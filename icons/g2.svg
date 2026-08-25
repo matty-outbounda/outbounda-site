@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Orange-red circle -->
+  <circle cx="100" cy="100" r="100" fill="#FF492C"/>
+  <!-- G arc: from upper-right (144,48), counterclockwise all the way around, to lower-right (144,152) -->
+  <path d="M144 48 A68 68 0 1 0 144 152"
+        fill="none" stroke="white" stroke-width="33" stroke-linecap="butt"/>
+  <!-- Crossbar of G at center height, filling the right gap -->
+  <rect x="111" y="83" width="37" height="34" fill="white"/>
+  <!-- Arrow/chevron at end of crossbar pointing right -->
+  <polygon points="148,72 148,128 178,100" fill="white"/>
+  <!-- "2" superscript at upper right -->
+  <text x="158" y="58"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="36" font-weight="900"
+        fill="white" text-anchor="middle">2</text>
+</svg>

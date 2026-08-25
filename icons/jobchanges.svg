@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="24" fill="#0A66C2"/>
+  <!-- Person silhouette -->
+  <circle cx="100" cy="78" r="28" fill="white" opacity="0.95"/>
+  <path d="M44 168 C44 136 70 116 100 116 C130 116 156 136 156 168" fill="white" opacity="0.95"/>
+  <!-- Upward arrow (top right) -->
+  <circle cx="148" cy="52" r="26" fill="#00C853"/>
+  <path d="M148 66 L148 40 M136 52 L148 40 L160 52" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

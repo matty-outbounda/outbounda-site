@@ -1,0 +1,3335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outbounda — Outbound That Actually Books Meetings</title>
+  <meta name="description"
+    content="We build and run your outbound engine — cold email, LinkedIn, and cold calling — so you can focus on closing, not chasing.">
+  <link rel="canonical" href="https://outbounda.io/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#0C0E1D">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Outbounda">
+  <meta property="og:url" content="https://outbounda.io/">
+  <meta property="og:title" content="Outbounda — Outbound That Actually Books Meetings">
+  <meta property="og:description" content="We build and run your outbound engine — cold email, LinkedIn, and cold calling — so you can focus on closing, not chasing.">
+  <meta property="og:image" content="https://outbounda.io/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:image:alt" content="Outbounda — outbound systems that book meetings">
+  <meta property="og:locale" content="en_AU">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Outbounda — Outbound That Actually Books Meetings">
+  <meta name="twitter:description" content="We build and run your outbound engine — cold email, LinkedIn, and cold calling — so you can focus on closing, not chasing.">
+  <meta name="twitter:image" content="https://outbounda.io/og.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&family=Geist:wght@500;700&display=swap"
+    rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Brand */
+      --accent: #8B5CF6;        /* primary purple */
+      --accent-light: #C4B5FD;  /* lavender mid */
+      --white: #FFFFFF;
+
+      /* Backgrounds */
+      --bg: #0C0E1D;            /* page base */
+      --bg-2: #13162E;          /* elevated surface */
+      --bg-glow: #1E2150;       /* radial gradient centre */
+
+      /* Surfaces */
+      --card: rgba(255,255,255,0.06);
+      --border: rgba(255,255,255,0.10);
+
+      /* Text */
+      --text: rgba(255,255,255,0.92);    /* primary */
+      --muted: rgba(255,255,255,0.52);   /* secondary */
+      --subtle: rgba(255,255,255,0.34);  /* tertiary / labels */
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background-color: #0C0E1D;
+      background-image: radial-gradient(ellipse at 50% 20%, #1E2150 0%, #0C0E1D 70%);
+      background-attachment: fixed;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── ANIMATED BACKGROUND ─── */
+
+    /* Grid layer — currently off */
+    .bg-grid {
+      display: none;
+    }
+
+    /* Blobs off for vignette mode */
+    .bg-mesh {
+      display: none;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(130px);
+      will-change: transform;
+    }
+
+    .blob-1 {
+      width: 55vw;
+      height: 55vw;
+      background: #FFFFFF;
+      top: -15%;
+      left: -10%;
+      animation: drift1 18s ease-in-out infinite alternate;
+      opacity: 0.04;
+    }
+
+    .blob-2 {
+      width: 45vw;
+      height: 45vw;
+      background: #8B5CF6;
+      top: 20%;
+      right: -15%;
+      animation: drift2 22s ease-in-out infinite alternate;
+      opacity: 0.06;
+    }
+
+    .blob-3 {
+      width: 40vw;
+      height: 40vw;
+      background: #FFFFFF;
+      bottom: -10%;
+      left: 30%;
+      animation: drift3 16s ease-in-out infinite alternate;
+      opacity: 0.03;
+    }
+
+    .blob-4 {
+      width: 30vw;
+      height: 30vw;
+      background: #8B5CF6;
+      top: 50%;
+      left: 10%;
+      animation: drift4 25s ease-in-out infinite alternate;
+      opacity: 0.04;
+    }
+
+    @keyframes drift1 {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      33% {
+        transform: translate(6vw, 8vh) scale(1.08);
+      }
+
+      66% {
+        transform: translate(-4vw, 12vh) scale(0.95);
+      }
+
+      100% {
+        transform: translate(8vw, -6vh) scale(1.05);
+      }
+    }
+
+    @keyframes drift2 {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      33% {
+        transform: translate(-8vw, -5vh) scale(1.1);
+      }
+
+      66% {
+        transform: translate(-4vw, 10vh) scale(0.92);
+      }
+
+      100% {
+        transform: translate(-10vw, 4vh) scale(1.06);
+      }
+    }
+
+    @keyframes drift3 {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(-6vw, -12vh) scale(1.12);
+      }
+
+      100% {
+        transform: translate(8vw, -8vh) scale(0.9);
+      }
+    }
+
+    @keyframes drift4 {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      50% {
+        transform: translate(10vw, -15vh) scale(1.15);
+      }
+
+      100% {
+        transform: translate(-5vw, 8vh) scale(0.95);
+      }
+    }
+
+    /* All page content sits above the background layers */
+    nav,
+    section,
+    .section,
+    .system,
+    .logo-bar,
+    .cta-section,
+    footer,
+    .booking-widget,
+    .widget-tab {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 100;
+      height: 68px;
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-wordmark {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    /* ─── BUTTONS ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      padding: 11px 22px;
+      font-size: 14px;
+    }
+
+    .btn-primary:hover {
+      background: #7C3AED;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(139, 92, 246, 0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 11px 22px;
+      font-size: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+      color: #fff;
+    }
+
+    .btn-lg {
+      padding: 15px 32px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: transparent;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 6% 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle gradient orbs */
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-orb-1 {
+      width: 700px;
+      height: 700px;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 65%);
+    }
+
+    .hero-orb-2 {
+      width: 400px;
+      height: 400px;
+      bottom: -80px;
+      right: -80px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.04) 0%, transparent 65%);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(160deg, #1e1e2e 0%, #2a2a3e 40%, #1a1a28 100%);
+      border: 1px solid rgba(200,200,220,0.35);
+      padding: 7px 18px;
+      border-radius: 100px;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      position: relative;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        inset 0 -1px 0 rgba(0,0,0,0.3),
+        0 2px 12px rgba(0,0,0,0.4),
+        0 0 0 1px rgba(255,255,255,0.04);
+    }
+
+    .hero-badge-chrome {
+      background: linear-gradient(90deg,
+        #888 0%,
+        #bbb 12%,
+        #fff 25%,
+        #ddd 38%,
+        #999 50%,
+        #ccc 62%,
+        #fff 75%,
+        #bbb 88%,
+        #888 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: chrome-sweep 3s linear infinite;
+    }
+
+    @keyframes chrome-sweep {
+      from { background-position: 200% center; }
+      to   { background-position: 0% center; }
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6.5vw, 76px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      max-width: 860px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(130deg, var(--accent) 0%, var(--white) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .hero h1 em.word-rotate-out {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+
+    .hero h1 em.word-rotate-in {
+      opacity: 0;
+      transform: translateY(-12px);
+      animation: word-rotate-settle 0.25s ease forwards;
+    }
+
+    @keyframes word-rotate-settle {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.5);
+      max-width: 520px;
+      margin: 0 auto 44px;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    /* video embed */
+    .hero-video {
+      width: 100%;
+      max-width: 760px;
+      margin: 48px auto 0;
+      position: relative;
+    }
+
+    .hero-video-inner {
+      position: relative;
+      padding-bottom: 56.25%;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-video-inner iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .hero-video-caption {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.32);
+      font-style: italic;
+      letter-spacing: 0.2px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 56px;
+      margin-top: 52px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      position: relative;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-stat-val {
+      font-size: 34px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -1.5px;
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.38);
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
+    /* ─── LOGO BAR ─── */
+    .logo-bar {
+      background: transparent;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 44px 0;
+      overflow: hidden;
+    }
+
+    .logo-bar-label {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--subtle);
+      margin-bottom: 32px;
+    }
+
+    .logo-track-outer {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* fade edges */
+    .logo-track-outer::before,
+    .logo-track-outer::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 140px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .logo-track-outer::before {
+      left: 0;
+      background: linear-gradient(to right, var(--bg), transparent);
+    }
+
+    .logo-track-outer::after {
+      right: 0;
+      background: linear-gradient(to left, var(--bg), transparent);
+    }
+
+    .logo-track {
+      display: flex;
+      align-items: center;
+      gap: 72px;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+
+    .logo-track:hover {
+      animation-play-state: paused;
+    }
+
+    .logo-track img {
+      height: 26px;
+      width: auto;
+      max-width: 130px;
+      object-fit: contain;
+      opacity: 0.75;
+      transition: opacity 0.25s;
+    }
+
+    .logo-track img:hover {
+      opacity: 1;
+    }
+
+    /* Blue Onion: icon + text combo */
+    .logo-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0.75;
+      transition: opacity 0.25s;
+      white-space: nowrap;
+    }
+
+    .logo-brand:hover {
+      opacity: 1;
+    }
+
+    .logo-brand img {
+      height: 26px;
+      width: 26px;
+      object-fit: contain;
+      opacity: 1 !important;
+      filter: none !important;
+    }
+
+    .logo-brand span,
+    .logo-brand {
+      font-size: 15px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 0.5px;
+    }
+
+    /* fallback text for logos that fail to load */
+    .logo-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--subtle);
+      letter-spacing: -0.3px;
+      white-space: nowrap;
+      filter: opacity(0.6);
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ─── SECTION BASE ─── */
+    .section {
+      padding: 72px 6%;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 700;
+      letter-spacing: -1.8px;
+      line-height: 1.08;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .section-sub {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    /* ─── PROBLEM ─── */
+    .problem {
+      background: transparent;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .problem-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 36px;
+    }
+
+    .problem-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 21px;
+      margin-bottom: 20px;
+    }
+
+    .problem-card h3 {
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: -0.4px;
+    }
+
+    .problem-card>p {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .problem-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .problem-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .problem-list li::before {
+      content: '—';
+      color: var(--accent);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ─── SYSTEM ─── */
+    .system {
+      background: transparent;
+      padding: 72px 6%;
+    }
+
+    .system .section-tag {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    .system .section-title {
+      color: #fff;
+    }
+
+    .system .section-sub {
+      color: rgba(255, 255, 255, 0.42);
+    }
+
+    .system-flow {
+      display: grid;
+      grid-template-columns: 1fr 36px 1fr 36px 1fr 36px 1fr;
+      align-items: center;
+      margin-top: 60px;
+      gap: 0;
+    }
+
+    .system-step {
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 18px;
+      padding: 28px 22px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+
+    .system-step:hover {
+      border-color: rgba(255, 255, 255, 0.14);
+    }
+
+    .step-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.25);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0 auto 16px;
+    }
+
+    .step-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .step-desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.42);
+      line-height: 1.6;
+    }
+
+    .step-tags {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 14px;
+    }
+
+    .step-tag {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.45);
+      font-weight: 500;
+    }
+
+    .system-arrow {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.16);
+      font-size: 20px;
+    }
+
+    .step-result {
+      background: linear-gradient(145deg, rgba(139, 92, 246, 0.06), rgba(255, 255, 255, 0.04));
+      border-color: rgba(139, 92, 246, 0.18);
+    }
+
+    .step-result .step-title {
+      color: #8B5CF6;
+    }
+
+    /* ─── TOOLS SECTION ─── */
+    .tools-section {
+      background: transparent;
+      padding-bottom: 0;
+    }
+
+    .tools-carousel-outer {
+      position: relative;
+      overflow: hidden;
+      margin-top: 52px;
+      padding: 8px 0;
+    }
+
+    .tools-carousel-outer::before,
+    .tools-carousel-outer::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 110px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .tools-carousel-outer::before {
+      left: 0;
+      background: linear-gradient(to right, #0C0E1D, transparent);
+    }
+
+    .tools-carousel-outer::after {
+      right: 0;
+      background: linear-gradient(to left, #0C0E1D, transparent);
+    }
+
+    .tools-track {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: max-content;
+      animation: marquee 38s linear infinite;
+    }
+
+    .tools-track:hover {
+      animation-play-state: paused;
+    }
+
+    .tool-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(208, 208, 232, 0.12);
+      border-radius: 13px;
+      padding: 13px 20px;
+      flex-shrink: 0;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+    }
+
+    .tool-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(208, 208, 232, 0.09), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .tool-card:hover {
+      border-color: rgba(208, 208, 232, 0.32);
+      background: rgba(255, 255, 255, 0.055);
+      box-shadow: 0 0 0 1px rgba(208, 208, 232, 0.09), 0 4px 20px rgba(208, 208, 232, 0.07);
+    }
+
+    .tool-card:hover::after {
+      left: 160%;
+    }
+
+    .tool-icon-img {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      object-fit: contain;
+      flex-shrink: 0;
+      opacity: 0.82;
+      transition: opacity 0.2s;
+    }
+
+    .tool-card:hover .tool-icon-img {
+      opacity: 1;
+    }
+
+    .tool-initials {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.65);
+      flex-shrink: 0;
+      letter-spacing: 0.5px;
+    }
+
+    .tool-card-name {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.58);
+      white-space: nowrap;
+      letter-spacing: -0.2px;
+      transition: color 0.2s;
+    }
+
+    .tool-card:hover .tool-card-name {
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    /* ─── RESULTS ─── */
+    .results {
+      background: transparent;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 340px));
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .result-card {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .result-card:hover {
+      border-color: #D8D8EC;
+      box-shadow: 0 8px 36px rgba(0, 0, 0, 0.055);
+    }
+
+    .result-num {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -2.5px;
+      background: linear-gradient(130deg, var(--accent), var(--white));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .result-desc {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .result-source {
+      font-size: 12px;
+      color: var(--subtle);
+      margin-top: 18px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .result-source::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 1px;
+      background: var(--subtle);
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials {
+      background: transparent;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .t-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .t-stars {
+      color: #F5A623;
+      font-size: 14px;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .t-quote {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text);
+      flex: 1;
+      margin-bottom: 24px;
+    }
+
+    .t-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .t-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.8);
+      flex-shrink: 0;
+    }
+
+    .t-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -0.2px;
+    }
+
+    .t-role {
+      font-size: 12.5px;
+      color: var(--subtle);
+      margin-top: 1px;
+    }
+
+    /* ─── TESTIMONIALS V2 ─── */
+    .tv2-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 40px;
+      max-height: 740px;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+      mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    }
+    .tv2-col { flex-shrink: 0; width: 320px; }
+    .tv2-col-2 { display: none; }
+    .tv2-col-3 { display: none; }
+    @media (min-width: 768px) { .tv2-col-2 { display: block; } }
+    @media (min-width: 1024px) { .tv2-col-3 { display: block; } }
+    .tv2-scroll {
+      list-style: none;
+      margin: 0;
+      padding: 0 0 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .tv2-col-1 .tv2-scroll { animation: tv2-up 15s linear infinite; }
+    .tv2-col-2 .tv2-scroll { animation: tv2-up 19s linear infinite; }
+    .tv2-col-3 .tv2-scroll { animation: tv2-up 17s linear infinite; }
+    @keyframes tv2-up {
+      from { transform: translateY(0); }
+      to   { transform: translateY(-50%); }
+    }
+    .tv2-card {
+      padding: 28px 32px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #ffffff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3), 0 1px 4px rgba(0,0,0,0.12);
+      cursor: default;
+      user-select: none;
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
+      outline: none;
+    }
+    .tv2-card:hover, .tv2-card:focus {
+      transform: scale(1.03) translateY(-8px);
+      box-shadow: 0 28px 56px rgba(0,0,0,0.45), 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .tv2-card:focus-visible { outline: 2px solid rgba(139,92,246,0.5); outline-offset: 2px; }
+    .tv2-card blockquote { margin: 0; padding: 0; }
+    .tv2-text { color: #4a4a6a; line-height: 1.7; font-size: 14.5px; font-weight: 400; margin: 0; }
+    .tv2-footer { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
+    .tv2-avatar {
+      width: 40px; height: 40px; border-radius: 50%; object-fit: cover;
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.08); flex-shrink: 0; transition: box-shadow 0.3s;
+    }
+    .tv2-card:hover .tv2-avatar { box-shadow: 0 0 0 2px rgba(139,92,246,0.45); }
+    .tv2-name { display: block; font-weight: 600; font-size: 14px; color: #0d0f1e; letter-spacing: -0.2px; line-height: 1.3; font-style: normal; }
+    .tv2-role { display: block; font-size: 12.5px; color: #8888aa; line-height: 1.3; margin-top: 2px; }
+
+    .testimonials-placeholder {
+      margin-top: 40px;
+      padding: 40px;
+      border: 2px dashed var(--border);
+      border-radius: 18px;
+      text-align: center;
+      color: var(--subtle);
+      font-size: 14px;
+    }
+
+    /* ─── FAQ ─── */
+    .faq {
+      background: transparent;
+    }
+
+    .faq-list {
+      margin-top: 40px;
+      max-width: 680px;
+    }
+
+    details.faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    details.faq-item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    details.faq-item summary {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--text);
+      padding: 22px 0;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      letter-spacing: -0.2px;
+    }
+
+    details.faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.faq-item summary::after {
+      content: '+';
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--accent);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+      line-height: 1;
+    }
+
+    details.faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    details.faq-item .faq-body {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.7;
+      padding-bottom: 22px;
+    }
+
+    /* ─── CTA SECTION ─── */
+    .cta-section {
+      background: transparent;
+      padding: 72px 6%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(34px, 5vw, 54px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: transparent;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 36px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-logo {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .footer-copy {
+      font-size: 12.5px;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social-btn {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(139,92,246,0.3);
+      background: rgba(139,92,246,0.06);
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 600;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .footer-social-btn:hover {
+      border-color: rgba(139,92,246,0.6);
+      background: rgba(139,92,246,0.12);
+    }
+
+    .footer-social-btn span {
+      background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer-social-btn svg {
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .problem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .system-flow {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .system-arrow {
+        transform: rotate(90deg);
+        padding: 12px 0;
+        display: block;
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        padding: 0 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .section,
+      .system,
+      .cta-section {
+        padding: 72px 20px;
+      }
+
+      .hero {
+        padding: 110px 20px 72px;
+      }
+
+      .hero-stats {
+        gap: 28px;
+      }
+
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .footer-links {
+        display: none;
+      }
+    }
+
+    /* ─── SILVER ACCENTS ─── */
+    :root {
+      --silver: #D0D0E8;
+      --silver-bright: #EAEAF8;
+      --silver-dim: rgba(208, 208, 232, 0.16);
+    }
+
+    @keyframes shimmer-sweep {
+      0% {
+        background-position: -200% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    @keyframes silver-pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+      }
+
+      50% {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14), 0 0 20px rgba(255, 255, 255, 0.04);
+      }
+    }
+
+    /* Nav: silver shimmer border */
+    nav {
+      border-bottom-color: rgba(208, 208, 232, 0.15);
+    }
+
+    /* Wordmark: clean white with subtle shimmer */
+    .nav-wordmark {
+      background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .grad {
+      background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-style: normal;
+    }
+
+    /* Hero badge: chrome shine stays as-is in dark mode */
+
+    /* Hero headline: clean white shimmer with subtle purple hint */
+    .hero h1 em {
+      background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Section tags: subtle purple accent */
+    .section-tag {
+      color: rgba(139, 92, 246, 0.65);
+    }
+
+    /* Hero stat numbers: clean white */
+    .hero-stat-val {
+      background: linear-gradient(140deg, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 45%, rgba(255, 255, 255, 0.9) 58%, rgba(255, 255, 255, 0.7) 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer-sweep 5s linear infinite;
+    }
+
+    /* Primary button: shimmer sweep on hover */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 55%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.24), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover::after {
+      left: 160%;
+    }
+
+    /* Outline button: silver border */
+    .btn-outline {
+      border-color: rgba(208, 208, 232, 0.25);
+    }
+
+    /* ─── GRID BACKGROUND ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(139,92,246,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(139,92,246,0.06) 1px, transparent 1px);
+      background-size: 52px 52px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── ROTATING RING ON CTA BUTTON ─── */
+    @property --ring-angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+    .btn-ring-wrap {
+      position: relative;
+      display: inline-flex;
+      border-radius: 10px;
+    }
+
+    .btn-ring-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 10px;
+      background: conic-gradient(
+        from var(--ring-angle),
+        transparent 0%,
+        rgba(109,40,217,0.4) 25%,
+        rgba(139,92,246,0.85) 45%,
+        rgba(196,181,253,1) 52%,
+        rgba(167,139,250,0.7) 60%,
+        rgba(109,40,217,0.2) 75%,
+        transparent 85%
+      );
+      filter: blur(2.5px);
+      animation: spin-ring 3s linear infinite;
+      z-index: 0;
+    }
+
+    .btn-ring-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 9px;
+      background: conic-gradient(
+        from var(--ring-angle),
+        transparent 0%,
+        transparent 45%,
+        rgba(196,181,253,0.6) 52%,
+        transparent 60%,
+        transparent 100%
+      );
+      animation: spin-ring 3s linear infinite;
+      z-index: 0;
+    }
+
+    .btn-ring-wrap .btn {
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes spin-ring {
+      to { --ring-angle: 360deg; }
+    }
+
+    /* ─── HERO FUNNEL ─── */
+    .hero-funnel {
+      position: absolute;
+      right: 6%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 220px;
+      opacity: 0.18;
+      pointer-events: none;
+      display: none;
+    }
+
+    @media (min-width: 1100px) {
+      .hero-funnel { display: block; }
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(208, 208, 232, 0.55);
+      color: #fff;
+    }
+
+    /* Hero video: silver shimmer border + glow */
+    .hero-video-inner {
+      border-color: rgba(208, 208, 232, 0.28);
+      box-shadow: 0 0 0 1px rgba(208, 208, 232, 0.09), 0 0 50px rgba(208, 208, 232, 0.05), 0 32px 80px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Result cards: subtle top bar + glow on hover */
+    .result-card {
+      border-top: 2px solid rgba(255, 255, 255, 0.12);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 40%);
+    }
+
+    .result-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+      border-top-color: rgba(139, 92, 246, 0.4);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 12px 48px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Result numbers: white shimmer */
+    .result-num {
+      background: linear-gradient(130deg, rgba(255, 255, 255, 0.65) 0%, #FFFFFF 38%, rgba(255, 255, 255, 0.85) 52%, #FFFFFF 68%, rgba(255, 255, 255, 0.65) 100%);
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer-sweep 5s linear infinite;
+    }
+
+    /* System step circles: subtle ring */
+    .step-num {
+      box-shadow: none;
+    }
+
+    /* System steps: shimmer sweep on hover */
+    .system-step {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .system-step::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(208, 208, 232, 0.09), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .system-step:hover::after {
+      left: 160%;
+    }
+
+    /* System arrows: silver */
+    .system-arrow {
+      color: rgba(208, 208, 232, 0.38);
+    }
+
+    /* Final result step: subtle purple glow */
+    .step-result {
+      border-color: rgba(139, 92, 246, 0.2);
+      box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.08), 0 0 36px rgba(139, 92, 246, 0.04);
+    }
+
+    /* Problem cards: shimmer on hover */
+    .problem-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .problem-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(208, 208, 232, 0.07), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .problem-card:hover::after {
+      left: 160%;
+    }
+
+    .problem-card:hover {
+      border-color: rgba(208, 208, 232, 0.18);
+    }
+
+    /* ─── SIGNAL DIAGRAM ─── */
+    .signal-section { padding-bottom: 40px; }
+
+    .signal-diagram-outer {
+      max-width: 900px;
+      margin: 52px auto 0;
+      padding: 0 20px;
+      overflow-x: auto;
+    }
+
+    .signal-diagram {
+      min-width: 820px;
+      position: relative;
+    }
+
+    .signal-sources {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .signal-box {
+      width: 120px;
+      background: #12142e;
+      border: 1px solid rgba(139,92,246,0.22);
+      border-radius: 3px;
+      padding: 12px 10px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+
+    .signal-box::before,
+    .signal-box::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      width: 5px;
+      height: 5px;
+      background: rgba(139,92,246,0.45);
+    }
+    .signal-box::before { left: -2px; }
+    .signal-box::after  { right: -2px; }
+
+    .signal-box-label {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .signal-box-icon {
+      width: 46px;
+      height: 46px;
+      background: #1b1d3a;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    .signal-box-connector {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      opacity: 0.75;
+      margin-top: 2px;
+    }
+
+    .sig-icon-cb   { color: #1a6fff; }
+    .sig-icon-g2   { color: #ff492c; }
+    .sig-icon-rb   { color: #a78bfa; font-size: 10px; }
+    .sig-icon-bw   { color: #22c55e; font-size: 10px; }
+
+    .signal-lines-svg {
+      display: block;
+      width: 100%;
+      height: 150px;
+      margin-top: -1px;
+    }
+
+    .sig-path {
+      fill: none;
+      stroke: #8B5CF6;
+      stroke-width: 1.5;
+      stroke-opacity: 0.3;
+    }
+
+    .signal-engine-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .signal-engine-box {
+      width: 560px;
+      background: #12142e;
+      border: 1.5px solid rgba(139,92,246,0.55);
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      position: relative;
+      box-shadow: 0 0 50px rgba(139,92,246,0.18), inset 0 0 30px rgba(139,92,246,0.06);
+      padding: 28px 32px 20px;
+    }
+
+    .engine-channels-row {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .engine-channel-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .engine-channel-name {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+    }
+
+    .engine-divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(139,92,246,0.2);
+      margin: 16px 0 14px;
+    }
+
+    .engine-team-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+    }
+
+    .engine-team-avatars {
+      display: flex;
+      gap: 4px;
+    }
+
+    .engine-team-text {
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.4;
+      text-wrap: balance;
+    }
+
+    .engine-team-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .signal-engine-box::before,
+    .signal-engine-box::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      width: 5px;
+      height: 5px;
+      background: rgba(139,92,246,0.7);
+    }
+    .signal-engine-box::before { left: -2px; }
+    .signal-engine-box::after  { right: -2px; }
+
+    .engine-o-logo {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -1px;
+      box-shadow: 0 4px 20px rgba(139,92,246,0.4);
+    }
+
+    .engine-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      color: var(--accent-light);
+      text-transform: uppercase;
+    }
+
+    .engine-channels {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .engine-channel {
+      width: 40px;
+      height: 40px;
+      background: #1b1d3a;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(139,92,246,0.28);
+    }
+
+    .signal-ops-box {
+      width: 210px;
+      background: #12142e;
+      border: 1px solid rgba(139,92,246,0.2);
+      border-radius: 3px;
+      padding: 18px;
+      margin-top: 8px;
+    }
+
+    .ops-header {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      color: rgba(255,255,255,0.28);
+      text-transform: uppercase;
+    }
+
+    .ops-sq { width: 5px; height: 5px; background: rgba(139,92,246,0.4); flex-shrink: 0; }
+
+    .ops-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin: 12px 0 10px;
+    }
+
+    .ops-avatars { display: flex; gap: 4px; margin-bottom: 12px; }
+
+    .ops-av {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #fff;
+      border: 2px solid #12142e;
+    }
+
+    .ops-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.35);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .ops-activities { display: flex; flex-direction: column; gap: 8px; }
+
+    .ops-act {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .ops-act-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+
+    .signal-engine-connector {
+      display: block;
+      width: 100%;
+      height: 56px;
+    }
+
+    .account-card-wrap { display: flex; justify-content: center; }
+
+    .account-card {
+      width: 380px;
+      background: #12142e;
+      border: 1.5px solid rgba(139,92,246,0.35);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .acc-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      border-bottom: 1px solid rgba(139,92,246,0.12);
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+      color: rgba(255,255,255,0.28);
+      text-transform: uppercase;
+    }
+
+    .acc-header-sq { display: flex; gap: 5px; }
+    .acc-header-sq span { width: 5px; height: 5px; background: rgba(139,92,246,0.35); display: block; }
+
+    .acc-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 13px;
+      color: rgba(255,255,255,0.38);
+    }
+
+    .acc-fit { font-size: 24px; font-weight: 800; color: var(--accent); line-height: 1; }
+    .acc-fit-label { font-size: 10px; font-weight: 600; color: rgba(139,92,246,0.6); margin-left: 3px; }
+
+    .acc-signal-row {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 12px 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .acc-signal-ico {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 10px;
+      font-weight: 800;
+      border-radius: 4px;
+    }
+
+    .acc-check {
+      margin-left: auto;
+      width: 18px;
+      height: 18px;
+      border: 1px solid rgba(139,92,246,0.5);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .acc-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 18px;
+      border-bottom: 1px solid rgba(139,92,246,0.1);
+    }
+
+    .acc-action-label { font-size: 12px; color: rgba(255,255,255,0.28); }
+
+    .acc-action-btn {
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      border: 1px solid rgba(139,92,246,0.45);
+      padding: 6px 13px;
+      border-radius: 2px;
+      text-transform: uppercase;
+    }
+
+    .acc-stack {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+    }
+
+    .acc-stack-label { font-size: 12px; color: rgba(255,255,255,0.22); }
+    .acc-stack-icons { display: flex; gap: 6px; align-items: center; }
+
+    /* FAQ dividers: silver */
+    details.faq-item,
+    details.faq-item:first-child {
+      border-color: rgba(208, 208, 232, 0.13);
+    }
+
+    /* CTA orb: subtle white glow */
+    .cta-section::before {
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, rgba(139, 92, 246, 0.03) 45%, transparent 70%);
+    }
+
+    /* Footer wordmark: silver */
+    .footer-logo {
+      background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://outbounda.io/#organization",
+      "name": "Outbounda",
+      "url": "https://outbounda.io/",
+      "description": "We build and run your outbound engine — cold email, LinkedIn, and cold calling — so you can focus on closing, not chasing.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://outbounda.io/favicon.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://outbounda.io/og.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Matty Morgan",
+        "jobTitle": "Founder"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Australia"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/outbounda",
+        "https://www.youtube.com/@matty.outbounda"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://outbounda.io/#service",
+      "name": "Outbounda",
+      "url": "https://outbounda.io/",
+      "description": "Outbound sales agency building and running cold email, LinkedIn, and cold calling systems that generate B2B pipeline.",
+      "parentOrganization": {
+        "@id": "https://outbounda.io/#organization"
+      },
+      "serviceType": [
+        "Outbound sales",
+        "Lead generation",
+        "Cold email",
+        "LinkedIn outreach",
+        "Cold calling",
+        "Go-to-market strategy"
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "B2B SaaS, professional services, and high-ticket agencies"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Outbound services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cold email campaigns"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "LinkedIn outreach"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cold calling"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://outbounda.io/#website",
+      "url": "https://outbounda.io/",
+      "name": "Outbounda",
+      "description": "We build and run your outbound engine — cold email, LinkedIn, and cold calling — so you can focus on closing, not chasing.",
+      "publisher": {
+        "@id": "https://outbounda.io/#organization"
+      },
+      "inLanguage": "en-AU"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://outbounda.io/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is this different from hiring an SDR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An SDR is a person. We're a system — strategy, data, tooling, execution, and optimisation all in one. We're operational in 30 days, not 90. And you're not betting $120K+ on a single hire who might not work out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What channels do you run?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cold email, LinkedIn outreach, and cold calling — across all three or just the ones that make sense for your market. We run the full tech stack: Instantly, HeyReach, Clay, Apollo, and more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long until we see results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "First meetings typically land within 30 days of going live. The first two weeks is setup and targeting. By week three, campaigns are running and replies are coming in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do we actually need to do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We need your input on ICP and positioning in week one. After that, you handle the meetings once they're booked. Everything in between — prospecting, messaging, sending, optimising — is on us."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on scope — which channels, what volume, and how much of the system you want us to own. Best to book a call and we'll figure out what makes sense for your situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with any industry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We focus on B2B — SaaS, professional services, and high-ticket agencies. If you're selling to businesses and need more pipeline, there's a good chance we can help."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+
+  <!-- Background layers -->
+  <div class="bg-mesh" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <span class="nav-wordmark">Outbounda</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="btn-ring-wrap">
+      <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a Call →</a>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <div class="hero-badge">
+      🏅 <span class="hero-badge-chrome">APAC's Premier GTM Agency</span>
+    </div>
+
+    <h1>Turn outbound into<br><em id="heroRotate">a GTM weapon</em></h1>
+
+    <p class="hero-sub">
+      We build and run your outbound engine — AI-driven research, buying signals, and multi-channel execution that consistently creates pipeline.
+    </p>
+
+    <div class="hero-ctas">
+      <div class="btn-ring-wrap">
+        <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary btn-lg" target="_blank"
+          rel="noopener">
+          Book a Strategy Session →
+        </a>
+      </div>
+      <a href="#how-it-works" class="btn btn-outline btn-lg">See how it works</a>
+    </div>
+
+    <!-- Video embed -->
+    <div class="hero-video">
+      <div class="hero-video-inner">
+        <iframe src="https://www.youtube.com/embed/4T2901yTB6M?rel=0&modestbranding=1" title="What is Outbounda?"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="hero-video-caption">"60 seconds — How Outbounda Works"</p>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-val">$10M+</div>
+        <div class="hero-stat-label">Pipeline built at Rippling</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">3</div>
+        <div class="hero-stat-label">Channels: email, LinkedIn, calling</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">30 days</div>
+        <div class="hero-stat-label">To first meetings</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── LOGO BAR ─── -->
+  <div class="logo-bar">
+    <p class="logo-bar-label">Trusted by B2B teams</p>
+    <div class="logo-track-outer">
+      <div class="logo-track" id="logoTrack">
+
+        <!-- Set 1 -->
+        <img src="https://superpath.io/sp_logo.svg" alt="Superpath"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
+          style="display:none">Superpath</span>
+        <span class="logo-brand"><img src="https://www.blueonion.ai/blue-onion-logo-512.png" alt="">Blue Onion</span>
+        <img src="https://cdn.prod.website-files.com/6178de88b212f6724e37c05c/68178bf06690f3cac98a4c18_Group%207910.svg"
+          alt="Derive" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span
+          class="logo-text" style="display:none">Derive</span>
+        <img
+          src="https://cdn.prod.website-files.com/682bb2f6ef2157b198f6cac8/682bb4aa54fe04851e093654_vouch-webclip.png"
+          alt="Vouch" style="height:42px;width:42px;border-radius:8px;"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
+          style="display:none">Vouch</span>
+        <span class="logo-brand"><img src="icons/alloy.jpg" alt="" style="height:42px;width:42px;border-radius:8px;"><span style="font-family:'Geist',sans-serif;">Alloy</span></span>
+        <img src="https://www.rivercity.net.au/wp-content/uploads/Rivercity-Logo-–-COL.svg" alt="Rivercity"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
+          style="display:none">Rivercity</span>
+        <img src="https://digitaldirections.io/wp-content/uploads/2024/03/logo-D.png" alt="Digital Directions"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
+          style="display:none">Digital Directions</span>
+
+        <!-- Set 2 — duplicate for seamless loop -->
+        <img src="https://superpath.io/sp_logo.svg" alt="Superpath"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
+          style="display:none">Superpath</span>
+        <span class="logo-brand"><img src="https://www.blueonion.ai/blue-onion-logo-512.png" alt="">Blue Onion</span>
+        <img src="https://cdn.prod.website-files.com/6178de88b212f6724e37c05c/68178bf06690f3cac98a4c18_Group%207910.svg"
+          alt="Derive" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span
+          class="logo-text" style="display:none">Derive</span>
+        <img
+          src="https://cdn.prod.website-files.com/682bb2f6ef2157b198f6cac8/682bb4aa54fe04851e093654_vouch-webclip.png"
+          alt="Vouch" style="height:42px;width:42px;border-radius:8px;"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
+          style="display:none">Vouch</span>
+        <span class="logo-brand"><img src="icons/alloy.jpg" alt="" style="height:42px;width:42px;border-radius:8px;"><span style="font-family:'Geist',sans-serif;">Alloy</span></span>
+        <img src="https://www.rivercity.net.au/wp-content/uploads/Rivercity-Logo-–-COL.svg" alt="Rivercity"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
+          style="display:none">Rivercity</span>
+        <img src="https://digitaldirections.io/wp-content/uploads/2024/03/logo-D.png" alt="Digital Directions"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
+          style="display:none">Digital Directions</span>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SIGNAL DIAGRAM ─── -->
+  <section class="section signal-section" id="signals">
+    <div class="container">
+      <span class="section-tag">Buying Intelligence</span>
+      <h2 class="section-title">We find accounts ready to buy<br><em class="grad">before your competitors do</em></h2>
+      <p class="section-sub">Real-time buying signals. One engine. Every account scored by fit and intent — automatically.</p>
+    </div>
+
+    <div class="signal-diagram-outer">
+      <div class="signal-diagram">
+
+        <!-- Signal source boxes -->
+        <div class="signal-sources">
+          <div class="signal-box">
+            <span class="signal-box-label">Funding</span>
+            <div class="signal-box-icon">
+              <img src="icons/crunchbase.svg" alt="" style="width:34px;height:34px;object-fit:contain;border-radius:6px">
+            </div>
+            <div class="signal-box-connector"></div>
+          </div>
+          <div class="signal-box">
+            <span class="signal-box-label">Hiring</span>
+            <div class="signal-box-icon">
+              <img src="icons/linkedin.svg" alt="" style="width:26px;height:26px;object-fit:contain">
+            </div>
+            <div class="signal-box-connector"></div>
+          </div>
+          <div class="signal-box">
+            <span class="signal-box-label">Web Visits</span>
+            <div class="signal-box-icon">
+              <img src="icons/rb2b.svg" alt="" style="width:34px;height:34px;object-fit:contain;border-radius:6px">
+            </div>
+            <div class="signal-box-connector"></div>
+          </div>
+          <div class="signal-box">
+            <span class="signal-box-label">Intent Data</span>
+            <div class="signal-box-icon">
+              <img src="icons/g2.png" alt="" style="width:34px;height:34px;object-fit:contain;border-radius:50%">
+            </div>
+            <div class="signal-box-connector"></div>
+          </div>
+          <div class="signal-box">
+            <span class="signal-box-label">Tech Stack</span>
+            <div class="signal-box-icon">
+              <img src="icons/apollo.png" alt="" style="width:26px;height:26px;object-fit:contain">
+            </div>
+            <div class="signal-box-connector"></div>
+          </div>
+          <div class="signal-box">
+            <span class="signal-box-label">Job Changes</span>
+            <div class="signal-box-icon">
+              <img src="icons/jobchanges.svg" alt="" style="width:34px;height:34px;object-fit:contain;border-radius:6px">
+            </div>
+            <div class="signal-box-connector"></div>
+          </div>
+        </div>
+
+        <!-- Converging lines SVG -->
+        <svg class="signal-lines-svg" viewBox="0 0 860 150" preserveAspectRatio="none" aria-hidden="true">
+          <!-- Reference paths (invisible, used by animateMotion) -->
+          <path id="sp1" d="M 73 0 C 73 75 430 75 430 150" visibility="hidden"/>
+          <path id="sp2" d="M 216 0 C 216 75 430 75 430 150" visibility="hidden"/>
+          <path id="sp3" d="M 360 0 C 360 75 430 75 430 150" visibility="hidden"/>
+          <path id="sp4" d="M 500 0 C 500 75 430 75 430 150" visibility="hidden"/>
+          <path id="sp5" d="M 644 0 C 644 75 430 75 430 150" visibility="hidden"/>
+          <path id="sp6" d="M 787 0 C 787 75 430 75 430 150" visibility="hidden"/>
+          <!-- Visible paths -->
+          <path class="sig-path" d="M 73 0 C 73 75 430 75 430 150"/>
+          <path class="sig-path" d="M 216 0 C 216 75 430 75 430 150"/>
+          <path class="sig-path" d="M 360 0 C 360 75 430 75 430 150"/>
+          <path class="sig-path" d="M 500 0 C 500 75 430 75 430 150"/>
+          <path class="sig-path" d="M 644 0 C 644 75 430 75 430 150"/>
+          <path class="sig-path" d="M 787 0 C 787 75 430 75 430 150"/>
+          <!-- Travelling dots -->
+          <circle r="3.5" fill="#8B5CF6" opacity="0.9"><animateMotion dur="2s" repeatCount="indefinite" begin="0s"><mpath href="#sp1"/></animateMotion></circle>
+          <circle r="3.5" fill="#8B5CF6" opacity="0.9"><animateMotion dur="2s" repeatCount="indefinite" begin="0.33s"><mpath href="#sp2"/></animateMotion></circle>
+          <circle r="3.5" fill="#C4B5FD" opacity="0.9"><animateMotion dur="2s" repeatCount="indefinite" begin="0.66s"><mpath href="#sp3"/></animateMotion></circle>
+          <circle r="3.5" fill="#8B5CF6" opacity="0.9"><animateMotion dur="2s" repeatCount="indefinite" begin="1s"><mpath href="#sp4"/></animateMotion></circle>
+          <circle r="3.5" fill="#C4B5FD" opacity="0.9"><animateMotion dur="2s" repeatCount="indefinite" begin="1.33s"><mpath href="#sp5"/></animateMotion></circle>
+          <circle r="3.5" fill="#8B5CF6" opacity="0.9"><animateMotion dur="2s" repeatCount="indefinite" begin="1.66s"><mpath href="#sp6"/></animateMotion></circle>
+        </svg>
+
+        <!-- Engine: single unified box -->
+        <div class="signal-engine-row">
+          <div class="signal-engine-box">
+            <div class="engine-label" style="margin-bottom:20px">Execution Layer</div>
+            <div class="engine-channels-row">
+              <div class="engine-channel-wrap">
+                <div class="engine-channel">
+                  <img src="icons/heyreach.png" alt="HeyReach" style="width:28px;height:28px;object-fit:contain">
+                </div>
+                <span class="engine-channel-name">LinkedIn</span>
+              </div>
+              <div class="engine-channel-wrap">
+                <div class="engine-channel">
+                  <img src="icons/instantly.png" alt="Instantly" style="width:28px;height:28px;object-fit:contain;border-radius:6px">
+                </div>
+                <span class="engine-channel-name">Email</span>
+              </div>
+              <div class="engine-channel-wrap">
+                <div class="engine-channel" style="background:linear-gradient(135deg,#5B21B6,#7C3AED);border-color:rgba(139,92,246,0.5)">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12 19.79 19.79 0 011.3 3.4 2 2 0 013.28 1.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" fill="white"/>
+                  </svg>
+                </div>
+                <span class="engine-channel-name">Calling</span>
+              </div>
+            </div>
+            <div class="engine-divider"></div>
+            <div class="engine-team-row">
+              <div class="engine-team-avatars">
+                <div class="ops-av">
+                  <svg viewBox="0 0 36 36" width="18" height="18" fill="none">
+                    <circle cx="18" cy="13" r="7" fill="rgba(255,255,255,0.85)"/>
+                    <path d="M4 34c0-7.732 6.268-14 14-14s14 6.268 14 14" fill="rgba(255,255,255,0.85)"/>
+                  </svg>
+                </div>
+                <div class="ops-av">
+                  <svg viewBox="0 0 36 36" width="18" height="18" fill="none">
+                    <circle cx="18" cy="13" r="7" fill="rgba(255,255,255,0.85)"/>
+                    <path d="M4 34c0-7.732 6.268-14 14-14s14 6.268 14 14" fill="rgba(255,255,255,0.85)"/>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div class="engine-team-tag">Done For You</div>
+                <div class="engine-team-text">A dedicated GTM Engineer and SDR assigned to your account from day one</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Engine → output connector -->
+        <svg class="signal-engine-connector" viewBox="0 0 860 56" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="430" y1="0" x2="430" y2="48" stroke="#8B5CF6" stroke-width="1.5" stroke-opacity="0.5"/>
+          <rect x="426" y="46" width="8" height="8" fill="#8B5CF6" opacity="0.7"/>
+        </svg>
+
+        <!-- Qualified Meeting output card -->
+        <div class="account-card-wrap">
+          <div class="account-card">
+            <div class="acc-header">
+              <div class="acc-header-sq"><span></span></div>
+              Qualified Meeting
+              <div class="acc-header-sq"><span></span></div>
+            </div>
+            <div class="acc-meta">
+              Jake Mercer · VP Sales · Buildkite
+              <span style="font-size:13px;font-weight:700;color:#4ade80;letter-spacing:0.3px">BOOKED ✓</span>
+            </div>
+            <div class="acc-signal-row">
+              <div class="acc-signal-ico"><img src="icons/instantly.png" style="width:16px;height:16px;object-fit:contain" alt=""></div>
+              <span>Replied after email step 3</span>
+              <div class="acc-check">✓</div>
+            </div>
+            <div class="acc-signal-row">
+              <div class="acc-signal-ico">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12 19.79 19.79 0 011.3 3.4 2 2 0 013.28 1.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span>Confirmed on cold call</span>
+              <div class="acc-check">✓</div>
+            </div>
+            <div class="acc-signal-row">
+              <div class="acc-signal-ico"><img src="icons/heyreach.png" style="width:16px;height:16px;object-fit:contain" alt=""></div>
+              <span>LinkedIn touchpoint sent</span>
+              <div class="acc-check">✓</div>
+            </div>
+            <div class="acc-action">
+              <span class="acc-action-label">Thu 3 Jul · 3:00 PM AEST</span>
+              <span class="acc-action-btn" style="color:#4ade80;border-color:rgba(74,222,128,0.35)">In Calendar</span>
+            </div>
+            <div class="acc-stack">
+              <span class="acc-stack-label">Booked via</span>
+              <div class="acc-stack-icons">
+                <img src="icons/instantly.png" style="width:18px;height:18px;object-fit:contain;opacity:0.7" alt="">
+                <img src="icons/heyreach.png" style="width:18px;height:18px;object-fit:contain;opacity:0.7" alt="">
+                <div style="width:18px;height:18px;background:linear-gradient(135deg,#5B21B6,#7C3AED);border-radius:4px;display:flex;align-items:center;justify-content:center;opacity:0.85">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.36 12 19.79 19.79 0 011.3 3.4 2 2 0 013.28 1.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROBLEM ─── -->
+  <section class="section problem" id="problem">
+    <div class="container">
+      <span class="section-tag">The problem</span>
+      <h2 class="section-title">Most outbound fails for<br>one of two reasons</h2>
+      <p class="section-sub">Both are more common than you think. Both kill pipeline before it starts.</p>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">💸</div>
+          <h3>The SDR Hire Trap</h3>
+          <p>You hire a rep, spend months getting them up to speed, and wonder why the pipeline isn't moving.</p>
+          <ul class="problem-list">
+            <li>$120K+ all-in before a single qualified meeting</li>
+            <li>3–6 month ramp before they're productive</li>
+            <li>Generic messaging that doesn't resonate</li>
+            <li>One bad hire and you're back to square one</li>
+          </ul>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">⏳</div>
+          <h3>The Founder Grind Trap</h3>
+          <p>You know you need outbound but you're also running the business. It happens in bursts, then stops.</p>
+          <ul class="problem-list">
+            <li>Manual prospecting eats 10+ hours a week</li>
+            <li>Inconsistent follow-up kills warm leads</li>
+            <li>You're the bottleneck to your own growth</li>
+            <li>No system means no scale</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SYSTEM ─── -->
+  <section class="system" id="how-it-works">
+    <div class="container">
+      <span class="section-tag">How it works</span>
+      <h2 class="section-title">Up and running in <em class="grad">30 days</em></h2>
+      <p class="section-sub">No long onboarding. No 90-day ramp. Here's what the first few weeks look like.</p>
+
+      <div class="system-flow">
+
+        <div class="system-step">
+          <div class="step-num">1</div>
+          <div class="step-title">Week 1 — Strategy</div>
+          <div class="step-desc">We get deep on your ICP, offer, and what's worked before. Out comes a targeting strategy, messaging framework, and channel plan built for your market.</div>
+          <div class="step-tags">
+            <span class="step-tag">ICP Workshop</span>
+            <span class="step-tag">Offer Positioning</span>
+            <span class="step-tag">Channel Strategy</span>
+            <span class="step-tag">Competitor Research</span>
+          </div>
+        </div>
+
+        <div class="system-arrow">→</div>
+
+        <div class="system-step">
+          <div class="step-num">2</div>
+          <div class="step-title">Week 2–3 — Build</div>
+          <div class="step-desc">We build the full system — sequences, lists, infrastructure, and signal tracking. You approve everything before we go live.</div>
+          <div class="step-tags">
+            <span class="step-tag">Sequence Writing</span>
+            <span class="step-tag">List Building</span>
+            <span class="step-tag">Tech Setup</span>
+            <span class="step-tag">Signal Tracking</span>
+          </div>
+        </div>
+
+        <div class="system-arrow">→</div>
+
+        <div class="system-step">
+          <div class="step-num">3</div>
+          <div class="step-title">Week 4 — Launch</div>
+          <div class="step-desc">Campaigns go live across email, LinkedIn, and cold calling. Replies get handled, meetings get booked, everything gets tracked in real time.</div>
+          <div class="step-tags">
+            <span class="step-tag">Campaigns Live</span>
+            <span class="step-tag">Reply Handling</span>
+            <span class="step-tag">Meeting Booking</span>
+            <span class="step-tag">Live Reporting</span>
+          </div>
+        </div>
+
+        <div class="system-arrow">→</div>
+
+        <div class="system-step step-result">
+          <div class="step-num" style="background: rgba(139,92,246,0.3); border-color: rgba(139,92,246,0.45)">✓</div>
+          <div class="step-title">Ongoing — Optimise</div>
+          <div class="step-desc">Weekly updates, monthly strategy reviews, and continuous testing. We improve every month based on what's working and what the data's telling us.</div>
+          <div class="step-tags">
+            <span class="step-tag">Weekly Reporting</span>
+            <span class="step-tag">A/B Testing</span>
+            <span class="step-tag">Monthly Reviews</span>
+            <span class="step-tag">Continuous Improvement</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TOOLS ─── -->
+  <section class="section tools-section" id="tools">
+    <div class="container">
+      <span class="section-tag">Our stack</span>
+      <h2 class="section-title">The tools behind every campaign</h2>
+      <p class="section-sub">We don't just know the tools — we've built a system that makes them work together.</p>
+    </div>
+
+    <div class="tools-carousel-outer">
+      <div class="tools-track" id="toolsTrack">
+
+        <!-- Set 1 -->
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/claude.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">CL</div>
+          <span class="tool-card-name">Claude</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/arkai-logo.jpg" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">AI</div>
+          <span class="tool-card-name">Ark AI</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/apify.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">AP</div>
+          <span class="tool-card-name">Apify</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/storeleads.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">SL</div>
+          <span class="tool-card-name">Storeleads</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/apollo.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">AP</div>
+          <span class="tool-card-name">Apollo</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/instantly.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">IN</div>
+          <span class="tool-card-name">Instantly</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/clay.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">CY</div>
+          <span class="tool-card-name">Clay</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/heyreach.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">HR</div>
+          <span class="tool-card-name">HeyReach</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/fireflies.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">FF</div>
+          <span class="tool-card-name">Fireflies</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/linkedin.svg" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">LI</div>
+          <span class="tool-card-name">Sales Nav</span>
+        </div>
+
+        <!-- Set 2 — duplicate for seamless loop -->
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/claude.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">CL</div>
+          <span class="tool-card-name">Claude</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/arkai-logo.jpg" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">AI</div>
+          <span class="tool-card-name">Ark AI</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/apify.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">AP</div>
+          <span class="tool-card-name">Apify</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/storeleads.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">SL</div>
+          <span class="tool-card-name">Storeleads</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/apollo.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">AP</div>
+          <span class="tool-card-name">Apollo</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/instantly.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">IN</div>
+          <span class="tool-card-name">Instantly</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/clay.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">CY</div>
+          <span class="tool-card-name">Clay</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/heyreach.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">HR</div>
+          <span class="tool-card-name">HeyReach</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/fireflies.png" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">FF</div>
+          <span class="tool-card-name">Fireflies</span>
+        </div>
+
+        <div class="tool-card">
+          <img class="tool-icon-img" src="icons/linkedin.svg" alt=""
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="tool-initials">LI</div>
+          <span class="tool-card-name">Sales Nav</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESULTS ─── -->
+  <section class="section results" id="results">
+    <div class="container">
+      <span class="section-tag">Results</span>
+      <h2 class="section-title">Operator-led. Numbers, not claims.</h2>
+      <p class="section-sub">Built by our founder from his prior role at Rippling — scaled from zero to $10M ARR. We
+        built the outbound engine that fed the pipeline. Operators, not agencies.</p>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-num">$10M+</div>
+          <div class="result-desc">ARR pipeline built during our founder's time at Rippling. Zero to a full outbound
+            motion in under 18 months. We didn't consult on it — we ran it.</div>
+          <div class="result-source">Matty's prior role at Rippling</div>
+        </div>
+        <div class="result-card">
+          <div class="result-num">30 days</div>
+          <div class="result-desc">Strategy, data, sequences, execution — live in week two, first qualified meetings in
+            the calendar by week four.</div>
+          <div class="result-source">New client average</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <span class="section-tag">What clients say</span>
+      <h2 class="section-title">Don't take our word for it</h2>
+      <p class="section-sub">Founders and sales leaders who've run outbound with Outbounda.</p>
+
+      <div class="tv2-wrap" role="region" aria-label="Client testimonials">
+
+        <!-- Column 1 (all screens) -->
+        <div class="tv2-col tv2-col-1">
+          <ul class="tv2-scroll">
+            <li class="tv2-card" tabindex="0">
+              <blockquote>
+                <p class="tv2-text">From the get go Outbounda have consistently delivered more meetings than promised. No ramp up time, no training. And you're paying for results, not activity.</p>
+                <footer class="tv2-footer">
+                  <img class="tv2-avatar" src="icons/roi.jpg" alt="Roi Gavrieli" width="40" height="40" loading="lazy">
+                  <div><cite class="tv2-name">Roi Gavrieli</cite><span class="tv2-role">CRO · Blue Onion</span></div>
+                </footer>
+              </blockquote>
+            </li>
+            <li class="tv2-card" tabindex="0">
+              <blockquote>
+                <p class="tv2-text">Couldn't speak more highly of the guys over at Outbounda. A wealth of knowledge and seamless customer experience. Highly highly recommended.</p>
+                <footer class="tv2-footer">
+                  <img class="tv2-avatar" src="icons/robbie.jpg" alt="Robbie Awad" width="40" height="40" loading="lazy">
+                  <div><cite class="tv2-name">Robbie Awad</cite><span class="tv2-role">CEO · Outright</span></div>
+                </footer>
+              </blockquote>
+            </li>
+            <li class="tv2-card" tabindex="0">
+              <blockquote>
+                <p class="tv2-text">These guys just get outbound.</p>
+                <footer class="tv2-footer">
+                  <img class="tv2-avatar" src="icons/jp.jpg" alt="JP Ghabriel" width="40" height="40" loading="lazy">
+                  <div><cite class="tv2-name">JP Ghabriel</cite><span class="tv2-role">Founder · Investr Property</span></div>
+                </footer>
+              </blockquote>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2 (tablet+) -->
+        <div class="tv2-col tv2-col-2">
+          <ul class="tv2-scroll">
+            <li class="tv2-card" tabindex="0">
+              <blockquote>
+                <p class="tv2-text">Outbounda have been incredible to work with. Our SDR left the business, and these guys have consistently been able to generate highly qualified meetings since we started.</p>
+                <footer class="tv2-footer">
+                  <img class="tv2-avatar" src="icons/ben.jpg" alt="Ben Sher" width="40" height="40" loading="lazy">
+                  <div><cite class="tv2-name">Ben Sher</cite><span class="tv2-role">Head of Sales · Vouch</span></div>
+                </footer>
+              </blockquote>
+            </li>
+            <li class="tv2-card" tabindex="0">
+              <blockquote>
+                <p class="tv2-text">We were running entirely off referrals. Outbounda built our first cold outbound engine from scratch — within 60 days we were closing deals from email we'd never have found otherwise.</p>
+                <footer class="tv2-footer">
+                  <img class="tv2-avatar" src="icons/james.jpg" alt="James Lattouf" width="40" height="40" loading="lazy">
+                  <div><cite class="tv2-name">James Lattouf</cite><span class="tv2-role">Founder · Megaphone Media</span></div>
+                </footer>
+              </blockquote>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3 (desktop+) -->
+        <div class="tv2-col tv2-col-3">
+          <ul class="tv2-scroll">
+            <li class="tv2-card" tabindex="0">
+              <blockquote>
+                <p class="tv2-text">Cold calling had always been the channel we struggled to scale. Outbounda changed that completely. Their SDR is sharper than most full-time hires and we're booking meetings consistently every week.</p>
+                <footer class="tv2-footer">
+                  <img class="tv2-avatar" src="icons/akshat.jpg" alt="Akshat Sondhi" width="40" height="40" loading="lazy">
+                  <div><cite class="tv2-name">Akshat Sondhi</cite><span class="tv2-role">Co-Founder · Derive</span></div>
+                </footer>
+              </blockquote>
+            </li>
+            <li class="tv2-card" tabindex="0">
+              <blockquote>
+                <p class="tv2-text">We've been working with Outbounda for well over 6 months. As a business without an internal sales development resource — these guys have smashed it out of the park. Our pipeline has never looked healthier.</p>
+                <footer class="tv2-footer">
+                  <img class="tv2-avatar" src="icons/barry.jpg" alt="Barry Heath" width="40" height="40" loading="lazy">
+                  <div><cite class="tv2-name">Barry Heath</cite><span class="tv2-role">Head of Growth · SuperPath</span></div>
+                </footer>
+              </blockquote>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Common questions</h2>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>How is this different from hiring an SDR?</summary>
+          <p class="faq-body">An SDR is a person. We're a system — strategy, data, tooling, execution, and optimisation
+            all in one. We're operational in 30 days, not 90. And you're not betting $120K+ on a single hire who might
+            not work out.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What channels do you run?</summary>
+          <p class="faq-body">Cold email, LinkedIn outreach, and cold calling — across all three or just the ones that
+            make sense for your market. We run the full tech stack: Instantly, HeyReach, Clay, Apollo, and more.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>How long until we see results?</summary>
+          <p class="faq-body">First meetings typically land within 30 days of going live. The first two weeks is setup
+            and targeting. By week three, campaigns are running and replies are coming in.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What do we actually need to do?</summary>
+          <p class="faq-body">We need your input on ICP and positioning in week one. After that, you handle the meetings
+            once they're booked. Everything in between — prospecting, messaging, sending, optimising — is on us.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>What does it cost?</summary>
+          <p class="faq-body">It depends on scope — which channels, what volume, and how much of the system you want us
+            to own. Best to book a call and we'll figure out what makes sense for your situation.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you work with any industry?</summary>
+          <p class="faq-body">We focus on B2B — SaaS, professional services, and high-ticket agencies. If you're selling
+            to businesses and need more pipeline, there's a good chance we can help.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ─── -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to build your<br><em class="grad">outbound engine?</em></h2>
+      <p>30-minute strategy session. No pitch deck. Just a straight conversation about your pipeline.</p>
+      <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary btn-lg" target="_blank"
+        rel="noopener">
+        Book a Strategy Session →
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-logo">Outbounda</div>
+    <div class="footer-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="#results">Results</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://calendly.com/matty-outbounda/30min" target="_blank">Book a Call</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/company/outbounda" target="_blank" rel="noopener" class="footer-social-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="#C4B5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="2" y="9" width="4" height="12" stroke="#C4B5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="4" cy="4" r="2" stroke="#C4B5FD" stroke-width="2"/>
+        </svg>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://www.youtube.com/@matty.outbounda" target="_blank" rel="noopener" class="footer-social-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+          <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z" stroke="#C4B5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" stroke="#C4B5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>YouTube</span>
+      </a>
+    </div>
+    <div class="footer-copy">© 2026 Outbounda Pty Ltd · Sydney, Australia</div>
+  </footer>
+
+  <!-- ─── FLOATING BOOKING WIDGET ─── -->
+  <div class="booking-widget" id="bookingWidget">
+    <button class="widget-close" id="widgetClose" aria-label="Close">×</button>
+    <div class="widget-header">
+      <div class="widget-avatar">MM</div>
+      <div>
+        <div class="widget-name">Matty Morgan</div>
+        <div class="widget-role">Founder, Outbounda</div>
+      </div>
+    </div>
+    <div class="widget-title">Book your 1-1 Strategy Call</div>
+    <div class="widget-desc">Book a 30 min session to see how we would engineer an unstoppable pipeline for you.</div>
+    <div class="widget-avail">
+      <span class="widget-avail-dot"></span>
+      <span>Next available: <strong id="widgetNextAvail">this week</strong></span>
+    </div>
+    <a href="https://calendly.com/matty-outbounda/30min" class="widget-cta" target="_blank" rel="noopener">
+      Claim Your Session →
+    </a>
+    <div class="widget-fine">Free · No obligation · 30 minutes</div>
+  </div>
+
+  <!-- Widget toggle tab (shows after close) -->
+  <button class="widget-tab" id="widgetTab" style="display:none" aria-label="Book a call">
+    📅 Book a Call
+  </button>
+
+  <style>
+    .booking-widget {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 320px;
+      background: #0E1021;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+      z-index: 200;
+      transform: translateY(0);
+      opacity: 1;
+      transition: transform 0.35s cubic-bezier(.4, 0, .2, 1), opacity 0.35s;
+    }
+
+    .booking-widget.hidden {
+      transform: translateY(120%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .widget-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.08);
+      border: none;
+      color: rgba(255, 255, 255, 0.5);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .widget-close:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    .widget-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .widget-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.8);
+      flex-shrink: 0;
+    }
+
+    .widget-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.2px;
+    }
+
+    .widget-role {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      margin-top: 1px;
+    }
+
+    .widget-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.3px;
+      margin-bottom: 8px;
+    }
+
+    .widget-desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.45);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .widget-avail {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.55);
+      margin-bottom: 18px;
+    }
+
+    .widget-avail-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #8B5CF6;
+      flex-shrink: 0;
+    }
+
+    .widget-avail strong {
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 600;
+    }
+
+    .widget-cta {
+      display: block;
+      width: 100%;
+      background: #8B5CF6;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 13px;
+      border-radius: 10px;
+      transition: background 0.2s, transform 0.2s;
+      margin-bottom: 10px;
+    }
+
+    .widget-cta:hover {
+      background: #7C3AED;
+      transform: translateY(-1px);
+    }
+
+    .widget-fine {
+      text-align: center;
+      font-size: 11.5px;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Tab that shows after dismiss */
+    .widget-tab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: #8B5CF6;
+      color: #fff;
+      border: none;
+      border-radius: 100px;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      z-index: 200;
+      box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .widget-tab:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(139, 92, 246, 0.5);
+    }
+
+    @media (max-width: 480px) {
+      .booking-widget {
+        width: calc(100vw - 32px);
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .widget-tab {
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+  </style>
+
+  <script>
+  /* ─── HERO WORD ROTATE ─── */
+  (function() {
+    var words = ['a GTM weapon', 'a pipeline machine', 'a meetings machine', 'a revenue engine'];
+    var duration = 2500;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var el = document.getElementById('heroRotate');
+      if (!el) return;
+      var index = 0;
+
+      setInterval(function() {
+        index = (index + 1) % words.length;
+        el.classList.add('word-rotate-out');
+
+        setTimeout(function() {
+          el.textContent = words[index];
+          el.classList.remove('word-rotate-out');
+          el.classList.add('word-rotate-in');
+
+          setTimeout(function() {
+            el.classList.remove('word-rotate-in');
+          }, 250);
+        }, 250);
+      }, duration);
+    });
+  })();
+  </script>
+
+  <script>
+  /* ─── TESTIMONIALS V2: duplicate cards for seamless infinite scroll ─── */
+  (function() {
+    document.querySelectorAll('.tv2-scroll').forEach(function(ul) {
+      Array.from(ul.querySelectorAll('.tv2-card')).forEach(function(card) {
+        var clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.setAttribute('tabindex', '-1');
+        ul.appendChild(clone);
+      });
+    });
+  })();
+  </script>
+
+  <script>
+    const widget = document.getElementById('bookingWidget');
+    const closeBtn = document.getElementById('widgetClose');
+    const tab = document.getElementById('widgetTab');
+    const nextAvailEl = document.getElementById('widgetNextAvail');
+
+    // Next available = tomorrow, skipping weekends
+    const nextAvail = new Date();
+    nextAvail.setDate(nextAvail.getDate() + 1);
+    while (nextAvail.getDay() === 0 || nextAvail.getDay() === 6) {
+      nextAvail.setDate(nextAvail.getDate() + 1);
+    }
+    nextAvailEl.textContent = nextAvail.toLocaleDateString('en-AU', { weekday: 'long', day: 'numeric', month: 'long' });
+
+    widget.classList.remove('hidden');
+
+    closeBtn.addEventListener('click', () => {
+      widget.classList.add('hidden');
+      setTimeout(() => { tab.style.display = 'block'; }, 400);
+    });
+
+    tab.addEventListener('click', () => {
+      tab.style.display = 'none';
+      widget.classList.remove('hidden');
+    });
+  </script>
+
+</body>
+
+</html>

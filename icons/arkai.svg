@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" rx="8" fill="#2B52F5"/>
+  <!-- Top chevron pair (smallest) -->
+  <path d="M17,18 L22,10 L22,18Z" fill="white"/>
+  <path d="M31,18 L26,10 L26,18Z" fill="white"/>
+  <!-- Middle chevron pair -->
+  <path d="M12,28 L22,20 L22,28Z" fill="white"/>
+  <path d="M36,28 L26,20 L26,28Z" fill="white"/>
+  <!-- Bottom chevron pair (widest) -->
+  <path d="M9,38 L22,30 L22,38Z" fill="white"/>
+  <path d="M39,38 L26,30 L26,38Z" fill="white"/>
+</svg>
