@@ -89,7 +89,15 @@ nav {
   -webkit-backdrop-filter: saturate(150%) blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
-.nav-wordmark { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; color: #fff; }
+/* Brand wordmark gradient — matches index.html. Never swap the colours. */
+.nav-wordmark, .footer-logo {
+  background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fff;                 /* fallback if background-clip is unsupported */
+}
+.nav-wordmark { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
 .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
 .nav-links a { color: rgba(255, 255, 255, 0.55); font-size: 14px; font-weight: 500; transition: color .2s; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: #fff; }
@@ -298,7 +306,7 @@ footer {
   gap: 18px 32px;
   text-align: center;
 }
-.footer-logo { font-size: 19px; font-weight: 700; letter-spacing: -.5px; color: #fff; }
+.footer-logo { font-size: 15px; font-weight: 700; letter-spacing: -.3px; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
 .footer-links a { color: var(--muted); font-size: 14px; }
 .footer-links a:hover { color: #fff; }
