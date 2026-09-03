@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cold Calling Strategy We Use for B2B SaaS in 2026 — Outbounda</title>
+<meta name="description" content="The list, the word-for-word script, and the numbers to track. The exact cold calling process we run for SaaS clients booking 8-12 qualified meetings a month.">
+<link rel="canonical" href="https://outbounda.io/blog/cold-calling-strategy-for-saas/">
+<meta name="theme-color" content="#0C0E1D">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Outbounda">
+<meta property="og:url" content="https://outbounda.io/blog/cold-calling-strategy-for-saas/">
+<meta property="og:title" content="The Cold Calling Strategy We Use for B2B SaaS in 2026 — Outbounda">
+<meta property="og:description" content="The list, the word-for-word script, and the numbers to track. The exact cold calling process we run for SaaS clients booking 8-12 qualified meetings a month.">
+<meta property="og:image" content="https://i.ytimg.com/vi/CIupUmbBcdc/maxresdefault.jpg">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Cold Calling Strategy We Use for B2B SaaS in 2026 — Outbounda">
+<meta name="twitter:description" content="The list, the word-for-word script, and the numbers to track. The exact cold calling process we run for SaaS clients booking 8-12 qualified meetings a month.">
+<meta name="twitter:image" content="https://i.ytimg.com/vi/CIupUmbBcdc/maxresdefault.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* Outbounda — shared styles for generated pages (blog, pre-call).
+   Tokens match brand/brand-kit.html. Do not invent colours here. */
+
+:root {
+  --accent: #8B5CF6;
+  --accent-light: #C4B5FD;
+  --bg: #0C0E1D;
+  --bg-2: #13162E;
+  --bg-glow: #1E2150;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-2: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.10);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.52);
+  --subtle: rgba(255, 255, 255, 0.34);
+  --mono: 'SF Mono', 'Fira Code', 'Fira Mono', ui-monospace, Menlo, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ambient glow, same treatment as the home page hero */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% -10%, var(--bg-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { color: #fff; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* ─── NAV ─── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 68px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(12, 14, 29, 0.82);
+  backdrop-filter: saturate(150%) blur(12px);
+  -webkit-backdrop-filter: saturate(150%) blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+/* Brand wordmark gradient — matches index.html. Never swap the colours. */
+.nav-wordmark, .footer-logo {
+  background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fff;                 /* fallback if background-clip is unsupported */
+}
+.nav-wordmark { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links a { color: rgba(255, 255, 255, 0.55); font-size: 14px; font-weight: 500; transition: color .2s; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: #fff; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all .2s;
+  border: none;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--accent); color: #fff; padding: 11px 22px; font-size: 14px; }
+.btn-primary:hover { background: #7C3AED; color: #fff; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(139, 92, 246, .45); }
+.btn-lg { padding: 15px 30px; font-size: 16px; }
+
+/* ─── LAYOUT ─── */
+main { position: relative; z-index: 1; flex: 1 0 auto; padding: 0 6% 100px; }
+.wrap { max-width: 1080px; margin: 0 auto; }
+.narrow { max-width: 720px; margin: 0 auto; }
+
+.page-head { padding: 72px 0 48px; }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 18px;
+}
+h1 {
+  font-size: clamp(34px, 5.5vw, 54px);
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+.page-head p { color: var(--muted); font-size: 19px; margin-top: 18px; max-width: 60ch; }
+
+/* ─── BLOG INDEX ─── */
+.post-list { display: grid; gap: 16px; list-style: none; }
+.post-card {
+  display: block;
+  padding: 28px 30px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: border-color .2s, transform .2s, background .2s;
+}
+.post-card:hover {
+  border-color: rgba(139, 92, 246, .45);
+  background: var(--card-2);
+  transform: translateY(-2px);
+}
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  margin-bottom: 12px;
+}
+.post-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--subtle); }
+.has-video { color: var(--accent-light); display: inline-flex; align-items: center; gap: 6px; }
+.post-card h2 {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 10px;
+  text-wrap: balance;
+}
+.post-card p { color: var(--muted); font-size: 16px; line-height: 1.6; }
+
+.empty {
+  padding: 60px 30px;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  color: var(--muted);
+}
+
+/* ─── POST ─── */
+.post-head { padding: 64px 0 36px; }
+.post-head h1 { font-size: clamp(30px, 4.6vw, 46px); }
+.post-head .post-meta { margin: 0 0 20px; }
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  margin-bottom: 44px;
+}
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+article { font-size: 17.5px; line-height: 1.78; }
+article > * + * { margin-top: 1.35em; }
+article h2 {
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.25;
+  color: #fff;
+  margin-top: 2.2em;
+  text-wrap: balance;
+}
+article h3 {
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -.01em;
+  color: #fff;
+  margin-top: 1.9em;
+}
+article p { color: rgba(255, 255, 255, .80); }
+article strong { color: #fff; font-weight: 650; }
+article ul, article ol { padding-left: 1.3em; color: rgba(255, 255, 255, .80); }
+article li + li { margin-top: .5em; }
+article li::marker { color: var(--accent); }
+article a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(196, 181, 253, .4); }
+article a:hover { text-decoration-color: currentColor; }
+article blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 22px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.55;
+}
+article code {
+  font-family: var(--mono);
+  font-size: .87em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  color: var(--accent-light);
+}
+article pre {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  overflow-x: auto;
+}
+article pre code { background: none; border: 0; padding: 0; color: var(--text); }
+article img { max-width: 100%; border-radius: 12px; display: block; }
+article hr { border: 0; border-top: 1px solid var(--border); margin: 2.6em 0; }
+article table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+article th, article td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+article th { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--subtle); font-weight: 500; }
+
+/* ─── PRE-CALL ─── */
+.video-grid { display: grid; gap: 22px; margin-bottom: 56px; }
+.video-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.video-card .video-embed { margin: 0; border: 0; border-radius: 0; border-bottom: 1px solid var(--border); }
+.video-card-body { padding: 22px 26px 26px; }
+.video-card h3 { font-size: 20px; font-weight: 650; letter-spacing: -.015em; color: #fff; margin-bottom: 8px; }
+.video-card p { color: var(--muted); font-size: 16px; }
+
+.checklist { display: grid; gap: 14px; margin-bottom: 48px; list-style: none; }
+.checklist li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 14px;
+  align-items: start;
+  color: rgba(255, 255, 255, .80);
+}
+.checklist svg { margin-top: 5px; flex: none; }
+
+.cta-band {
+  padding: 44px 40px;
+  background: linear-gradient(140deg, var(--bg-2), rgba(139, 92, 246, .10));
+  border: 1px solid rgba(139, 92, 246, .28);
+  border-radius: 20px;
+  text-align: center;
+}
+.cta-band h2 { font-size: 27px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 12px; }
+.cta-band p { color: var(--muted); margin-bottom: 24px; max-width: 48ch; margin-left: auto; margin-right: auto; }
+
+/* ─── FOOTER ─── */
+footer {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  padding: 44px 6%;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px 32px;
+  text-align: center;
+}
+.footer-logo { font-size: 15px; font-weight: 700; letter-spacing: -.3px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+.footer-links a { color: var(--muted); font-size: 14px; }
+.footer-links a:hover { color: #fff; }
+.footer-copy { color: var(--subtle); font-size: 13px; width: 100%; }
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  nav { padding: 0 5%; gap: 12px; }
+  .nav-links { display: none; }
+  main { padding: 0 5% 72px; }
+  .page-head { padding: 48px 0 36px; }
+  .post-card { padding: 22px 22px; }
+  .cta-band { padding: 34px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .post-card:hover, .btn-primary:hover { transform: none; }
+}
+
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Cold Calling Strategy We Use for B2B SaaS in 2026",
+  "description": "The list, the word-for-word script, and the numbers to track. The exact cold calling process we run for SaaS clients booking 8-12 qualified meetings a month.",
+  "datePublished": "2026-09-02",
+  "url": "https://outbounda.io/blog/cold-calling-strategy-for-saas/",
+  "author": {
+    "@type": "Person",
+    "name": "Matty Morgan"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Outbounda",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://outbounda.io/logo-512.png"
+    }
+  }
+}</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-wordmark">Outbounda</span></a>
+  <ul class="nav-links">
+    <li><a href="/#how-it-works">How it works</a></li>
+    <li><a href="/#results">Results</a></li>
+    <li><a href="/blog/" aria-current="page">Blog</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+  <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a Call &rarr;</a>
+</nav>
+<main>
+  <div class="narrow">
+    <header class="post-head">
+      <div class="post-meta"><span>2 September 2026</span><span class="dot"></span><span class="has-video">Watch the video</span></div>
+      <h1>The Cold Calling Strategy We Use for B2B SaaS in 2026</h1>
+    </header>
+    <div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/CIupUmbBcdc" title="The Cold Calling Strategy We Use for B2B SaaS in 2026"
+    loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+    <article>
+<p>If you run a SaaS company, cold calling is still the quickest way to fill your calendar. It&rsquo;s
+working better right now than it has in years.</p>
+<p>I was one of Rippling&rsquo;s first go-to-market sales development hires in Australia. Even with all of
+their inbound and a huge partner network, 85 to 90% of the meetings we booked came over the phone
+as we scaled from zero to $10M ARR in region. I now run an outbound agency where we&rsquo;ve generated
+over seven figures in revenue for the SaaS clients we work with, and calling is still where most
+of it starts.</p>
+<p>This is the whole process: how we build the list, the script we use word for word, and the numbers
+you should be tracking once your team starts dialling.</p>
+<h2>Why cold calling is working again</h2>
+<p>Every go-to-market team is running the same three or four tools across cold email and LinkedIn. We
+use them too. The result is that your buyer&rsquo;s inbox is full of the same automated emails, reply
+rates have dropped a lot, and most of it never gets seen because it lands in spam. Even when it
+does get seen, you&rsquo;re one of forty.</p>
+<p>Cold calling is the one channel where you get an answer on the spot. You&rsquo;re not waiting for a
+reply that never comes. You find out in 30 seconds whether that person has a problem you solve,
+and if they don&rsquo;t, it&rsquo;s 30 seconds gone.</p>
+<p>One more thing worth noticing: the founder of one of the biggest AI SDR tools out there spent two
+years telling everyone to stop hiring humans. He&rsquo;s just retired that slogan and hired his first
+human rep to put on the phone.</p>
+<p>Worth saying: almost every person I dialled at Rippling had already had an email or a LinkedIn
+message from us. The phone closed it. The other two channels made the name familiar first. Calling
+on its own is a much harder job.</p>
+<h2>Step 1: Build the list from your own customers</h2>
+<p>Everything depends on who&rsquo;s on the list.</p>
+<p>We build every list from scratch, and we start with the customers a company already has. Before we
+look at a single new company, we go back through the client&rsquo;s existing paying customers and work
+out what they have in common. Company size, where they&rsquo;re based, what software they run, what was
+going wrong before they bought, and why they picked our client over the alternatives.</p>
+<p>Then we go and find every other company that matches that description.</p>
+<p>Blue Onion is the example I always use. They&rsquo;re an accounting solution that integrates with Xero.
+Their best customers are e-commerce founders, financial controllers, finance managers and
+accounting managers. Once you know that, you know exactly which job titles to look for inside every
+company on the list, because those are the people with the problem.</p>
+<p>If we&rsquo;ve got a list of 10,000 companies, we&rsquo;ll usually end up with about 40,000 contacts. Three or
+four people per company worth speaking to.</p>
+<h3>The two people you&rsquo;re calling</h3>
+<p>Those contacts fall into two groups that care about completely different things.</p>
+<p><strong>The champion</strong> is the person dealing with the problem every day. The spreadsheet, the manual
+process, the thing your product removes. Most of the time they can&rsquo;t sign the contract, but they&rsquo;re
+the one who&rsquo;ll argue for it internally.</p>
+<p><strong>The signer</strong> is usually a CFO, CEO or managing director. They don&rsquo;t care that data entry is
+annoying. They care about risk, compliance, cost and revenue. For them you need a business case:
+what happens if they don&rsquo;t fix it.</p>
+<p>Same company, same product, two entirely different calls.</p>
+<h2>Signals are massively oversold</h2>
+<p>The standard advice at this point is to add a way of spotting which companies are ready to buy
+right now. Just raised a round. Hiring for a certain role. Running a specific bit of tech. In
+go-to-market we call those signals.</p>
+<p>Some businesses genuinely have them, usually software selling to other software companies. For a
+finance product it might be which accounting or payroll system they run. For one of our clients
+selling employee video software, it&rsquo;s whether a company has an out-of-date careers page.</p>
+<p>But the go-to-market world has sold founders and sales leaders the idea that every company has
+signals you can track, and that if you find the signal the deal follows. That&rsquo;s not true. Plenty of
+businesses have no signals at all and we book meetings for them every single month.</p>
+<p>The 12 to 15 meetings a month we book for Blue Onion aren&rsquo;t based on signals. The only filter is
+whether the company uses Shopify, because we know the product integrates with it.</p>
+<p>You can get away without signals. You can&rsquo;t get away with bad data.</p>
+<h2>Bad data kills more campaigns than bad scripts</h2>
+<p>The mistake I see most often is buying a huge list off a data provider and handing it straight to
+the team. Numbers go out of date. A chunk of them were never right. Your reps spend an entire
+session on disconnected lines and people who left the company two years ago.</p>
+<p>Before a list reaches a rep, every row needs a name, a job title, a company and a validated mobile
+number. Not a switchboard, not an office line. A mobile.</p>
+<p>The way to get there is a waterfall enrichment tool. It&rsquo;s a data aggregator: if the first provider
+doesn&rsquo;t have the mobile, it goes to the next one, then the next. That&rsquo;s the difference between
+reps talking to buyers and reps talking to reception.</p>
+<p>Get the list right, because the next two steps don&rsquo;t work unless you do.</p>
+<h2>Step 2: The script</h2>
+<p>Before anyone writes a script, go and get two things.</p>
+<p>First, every objection that keeps coming back in your market. Get this from whoever has been
+selling the product longest, usually the founder. Second, which competitors your buyers are
+already using, because they almost always have something in place already.</p>
+<h3>The opener</h3>
+<p>The opener you never want is &ldquo;Hey John, it&rsquo;s just Matty, how are you today?&rdquo; It&rsquo;s robotic. They&rsquo;ve
+heard that exact pattern a thousand times and their guard is up before you&rsquo;ve said anything.</p>
+<p>Ask for permission before you pitch anything. That&rsquo;s a permission-based opener. Say hi, use their
+name, say who you are and where you&rsquo;re calling from, admit it&rsquo;s a cold call, then ask for a minute.</p>
+<blockquote>
+<p>Hey John, it&rsquo;s just Matty here from Outbounda. I know I&rsquo;m calling you out of the blue, we haven&rsquo;t
+spoken before. Do you mind if I grab a minute to explain why I&rsquo;m calling?</p>
+</blockquote>
+<p>Because you asked first, their guard drops and they actually listen.</p>
+<h3>The problem statement</h3>
+<p>Once they say yes, you still don&rsquo;t pitch. Name the type of people you work with, the problem those
+people usually have, and ask if it sounds familiar.</p>
+<blockquote>
+<p>So John, the reason I&rsquo;m reaching out is we work with founders and sales leaders at software
+companies like yours. What we hear is they&rsquo;ve got a real focus on top of funnel and pipeline, but
+no big sales development team internally, so cold calling and outreach ends up on the founder&rsquo;s
+plate. Just curious if that sounds familiar at all.</p>
+</blockquote>
+<p>You still haven&rsquo;t said what you sell. You&rsquo;ve asked them a question about their own business.</p>
+<p>If it resonates, move into discovery and ask how they&rsquo;re handling it today. You&rsquo;ve earned the right
+to drop the script and have a normal conversation.</p>
+<p>If it doesn&rsquo;t resonate, don&rsquo;t fold:</p>
+<blockquote>
+<p>Totally get that. If it did resonate you&rsquo;d probably be reaching out to us, not sitting around
+waiting for a cold call. But just out of curiosity, how are you managing pipeline today?</p>
+</blockquote>
+<p>Either way you&rsquo;re back in the conversation, which is the only thing you&rsquo;re trying to do at this
+stage.</p>
+<h3>The pitch and the close</h3>
+<p>Only after discovery do you pitch, and you can ask permission for that too. &ldquo;That makes sense, we
+hear that a lot. Do you mind if I quickly explain what we do and you can see if it&rsquo;s relevant?&rdquo;
+Two or three sentences. Nothing more.</p>
+<p>Then go for the close. You&rsquo;re not asking them to buy anything, you&rsquo;re asking for 20 minutes.</p>
+<blockquote>
+<p>Would you be totally opposed to having a quick conversation to see if this could make sense for
+your business?</p>
+</blockquote>
+<p>Qualifying happens after the time is agreed, not before. How long they&rsquo;ve had the issue, what
+they&rsquo;re doing about it now, how many people are in the business. Then confirm the invite has landed
+in their calendar and get them to accept it before you hang up.</p>
+<h2>Step 3: Track the whole sequence, not the dials</h2>
+<p>The biggest mistake I see is managing calling by dial count. You set a target of 80 a day, the team
+hits 80 a day, and if only one person answers it doesn&rsquo;t matter whether they made 50 or 100.</p>
+<p>I saw this recently with a client. Each rep was making around 100 calls a day, connecting with five
+or six people, and reaching a pitch about 35% of the time. So 100 calls produced one or two real
+conversations. The dial number looked completely fine. The connect rate and the pitch rate were the
+numbers nobody was looking at.</p>
+<p>Count every stage instead:</p>
+<p><strong>Dials → connects → conversations → qualified conversations → meetings booked → meetings held.</strong></p>
+<p>Each number is smaller than the one before it, so you can see exactly where people drop off.</p>
+<h3>The benchmarks to aim for</h3>
+<ul>
+<li><strong>50-100 dials per hour</strong> per rep on a power dialer</li>
+<li><strong>10% connect rate</strong> is acceptable; with the right targeting we&rsquo;ve seen 20-25%</li>
+<li><strong>60%+ of connects</strong> should turn into a real conversation</li>
+</ul>
+<p>Here&rsquo;s a live campaign for Blue Onion: 182 dials, 23 connects, 14 conversations, two meetings
+booked. That&rsquo;s a 12.6% connect rate. Connect-to-conversation came in at 60.9%, bang on benchmark.
+Conversation-to-meeting was 14.3%, which we can definitely improve.</p>
+<h3>Reading the drop-off</h3>
+<p><strong>Plenty of dials, nobody answering?</strong> It&rsquo;s the list. Wrong numbers, out of date, or you&rsquo;ve got
+company mainlines and never get past reception.</p>
+<p><strong>People answering but nobody letting you pitch?</strong> It&rsquo;s the first 30 seconds, and it&rsquo;s almost
+always a rep treating a brush-off like an objection.</p>
+<p>A brush-off is a reflex. &ldquo;Send me an email&rdquo;, &ldquo;I&rsquo;m in a meeting&rdquo;, &ldquo;not interested&rdquo;. It happens
+before you&rsquo;ve pitched. An objection is a real answer with a reason attached, and it comes after.
+You handle objections. You call out brush-offs.</p>
+<blockquote>
+<p>Sure John, more than happy to send an email. Though usually when someone says that, it&rsquo;s a nice
+way of telling me to buzz off. Just out of curiosity, is there anything specific you&rsquo;d want in
+it, or are you just not interested in the conversation?</p>
+</blockquote>
+<p>For &ldquo;I&rsquo;m in a meeting&rdquo;:</p>
+<blockquote>
+<p>Totally get it. How about I take 30 seconds now to explain why I&rsquo;m calling, and if it doesn&rsquo;t
+make sense I&rsquo;ll never call you back.</p>
+</blockquote>
+<p>You&rsquo;ve got permission to call people out like that. Most of the time it earns their respect.</p>
+<h2>What this actually produces</h2>
+<p>With a clean list, a script that works and the numbers in front of you, a good rep can book
+anywhere from three to ten meetings a day.</p>
+<p>When I started the business I had six clients and I was calling for all of them. Each was getting
+four to five meetings a week. That&rsquo;s 20 to 30 meetings a week from the phone alone.</p>
+<p>Our clients today average between 8 and 12 qualified meetings a month. One of them wasn&rsquo;t doing any
+outbound at all before we started and closed three deals in their first 90 days.</p>
+<p>None of this is complicated. It&rsquo;s just a lot of work done properly in the right order, and most
+teams skip straight to the dialling.</p>
+    </article>
+    <div class="cta-band" style="margin-top:64px">
+      <h2>Want this running for your company?</h2>
+      <p>We build and run the outbound engine — cold email, LinkedIn, and cold calling. You focus on closing.</p>
+      <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Book a Strategy Session &rarr;</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-logo">Outbounda</div>
+  <div class="footer-links">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#results">Results</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://www.youtube.com/@matty.outbounda" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://calendly.com/matty-outbounda/30min" target="_blank" rel="noopener">Book a Call</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Outbounda Pty Ltd &middot; Sydney, Australia</div>
+</footer>
+</body>
+</html>
