@@ -139,21 +139,75 @@ h1 {
 }
 .page-head p { color: var(--muted); font-size: 19px; margin-top: 18px; max-width: 60ch; }
 
-/* ─── BLOG INDEX ─── */
-.post-list { display: grid; gap: 16px; list-style: none; }
-.post-card {
-  display: block;
-  padding: 28px 30px;
-  background: var(--card);
-  border: 1px solid var(--border);
+/* ─── BLOG INDEX ───
+   Editorial feed: one image-led card per row, no panel or border around the card.
+   The thumbnail carries the card; everything else hangs off it. */
+.feed-head, .post-list { max-width: 780px; margin-left: auto; margin-right: auto; }
+.post-list { display: grid; gap: 64px; list-style: none; }
+
+.post-card { display: block; }
+
+.post-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
   border-radius: 16px;
-  transition: border-color .2s, transform .2s, background .2s;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  margin-bottom: 20px;
 }
-.post-card:hover {
-  border-color: rgba(139, 92, 246, .45);
-  background: var(--card-2);
-  transform: translateY(-2px);
+.post-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s cubic-bezier(.2, .7, .3, 1);
 }
+.post-card:hover .post-thumb img { transform: scale(1.035); }
+.post-card:hover .post-thumb { border-color: rgba(139, 92, 246, .45); }
+
+/* Play glyph, so a video-backed post reads as one at a glance */
+.thumb-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 62px;
+  height: 62px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(12, 14, 29, .62);
+  border: 1px solid rgba(255, 255, 255, .28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background .25s, border-color .25s;
+}
+.thumb-play::after {
+  content: "";
+  position: absolute;
+  left: 54%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 9px 0 9px 15px;
+  border-color: transparent transparent transparent #fff;
+}
+.post-card:hover .thumb-play { background: var(--accent); border-color: transparent; }
+
+.post-thumb-empty {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(140deg, var(--bg-2), rgba(139, 92, 246, .16));
+}
+.post-thumb-empty span {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .post-meta {
   display: flex;
   flex-wrap: wrap;
@@ -164,20 +218,47 @@ h1 {
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--subtle);
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 .post-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--subtle); }
+.chip {
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, .38);
+  background: rgba(139, 92, 246, .10);
+  color: var(--accent-light);
+  letter-spacing: .1em;
+}
 .has-video { color: var(--accent-light); display: inline-flex; align-items: center; gap: 6px; }
+
 .post-card h2 {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 700;
-  letter-spacing: -.02em;
-  line-height: 1.25;
+  letter-spacing: -.028em;
+  line-height: 1.2;
   color: #fff;
   margin-bottom: 10px;
   text-wrap: balance;
+  transition: color .2s;
 }
-.post-card p { color: var(--muted); font-size: 16px; line-height: 1.6; }
+.post-card:hover h2 { color: var(--accent-light); }
+.post-card p { color: var(--muted); font-size: 16.5px; line-height: 1.62; }
+
+/* ─── BYLINE ─── */
+.byline { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
+.byline img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex: none;
+}
+.byline div { display: flex; flex-direction: column; line-height: 1.35; }
+.byline-name { color: #fff; font-size: 14.5px; font-weight: 600; }
+.byline-role { color: var(--subtle); font-size: 13px; }
+.byline-lg img { width: 48px; height: 48px; }
+.byline-lg .byline-name { font-size: 16px; }
 
 .empty {
   padding: 60px 30px;
@@ -191,6 +272,14 @@ h1 {
 .post-head { padding: 64px 0 36px; }
 .post-head h1 { font-size: clamp(30px, 4.6vw, 46px); }
 .post-head .post-meta { margin: 0 0 20px; }
+.post-standfirst {
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.6;
+  margin-top: 18px;
+  max-width: 62ch;
+}
+.post-head .byline { margin-top: 28px; padding-top: 26px; border-top: 1px solid var(--border); }
 
 .video-embed {
   position: relative;
@@ -318,13 +407,18 @@ footer {
   .nav-links { display: none; }
   main { padding: 0 5% 72px; }
   .page-head { padding: 48px 0 36px; }
-  .post-card { padding: 22px 22px; }
+  .post-list { gap: 48px; }
+  .post-card h2 { font-size: 24px; }
+  .post-thumb { border-radius: 12px; margin-bottom: 16px; }
+  .thumb-play { width: 48px; height: 48px; }
+  .post-standfirst { font-size: 17px; }
   .cta-band { padding: 34px 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .post-card:hover, .btn-primary:hover { transform: none; }
+  .post-card:hover .post-thumb img { transform: none; }
 }
 
 </style>
@@ -363,8 +457,16 @@ footer {
 <main>
   <div class="narrow">
     <header class="post-head">
-      <div class="post-meta"><span>22 September 2026</span><span class="dot"></span><span class="has-video">Watch the video</span></div>
+      <div class="post-meta"><span class="chip">Outbound</span><span>22 September 2026</span><span class="dot"></span><span>7 min read</span></div>
       <h1>The B2B SaaS Outbound Playbook We Ran at Rippling (0 to $10M in Australia)</h1>
+      <p class="post-standfirst">The full outbound playbook behind Rippling&#x27;s Australian launch, from list building and cold call blocks to the direct mail and partner motions that ran alongside the phone.</p>
+      <div class="byline byline-lg">
+      <img src="/assets/matty-avatar.jpg" alt="" width="40" height="40" loading="lazy">
+      <div>
+        <span class="byline-name">Matty Morgan</span>
+        <span class="byline-role">Founder, Outbounda</span>
+      </div>
+    </div>
     </header>
     <div class="video-embed">
   <iframe src="https://www.youtube-nocookie.com/embed/vF7gvOACaek" title="The B2B SaaS Outbound Playbook We Ran at Rippling (0 to $10M in Australia)"
