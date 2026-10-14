@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Generate Leads for B2B SaaS: The 13-Stage Process We Run for Every Client | Outbounda</title>
+<meta name="description" content="The full outbound lead generation process we use for B2B SaaS clients, in order, from working out whether your sales are repeatable to the six numbers that tell you what&#x27;s broken.">
+<link rel="canonical" href="https://outbounda.io/blog/b2b-saas-lead-generation/">
+<meta name="theme-color" content="#0C0E1D">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Outbounda">
+<meta property="og:url" content="https://outbounda.io/blog/b2b-saas-lead-generation/">
+<meta property="og:title" content="How to Generate Leads for B2B SaaS: The 13-Stage Process We Run for Every Client | Outbounda">
+<meta property="og:description" content="The full outbound lead generation process we use for B2B SaaS clients, in order, from working out whether your sales are repeatable to the six numbers that tell you what&#x27;s broken.">
+<meta property="og:image" content="https://i.ytimg.com/vi/TR9OqocnE_Y/maxresdefault.jpg">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Generate Leads for B2B SaaS: The 13-Stage Process We Run for Every Client | Outbounda">
+<meta name="twitter:description" content="The full outbound lead generation process we use for B2B SaaS clients, in order, from working out whether your sales are repeatable to the six numbers that tell you what&#x27;s broken.">
+<meta name="twitter:image" content="https://i.ytimg.com/vi/TR9OqocnE_Y/maxresdefault.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* Outbounda: shared styles for generated pages (blog, pre-call).
+   Tokens match brand/brand-kit.html. Do not invent colours here. */
+
+:root {
+  --accent: #8B5CF6;
+  --accent-light: #C4B5FD;
+  --bg: #0C0E1D;
+  --bg-2: #13162E;
+  --bg-glow: #1E2150;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-2: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.10);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.52);
+  --subtle: rgba(255, 255, 255, 0.34);
+  --mono: 'SF Mono', 'Fira Code', 'Fira Mono', ui-monospace, Menlo, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ambient glow, same treatment as the home page hero */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% -10%, var(--bg-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { color: #fff; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* ─── NAV ─── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 68px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(12, 14, 29, 0.82);
+  backdrop-filter: saturate(150%) blur(12px);
+  -webkit-backdrop-filter: saturate(150%) blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+/* Brand wordmark gradient, matches index.html. Never swap the colours. */
+.nav-wordmark, .footer-logo {
+  background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fff;                 /* fallback if background-clip is unsupported */
+}
+.nav-wordmark { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links a { color: rgba(255, 255, 255, 0.55); font-size: 14px; font-weight: 500; transition: color .2s; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: #fff; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all .2s;
+  border: none;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--accent); color: #fff; padding: 11px 22px; font-size: 14px; }
+.btn-primary:hover { background: #7C3AED; color: #fff; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(139, 92, 246, .45); }
+.btn-lg { padding: 15px 30px; font-size: 16px; }
+
+/* ─── LAYOUT ─── */
+main { position: relative; z-index: 1; flex: 1 0 auto; padding: 0 6% 100px; }
+.wrap { max-width: 1080px; margin: 0 auto; }
+.wrap-wide { max-width: 1240px; }   /* blog index — gives the 3-up grid room */
+.narrow { max-width: 720px; margin: 0 auto; }
+
+.page-head { padding: 72px 0 48px; }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 18px;
+}
+h1 {
+  font-size: clamp(34px, 5.5vw, 54px);
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+.page-head p { color: var(--muted); font-size: 19px; margin-top: 18px; max-width: 60ch; }
+
+/* ─── BLOG INDEX ───
+   Editorial feed: one image-led card per row, no panel or border around the card.
+   The thumbnail carries the card; everything else hangs off it. */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 44px 30px;
+  list-style: none;
+}
+
+.post-card { display: flex; flex-direction: column; height: 100%; }
+
+.post-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  margin-bottom: 16px;
+}
+.post-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s cubic-bezier(.2, .7, .3, 1);
+}
+.post-card:hover .post-thumb img { transform: scale(1.035); }
+.post-card:hover .post-thumb { border-color: rgba(139, 92, 246, .45); }
+
+/* Play glyph, so a video-backed post reads as one at a glance */
+.thumb-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 46px;
+  height: 46px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(12, 14, 29, .62);
+  border: 1px solid rgba(255, 255, 255, .28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background .25s, border-color .25s;
+}
+.thumb-play::after {
+  content: "";
+  position: absolute;
+  left: 54%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent #fff;
+}
+.post-card:hover .thumb-play { background: var(--accent); border-color: transparent; }
+
+.post-thumb-empty {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(140deg, var(--bg-2), rgba(139, 92, 246, .16));
+}
+.post-thumb-empty span {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  margin-bottom: 11px;
+}
+.post-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--subtle); }
+.chip {
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, .38);
+  background: rgba(139, 92, 246, .10);
+  color: var(--accent-light);
+  letter-spacing: .1em;
+}
+.has-video { color: var(--accent-light); display: inline-flex; align-items: center; gap: 6px; }
+
+.post-card h2 {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -.022em;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 8px;
+  text-wrap: balance;
+  transition: color .2s;
+}
+.post-card:hover h2 { color: var(--accent-light); }
+.post-card p {
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.58;
+  /* Clamp so a long standfirst can't push one card's byline out of line with the rest */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── BYLINE ─── */
+.byline { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 16px; }
+.byline img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex: none;
+}
+.byline div { display: flex; flex-direction: column; line-height: 1.3; }
+.byline-name { color: #fff; font-size: 13px; font-weight: 600; }
+.byline-role { color: var(--subtle); font-size: 11.5px; }
+.byline-lg img { width: 48px; height: 48px; }
+.byline-lg { gap: 12px; }
+.byline-lg .byline-name { font-size: 16px; }
+.byline-lg .byline-role { font-size: 13px; }
+
+.empty {
+  padding: 60px 30px;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  color: var(--muted);
+}
+
+/* ─── POST ─── */
+.post-head { padding: 64px 0 36px; }
+.post-head h1 { font-size: clamp(30px, 4.6vw, 46px); }
+.post-head .post-meta { margin: 0 0 20px; }
+.post-standfirst {
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.6;
+  margin-top: 18px;
+  max-width: 62ch;
+}
+.post-head .byline { margin-top: 28px; padding-top: 26px; border-top: 1px solid var(--border); }
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  margin-bottom: 44px;
+}
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+article { font-size: 17.5px; line-height: 1.78; }
+article > * + * { margin-top: 1.35em; }
+article h2 {
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.25;
+  color: #fff;
+  margin-top: 2.2em;
+  text-wrap: balance;
+}
+article h3 {
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -.01em;
+  color: #fff;
+  margin-top: 1.9em;
+}
+article p { color: rgba(255, 255, 255, .80); }
+article strong { color: #fff; font-weight: 650; }
+article ul, article ol { padding-left: 1.3em; color: rgba(255, 255, 255, .80); }
+article li + li { margin-top: .5em; }
+article li::marker { color: var(--accent); }
+article a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(196, 181, 253, .4); }
+article a:hover { text-decoration-color: currentColor; }
+article blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 22px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.55;
+}
+article code {
+  font-family: var(--mono);
+  font-size: .87em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  color: var(--accent-light);
+}
+article pre {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  overflow-x: auto;
+}
+article pre code { background: none; border: 0; padding: 0; color: var(--text); }
+article img { max-width: 100%; border-radius: 12px; display: block; }
+article hr { border: 0; border-top: 1px solid var(--border); margin: 2.6em 0; }
+article table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+article th, article td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+article th { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--subtle); font-weight: 500; }
+
+/* ─── PRE-CALL ─── */
+.video-grid { display: grid; gap: 22px; margin-bottom: 56px; }
+.video-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.video-card .video-embed { margin: 0; border: 0; border-radius: 0; border-bottom: 1px solid var(--border); }
+.video-card-body { padding: 22px 26px 26px; }
+.video-card h3 { font-size: 20px; font-weight: 650; letter-spacing: -.015em; color: #fff; margin-bottom: 8px; }
+.video-card p { color: var(--muted); font-size: 16px; }
+
+.checklist { display: grid; gap: 14px; margin-bottom: 48px; list-style: none; }
+.checklist li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 14px;
+  align-items: start;
+  color: rgba(255, 255, 255, .80);
+}
+.checklist svg { margin-top: 5px; flex: none; }
+
+.cta-band {
+  padding: 44px 40px;
+  background: linear-gradient(140deg, var(--bg-2), rgba(139, 92, 246, .10));
+  border: 1px solid rgba(139, 92, 246, .28);
+  border-radius: 20px;
+  text-align: center;
+}
+.cta-band h2 { font-size: 27px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 12px; }
+.cta-band p { color: var(--muted); margin-bottom: 24px; max-width: 48ch; margin-left: auto; margin-right: auto; }
+
+/* ─── FOOTER ─── */
+footer {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  padding: 44px 6%;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px 32px;
+  text-align: center;
+}
+.footer-logo { font-size: 15px; font-weight: 700; letter-spacing: -.3px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+.footer-links a { color: var(--muted); font-size: 14px; }
+.footer-links a:hover { color: #fff; }
+.footer-copy { color: var(--subtle); font-size: 13px; width: 100%; }
+
+/* 3-up down to 2-up, then a single column on phones */
+@media (max-width: 940px) {
+  .post-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  nav { padding: 0 5%; gap: 12px; }
+  .nav-links { display: none; }
+  main { padding: 0 5% 72px; }
+  .page-head { padding: 48px 0 36px; }
+  .post-list { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+  .post-card h2 { font-size: 20px; }
+  .post-card p { -webkit-line-clamp: 2; }
+  .post-standfirst { font-size: 17px; }
+  .cta-band { padding: 34px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .post-card:hover, .btn-primary:hover { transform: none; }
+  .post-card:hover .post-thumb img { transform: none; }
+}
+
+</style>
+<!-- RB2B visitor identification -->
+<script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HJZ28O5");</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Generate Leads for B2B SaaS: The 13-Stage Process We Run for Every Client",
+  "description": "The full outbound lead generation process we use for B2B SaaS clients, in order, from working out whether your sales are repeatable to the six numbers that tell you what's broken.",
+  "datePublished": "2026-10-14",
+  "url": "https://outbounda.io/blog/b2b-saas-lead-generation/",
+  "author": {
+    "@type": "Person",
+    "name": "Matty Morgan"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Outbounda",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://outbounda.io/logo-512.png"
+    }
+  }
+}</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-wordmark">Outbounda</span></a>
+  <ul class="nav-links">
+    <li><a href="/#how-it-works">How it works</a></li>
+    <li><a href="/#results">Results</a></li>
+    <li><a href="/blog/" aria-current="page">Blog</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+  <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a Call &rarr;</a>
+</nav>
+<main>
+  <div class="narrow">
+    <header class="post-head">
+      <div class="post-meta"><span class="chip">Outbound</span><span>14 October 2026</span><span class="dot"></span><span>8 min read</span></div>
+      <h1>How to Generate Leads for B2B SaaS: The 13-Stage Process We Run for Every Client</h1>
+      <p class="post-standfirst">The full outbound lead generation process we use for B2B SaaS clients, in order, from working out whether your sales are repeatable to the six numbers that tell you what&#x27;s broken.</p>
+      <div class="byline byline-lg">
+      <img src="/assets/matty-avatar.jpg" alt="" width="40" height="40" loading="lazy">
+      <div>
+        <span class="byline-name">Matty Morgan</span>
+        <span class="byline-role">Founder, Outbounda</span>
+      </div>
+    </div>
+    </header>
+    <div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/TR9OqocnE_Y" title="How to Generate Leads for B2B SaaS: The 13-Stage Process We Run for Every Client"
+    loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+    <article>
+<p>If you&rsquo;re trying to work out how to generate leads for a B2B SaaS company without building a whole SDR team, buying a list and handing your reps a script won&rsquo;t get you there. We&rsquo;ve booked more than 150 meetings in four months for a group of B2B SaaS clients, and 70 to 75% of them came from cold calling. All of it ran through the same 13 stages, in the same order.</p>
+<p>Here&rsquo;s every stage. Stage zero is the one almost everyone skips.</p>
+<h2>Stage 0: Work out whether your sales are repeatable yet</h2>
+<p>Lead generation means two very different things depending on where you are.</p>
+<p>In the first situation, you know who buys from you and why. You just need more of those people in your calendar. In the second, you&rsquo;ve got a product and a few customers, but you still don&rsquo;t know which market it&rsquo;s really for.</p>
+<p>From the outside they look identical. They need opposite plans.</p>
+<p>One question tells you which one you&rsquo;re in: <strong>of your last five closed deals, did they all come from the same channel?</strong></p>
+<p>Five referrals, say, or five inbound leads. That means your sales are repeatable and your only problem is volume. Five deals from five different places means you don&rsquo;t know where your pipeline comes from yet, and more outbound will mostly just cost you more.</p>
+<p>You should still do outbound in the second situation. You just set it up so every campaign tests one market, and at the end of it you know whether that market is right for your product. Booked meetings is the right scoreboard for the first situation. For the second, the scoreboard is what you learned.</p>
+<h2>Stage 1: Pick the easiest market, not the biggest</h2>
+<p>Most founders want to start with the biggest market they can find. Start with the smallest one that&rsquo;s still big enough, where the problem you solve hurts the most and you have to explain the least.</p>
+<p>The most useful exercise here is writing down who should <strong>never</strong> buy from you. The companies who&rsquo;d cancel. The ones who&rsquo;d be miserable using your product. The ones who&rsquo;d need six months of education first. If you can&rsquo;t name them, you haven&rsquo;t found your market yet.</p>
+<p>Then write your ideal customer profile as a set of assumptions, not a list of boxes. Each assumption is either right or wrong, so give each one a label and test it on its own. For a client selling video software to recruiting teams, three of ours were:</p>
+<ul>
+<li><strong>A1:</strong> companies over 500 staff with an employer brand manager, who struggle to make video fast enough to keep up with hiring</li>
+<li><strong>A2:</strong> companies hiring a lot with nobody in employer brand, where the head of talent acquisition has roles staying open too long</li>
+<li><strong>A3:</strong> companies that just raised and are growing, where the head of people has a careers page that looks like everyone else&rsquo;s</li>
+</ul>
+<p>Every campaign gets one segment, one job title, one reason to call them now and one problem. Change three things at once and you&rsquo;ll never know what worked.</p>
+<h2>Stage 2: Get the message right before you hire anyone</h2>
+<p>Every message should be about one problem for one type of person. Leave the platform and the feature list out of it.</p>
+<p>First, explain your product with no industry terms. Most founders can do it in about 15 seconds once their usual words are taken away. Then turn that into a 30-second version with four parts: the story, the problem, the outcome and the ask. The same four parts work in a cold call opener, an email and a LinkedIn message.</p>
+<p>Hire an SDR before you&rsquo;ve done this and you&rsquo;re paying them to find out the message doesn&rsquo;t work. That can be two months of salary with no meetings, and you still won&rsquo;t know whether it was the rep, the list or the pitch.</p>
+<h2>Stage 3: Build a list of every company that could buy</h2>
+<p>This is your total addressable market. It takes a lot longer than an afternoon in Apollo, which is why we have someone whose whole job is building lists.</p>
+<p>Start with a kickoff that goes through the last 20 customers you closed. What do they have in common? Headcount, the title of whoever signed, the tech they use, and what made them buy when they did.</p>
+<p>Then set a <strong>maximum</strong> company size, not just a minimum. Go too big and they&rsquo;ve probably built their own version of your product.</p>
+<p>Find three to five people at each company who own the problem. 10,000 companies turns into 40,000 to 50,000 contacts. You won&rsquo;t call all of them. That&rsquo;s everyone you could reach, and the next stages cut it down.</p>
+<h2>Stages 4 and 5: Check the data, then remove anyone who already knows you</h2>
+<p>Make 100 dials when half the list left their company a year ago and only about 50 of those dials could ever have gone anywhere.</p>
+<p>Every contact has to pass four checks before anyone dials:</p>
+<ol>
+<li>A direct mobile number. We bin landlines and office numbers.</li>
+<li>They own the problem or the budget themselves.</li>
+<li>Their company is inside the size band you set.</li>
+<li>They&rsquo;re based in the market you&rsquo;re calling.</li>
+</ol>
+<p>Claude can run those checks across a whole list, but nothing reaches a rep until a person has read it and approved it.</p>
+<p>Then take out everyone you&rsquo;ve already spoken to, anyone in an active email or LinkedIn campaign, existing customers, open pipeline, your do-not-contact list and any company you&rsquo;ve already booked a meeting with. Skip this and your reps end up cold calling your own customers.</p>
+<h2>Stage 6: Email and LinkedIn go out before anyone calls</h2>
+<p>Cold calling books most of our meetings, but email and LinkedIn always go first. They&rsquo;re cheap, and they show you who&rsquo;s engaging before anyone spends time on the phone.</p>
+<p>On email, a lot of people still follow advice from 2022. Since Gmail changed its bulk sender rules in 2024, we keep it to 20 to 30 emails per inbox per day. Push 100 to 150 from one inbox and you&rsquo;ll wreck your domain&rsquo;s reputation.</p>
+<p>On LinkedIn, never ask for a meeting in the first message. Give away something their company would pay for. For us that&rsquo;s 100 validated emails and phone numbers matching their market, with no ask attached. Three of our live LinkedIn campaigns are replying at 33%, 27% and 18%.</p>
+<h2>Stage 7: Score the list and only call the top slice</h2>
+<p>Every contact gets a score based on how they engaged with your emails and LinkedIn messages, plus extra points for buying signals. We call the top 30 to 40% of each segment. On lists built like that, around 20% of our dials get picked up.</p>
+<p>Signals are different for every business. For a visa sponsorship client, it&rsquo;s job ads open for 30 days that mention sponsorship. Another good one is companies using a competitor&rsquo;s product.</p>
+<p>But signals matter less than people think. One of our best performing clients doesn&rsquo;t track a single signal. The only filter is whether the company uses Shopify. Signals help you decide who to call first. They can&rsquo;t create demand that isn&rsquo;t there.</p>
+<h2>Stage 8: Call</h2>
+<p>They can ignore your email and scroll past your LinkedIn message. Once they&rsquo;ve picked up and said hello, they&rsquo;re in the conversation. And most of your competitors are trying to avoid the phone altogether.</p>
+<p>In one two-hour session we made about 240 dials to financial controllers, CFOs and finance managers at e-commerce companies and booked five meetings. That&rsquo;s one per 48 dials. On a well-targeted list with validated mobiles, one meeting every 40 to 50 dials is realistic.</p>
+<h2>Stage 9: Track six numbers, in order</h2>
+<p>Dials, connects, conversations, qualified conversations, meetings booked and meetings held. The step where the number drops is the step to fix.</p>
+<ul>
+<li><strong>Connect rate</strong> should be above 10%. 15 to 25% is really solid. Under 10% is almost always the list.</li>
+<li><strong>Connect to conversation</strong> should be above 60%. We see 80 to 90%. Under 60% means the first 30 seconds of the call need work.</li>
+<li><strong>Conversation to meeting</strong> falls when reps ask for too much, or ask too early.</li>
+</ul>
+<p>Not every session books five. A more normal one of ours was 182 dials, 23 pickups, 14 conversations and two meetings, which is a perfectly healthy session. Then set up a confirmation process for every meeting, because a booked meeting isn&rsquo;t a held one.</p>
+<h2>Stage 10: Stop, change or scale on a fixed date</h2>
+<p>Every campaign gets one of three decisions, written down on a fixed date each month.</p>
+<p>Here&rsquo;s roughly how the first 90 days go. Weeks one and two are list building, data checks and getting inboxes ready, with no meetings. Weeks three and four, email and LinkedIn go out and calling starts. Day 30 tells you whether the data or the opener is broken. Day 45 is your first proper decision on each campaign. Day 90 tells you whether outbound is working.</p>
+<p>Make sure you have enough calls before you trust a result. 34 dials turning into seven conversations and two meetings could just be luck. You need a couple of hundred connects in a segment.</p>
+<h3>Two campaigns where the targeting was wrong</h3>
+<p>A visa sponsorship client had never done outbound. Their biggest customers were tech companies, so tech was the assumed segment and construction was expected to do worst. Within two weeks of calling, HR managers at construction companies kept bringing up the same thing unprompted: a trades shortage in Queensland, and real pressure to sponsor workers from overseas. We built a construction campaign around that shortage and it beat everything else on the list.</p>
+<p>Another client processes and matches supplier invoices for businesses on Xero. The plan was to call all of them. Call after call, we reached businesses under 50 staff using Xero only for payroll, with no invoice software to replace. We moved to multi-entity businesses, like dental and medical practices with more than one site, where invoice volume makes the problem real. Using the tool you integrate with doesn&rsquo;t make a company qualified.</p>
+<h2>Stage 11: Work the follow-ups</h2>
+<p>Every campaign builds up a list of people who said &ldquo;call me in a few months&rdquo; or &ldquo;send me something&rdquo;. They don&rsquo;t count as booked meetings, so they get forgotten. If they have the problem and the timing was off, they can still book later, but only if someone calls them back.</p>
+<p>We run a follow-ups channel in Slack that pulls in our call transcripts every morning and flags every callback that&rsquo;s due. An hour blocked out each day does the same job.</p>
+<h2>Stage 12: Own the playbook</h2>
+<p>At the end of 90 days you should have pipeline and the playbook that built it: the list, the call scripts, the email and LinkedIn sequences, how objections were handled, and everything you learned about which segments respond. Your company keeps all of it, so if the person running outbound ever changes, nobody starts again from zero.</p>
+    </article>
+    <div class="cta-band" style="margin-top:64px">
+      <h2>Want this running for your company?</h2>
+      <p>We build and run the outbound engine: cold email, LinkedIn, and cold calling. You focus on closing.</p>
+      <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Book a Strategy Session &rarr;</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-logo">Outbounda</div>
+  <div class="footer-links">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#results">Results</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://www.youtube.com/@matty.outbounda" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://calendly.com/matty-outbounda/30min" target="_blank" rel="noopener">Book a Call</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Outbounda Pty Ltd &middot; Sydney, Australia</div>
+</footer>
+</body>
+</html>
