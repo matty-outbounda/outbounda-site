@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hire an SDR or Outsource Cold Calling? A B2B SaaS That Tried Both | Outbounda</title>
+<meta name="description" content="Blue Onion had their own outbound team and two agencies before us. Here&#x27;s what was going wrong, what changed, and when hiring your own SDR still makes more sense.">
+<link rel="canonical" href="https://outbounda.io/blog/hire-sdr-or-outsource-cold-calling/">
+<meta name="theme-color" content="#0C0E1D">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Outbounda">
+<meta property="og:url" content="https://outbounda.io/blog/hire-sdr-or-outsource-cold-calling/">
+<meta property="og:title" content="Hire an SDR or Outsource Cold Calling? A B2B SaaS That Tried Both | Outbounda">
+<meta property="og:description" content="Blue Onion had their own outbound team and two agencies before us. Here&#x27;s what was going wrong, what changed, and when hiring your own SDR still makes more sense.">
+<meta property="og:image" content="https://outbounda.io/og.png">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hire an SDR or Outsource Cold Calling? A B2B SaaS That Tried Both | Outbounda">
+<meta name="twitter:description" content="Blue Onion had their own outbound team and two agencies before us. Here&#x27;s what was going wrong, what changed, and when hiring your own SDR still makes more sense.">
+<meta name="twitter:image" content="https://outbounda.io/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* Outbounda: shared styles for generated pages (blog, pre-call).
+   Tokens match brand/brand-kit.html. Do not invent colours here. */
+
+:root {
+  --accent: #8B5CF6;
+  --accent-light: #C4B5FD;
+  --bg: #0C0E1D;
+  --bg-2: #13162E;
+  --bg-glow: #1E2150;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-2: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.10);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.52);
+  --subtle: rgba(255, 255, 255, 0.34);
+  --mono: 'SF Mono', 'Fira Code', 'Fira Mono', ui-monospace, Menlo, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ambient glow, same treatment as the home page hero */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% -10%, var(--bg-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { color: #fff; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* ─── NAV ─── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 68px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(12, 14, 29, 0.82);
+  backdrop-filter: saturate(150%) blur(12px);
+  -webkit-backdrop-filter: saturate(150%) blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+/* Brand wordmark gradient, matches index.html. Never swap the colours. */
+.nav-wordmark, .footer-logo {
+  background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fff;                 /* fallback if background-clip is unsupported */
+}
+.nav-wordmark { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links a { color: rgba(255, 255, 255, 0.55); font-size: 14px; font-weight: 500; transition: color .2s; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: #fff; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all .2s;
+  border: none;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--accent); color: #fff; padding: 11px 22px; font-size: 14px; }
+.btn-primary:hover { background: #7C3AED; color: #fff; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(139, 92, 246, .45); }
+.btn-lg { padding: 15px 30px; font-size: 16px; }
+
+/* ─── LAYOUT ─── */
+main { position: relative; z-index: 1; flex: 1 0 auto; padding: 0 6% 100px; }
+.wrap { max-width: 1080px; margin: 0 auto; }
+.wrap-wide { max-width: 1240px; }   /* blog index — gives the 3-up grid room */
+.narrow { max-width: 720px; margin: 0 auto; }
+
+.page-head { padding: 72px 0 48px; }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 18px;
+}
+h1 {
+  font-size: clamp(34px, 5.5vw, 54px);
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+.page-head p { color: var(--muted); font-size: 19px; margin-top: 18px; max-width: 60ch; }
+
+/* ─── BLOG INDEX ───
+   Editorial feed: one image-led card per row, no panel or border around the card.
+   The thumbnail carries the card; everything else hangs off it. */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 44px 30px;
+  list-style: none;
+}
+
+.post-card { display: flex; flex-direction: column; height: 100%; }
+
+.post-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  margin-bottom: 16px;
+}
+.post-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s cubic-bezier(.2, .7, .3, 1);
+}
+.post-card:hover .post-thumb img { transform: scale(1.035); }
+.post-card:hover .post-thumb { border-color: rgba(139, 92, 246, .45); }
+
+/* Play glyph, so a video-backed post reads as one at a glance */
+.thumb-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 46px;
+  height: 46px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(12, 14, 29, .62);
+  border: 1px solid rgba(255, 255, 255, .28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background .25s, border-color .25s;
+}
+.thumb-play::after {
+  content: "";
+  position: absolute;
+  left: 54%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent #fff;
+}
+.post-card:hover .thumb-play { background: var(--accent); border-color: transparent; }
+
+.post-thumb-empty {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(140deg, var(--bg-2), rgba(139, 92, 246, .16));
+}
+.post-thumb-empty span {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  margin-bottom: 11px;
+}
+.post-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--subtle); }
+.chip {
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, .38);
+  background: rgba(139, 92, 246, .10);
+  color: var(--accent-light);
+  letter-spacing: .1em;
+}
+.has-video { color: var(--accent-light); display: inline-flex; align-items: center; gap: 6px; }
+
+.post-card h2 {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -.022em;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 8px;
+  text-wrap: balance;
+  transition: color .2s;
+}
+.post-card:hover h2 { color: var(--accent-light); }
+.post-card p {
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.58;
+  /* Clamp so a long standfirst can't push one card's byline out of line with the rest */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── BYLINE ─── */
+.byline { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 16px; }
+.byline img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex: none;
+}
+.byline div { display: flex; flex-direction: column; line-height: 1.3; }
+.byline-name { color: #fff; font-size: 13px; font-weight: 600; }
+.byline-role { color: var(--subtle); font-size: 11.5px; }
+.byline-lg img { width: 48px; height: 48px; }
+.byline-lg { gap: 12px; }
+.byline-lg .byline-name { font-size: 16px; }
+.byline-lg .byline-role { font-size: 13px; }
+
+.empty {
+  padding: 60px 30px;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  color: var(--muted);
+}
+
+/* ─── POST ─── */
+.post-head { padding: 64px 0 36px; }
+.post-head h1 { font-size: clamp(30px, 4.6vw, 46px); }
+.post-head .post-meta { margin: 0 0 20px; }
+.post-standfirst {
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.6;
+  margin-top: 18px;
+  max-width: 62ch;
+}
+.post-head .byline { margin-top: 28px; padding-top: 26px; border-top: 1px solid var(--border); }
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  margin-bottom: 44px;
+}
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+article { font-size: 17.5px; line-height: 1.78; }
+article > * + * { margin-top: 1.35em; }
+article h2 {
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.25;
+  color: #fff;
+  margin-top: 2.2em;
+  text-wrap: balance;
+}
+article h3 {
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -.01em;
+  color: #fff;
+  margin-top: 1.9em;
+}
+article p { color: rgba(255, 255, 255, .80); }
+article strong { color: #fff; font-weight: 650; }
+article ul, article ol { padding-left: 1.3em; color: rgba(255, 255, 255, .80); }
+article li + li { margin-top: .5em; }
+article li::marker { color: var(--accent); }
+article a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(196, 181, 253, .4); }
+article a:hover { text-decoration-color: currentColor; }
+article blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 22px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.55;
+}
+article code {
+  font-family: var(--mono);
+  font-size: .87em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  color: var(--accent-light);
+}
+article pre {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  overflow-x: auto;
+}
+article pre code { background: none; border: 0; padding: 0; color: var(--text); }
+article img { max-width: 100%; border-radius: 12px; display: block; }
+article hr { border: 0; border-top: 1px solid var(--border); margin: 2.6em 0; }
+article table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+article th, article td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+article th { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--subtle); font-weight: 500; }
+
+/* ─── PRE-CALL ─── */
+.video-grid { display: grid; gap: 22px; margin-bottom: 56px; }
+.video-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.video-card .video-embed { margin: 0; border: 0; border-radius: 0; border-bottom: 1px solid var(--border); }
+.video-card-body { padding: 22px 26px 26px; }
+.video-card h3 { font-size: 20px; font-weight: 650; letter-spacing: -.015em; color: #fff; margin-bottom: 8px; }
+.video-card p { color: var(--muted); font-size: 16px; }
+
+.checklist { display: grid; gap: 14px; margin-bottom: 48px; list-style: none; }
+.checklist li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 14px;
+  align-items: start;
+  color: rgba(255, 255, 255, .80);
+}
+.checklist svg { margin-top: 5px; flex: none; }
+
+.cta-band {
+  padding: 44px 40px;
+  background: linear-gradient(140deg, var(--bg-2), rgba(139, 92, 246, .10));
+  border: 1px solid rgba(139, 92, 246, .28);
+  border-radius: 20px;
+  text-align: center;
+}
+.cta-band h2 { font-size: 27px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 12px; }
+.cta-band p { color: var(--muted); margin-bottom: 24px; max-width: 48ch; margin-left: auto; margin-right: auto; }
+
+/* ─── FOOTER ─── */
+footer {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  padding: 44px 6%;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px 32px;
+  text-align: center;
+}
+.footer-logo { font-size: 15px; font-weight: 700; letter-spacing: -.3px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+.footer-links a { color: var(--muted); font-size: 14px; }
+.footer-links a:hover { color: #fff; }
+.footer-copy { color: var(--subtle); font-size: 13px; width: 100%; }
+
+/* 3-up down to 2-up, then a single column on phones */
+@media (max-width: 940px) {
+  .post-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  nav { padding: 0 5%; gap: 12px; }
+  .nav-links { display: none; }
+  main { padding: 0 5% 72px; }
+  .page-head { padding: 48px 0 36px; }
+  .post-list { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+  .post-card h2 { font-size: 20px; }
+  .post-card p { -webkit-line-clamp: 2; }
+  .post-standfirst { font-size: 17px; }
+  .cta-band { padding: 34px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .post-card:hover, .btn-primary:hover { transform: none; }
+  .post-card:hover .post-thumb img { transform: none; }
+}
+
+</style>
+<!-- RB2B visitor identification -->
+<script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HJZ28O5");</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hire an SDR or Outsource Cold Calling? A B2B SaaS That Tried Both",
+  "description": "Blue Onion had their own outbound team and two agencies before us. Here's what was going wrong, what changed, and when hiring your own SDR still makes more sense.",
+  "datePublished": "2026-10-28",
+  "url": "https://outbounda.io/blog/hire-sdr-or-outsource-cold-calling/",
+  "author": {
+    "@type": "Person",
+    "name": "Matty Morgan"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Outbounda",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://outbounda.io/logo-512.png"
+    }
+  }
+}</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-wordmark">Outbounda</span></a>
+  <ul class="nav-links">
+    <li><a href="/#how-it-works">How it works</a></li>
+    <li><a href="/#results">Results</a></li>
+    <li><a href="/blog/" aria-current="page">Blog</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+  <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a Call &rarr;</a>
+</nav>
+<main>
+  <div class="narrow">
+    <header class="post-head">
+      <div class="post-meta"><span class="chip">Outbound</span><span>28 October 2026</span><span class="dot"></span><span>6 min read</span></div>
+      <h1>Hire an SDR or Outsource Cold Calling? A B2B SaaS That Tried Both</h1>
+      <p class="post-standfirst">Blue Onion had their own outbound team and two agencies before us. Here&#x27;s what was going wrong, what changed, and when hiring your own SDR still makes more sense.</p>
+      <div class="byline byline-lg">
+      <img src="/assets/matty-avatar.jpg" alt="" width="40" height="40" loading="lazy">
+      <div>
+        <span class="byline-name">Matty Morgan</span>
+        <span class="byline-role">Founder, Outbounda</span>
+      </div>
+    </div>
+    </header>
+    
+    <article>
+<p>If you&rsquo;re a Head of Sales trying to work out whether to hire an SDR or outsource cold calling, it helps to hear from a company that&rsquo;s tried both. Blue Onion, a B2B SaaS that sells to ecommerce brands, had their own outbound team and had worked with a couple of outbound agencies. Neither got them the meetings they needed. In under five months with us, they closed five deals worth nearly $100K USD, all sourced from cold calling.</p>
+<p>Here&rsquo;s what was going wrong, what we changed, and how to work out which route fits your company.</p>
+<h2>What Blue Onion tried before</h2>
+<p>Blue Onion helps ecommerce brands automate one of the biggest headaches for their finance teams: end-of-month reconciliation. Their customers sell direct to consumer and usually do $5M or more a year in revenue. A lot of them are beauty and cosmetics, clothing and supplement brands.</p>
+<p>Before us, they&rsquo;d tried to get outbound working two ways. Logan, one of their account executives, put it like this:</p>
+<blockquote>
+<p>&ldquo;We had a couple of outbound agencies that were setting up some feedback meetings for us that didn&rsquo;t really go too far. And then we also had our own outbound team internally at Blue Onion as well. They were setting up a few meetings here and there, but just hadn&rsquo;t really found a way to really bust in and get, you know, kind of the volume we were looking for.&rdquo;</p>
+</blockquote>
+<p>A lot of the SaaS companies we work with are in the same spot when they first come to us. A good product, customers who get value from it, and outbound that just isn&rsquo;t booking meetings predictably every month.</p>
+<h2>Why nobody was picking up</h2>
+<p>Their messaging could have been part of it. We ended up building their talk track from scratch. But a big part of the problem was that they couldn&rsquo;t get enough people to actually answer the phone.</p>
+<p>In my experience that comes down to two things: who you&rsquo;re calling, and whether you&rsquo;ve got the right number for them.</p>
+<p>So every person on Blue Onion&rsquo;s list gets a direct mobile number. Call a company&rsquo;s main line and you usually just sit around waiting to speak to reception.</p>
+<h2>Will an agency even understand your product?</h2>
+<p>It&rsquo;s the biggest worry we hear from sales leaders before they hire an outbound agency, and it&rsquo;s a valid one. Here&rsquo;s how we get up to speed. It&rsquo;s the same for every client.</p>
+<h3>The kickoff call</h3>
+<p>We go through who the client&rsquo;s customers are and what software those companies use. Then which competitors they&rsquo;re up against, and the exact problems they solve for their customers.</p>
+<h3>The client brain</h3>
+<p>We record the whole call, then build a second brain for that client inside a Claude project with everything we learned on it. That goes to our go-to-market engineer, whose whole job is building lists. He knows who they sell to and who already buys from them before he puts together a list of every company that could.</p>
+<p>For Blue Onion, meetings were popping up in their calendar about two weeks after kickoff. The first meeting we booked for them turned into a closed deal. I didn&rsquo;t know that until Logan told me.</p>
+<h2>Who we call and how the list gets built</h2>
+<p>We built Blue Onion&rsquo;s list from lookalikes of the 200+ ecommerce brands already paying them. The filters:</p>
+<ul>
+<li>Direct-to-consumer brands doing more than $5M a year in revenue</li>
+<li>Based in the United States, or Australia and New Zealand</li>
+<li>Usually selling on Shopify</li>
+</ul>
+<p>The buyers are mostly in finance and accounting: <strong>financial controllers, chief financial officers and finance managers</strong>, and sometimes the founder. Those are the people dealing with the exact problem Blue Onion solves.</p>
+<p>Our reps make between 200 and 400 dials a day for Blue Onion, with email and LinkedIn going out alongside the calls. We usually get a meeting about every 100 dials.</p>
+<h2>The results</h2>
+<p>Blue Onion&rsquo;s client portal shows every meeting we&rsquo;ve booked for them and whether it&rsquo;s happened yet. Over the last 90 days that&rsquo;s <strong>46 meetings booked, 23 held and 12 still upcoming</strong>.</p>
+<p>On the quality, Logan&rsquo;s read is that the meetings are in their ICP and the prospects have the problems Blue Onion solves. The work after that is &ldquo;tracking them down and making sure that timing is right&rdquo; and justifying the cost.</p>
+<p>Five deals and close to $100K USD have closed so far, all within about five months of the first campaigns going live. Logan has another five or six deals near the finish line.</p>
+<h2>Give outbound a few months before you judge it</h2>
+<p>A lot of the brands we call for Blue Onion are in Australia, where the financial year ends on 30 June. Some of the finance leaders who took a meeting in May and June didn&rsquo;t buy on the first call. They&rsquo;re only getting back in touch now.</p>
+<p>If you&rsquo;re testing outbound for your own company, give it a few months before you decide whether it&rsquo;s working. Judge it on what closed in month one and you&rsquo;ll write off meetings that are still very much in play.</p>
+<h2>Should you hire an SDR or use an agency?</h2>
+<p>This was the last thing I asked Logan, since Blue Onion has done both:</p>
+<blockquote>
+<p>&ldquo;People are getting thrown more and more emails in their inbox, they&rsquo;re getting more and more irrelevant messages and even text messages and LinkedIn messages&hellip; You can try and bring people internally and then you have to basically build the entire process from scratch. Whereas using an agency like Outbounda, you guys have already figured out a lot of the ways to bust in different accounts and what works best with messaging and what works best with cold calls.&rdquo;</p>
+</blockquote>
+<p>My answer is less one-sided than you&rsquo;d expect from someone who runs an agency.</p>
+<h3>When hiring your own SDR makes sense</h3>
+<p>If you want your reps growing into account executives in your own company one day, hire internally. They&rsquo;ll learn your product, your buyers and your deals from the inside, and that&rsquo;s worth a lot.</p>
+<h3>What hiring actually costs</h3>
+<p>A new SDR can cost you up to $120K a year, and they can take three to six months to ramp. That&rsquo;s if they even get that far. If they turn out to be the wrong hire, you&rsquo;ve spent months paying their salary before you find out.</p>
+<p>Once they&rsquo;re up to speed, someone still has to build the whole process around them. The list. The mobile numbers. The talk track. The email and LinkedIn running alongside the calls. The tracking that tells you which campaigns book meetings and which ones are just burning through accounts.</p>
+<h3>When an agency makes more sense</h3>
+<p>When the problem is pipeline right now, and you&rsquo;d rather not spend half a year finding out whether a new hire can build that process from nothing.</p>
+<h2>Does it only work if you already have customers?</h2>
+<p>No, but the work looks different.</p>
+<p>If you&rsquo;ve got customers, like Blue Onion does, we build the list from the companies already paying you. That&rsquo;s the fastest route to meetings, because you already know what a buyer looks like.</p>
+<p>If you&rsquo;re still early and working out who your product is really for, we spend a lot more time on messaging and testing different industries. The goal there is finding out which messages get people to book a meeting, and which industries are the most likely to buy from you.</p>
+    </article>
+    <div class="cta-band" style="margin-top:64px">
+      <h2>Want this running for your company?</h2>
+      <p>We build and run the outbound engine: cold email, LinkedIn, and cold calling. You focus on closing.</p>
+      <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Book a Strategy Session &rarr;</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-logo">Outbounda</div>
+  <div class="footer-links">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#results">Results</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://www.youtube.com/@matty.outbounda" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://calendly.com/matty-outbounda/30min" target="_blank" rel="noopener">Book a Call</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Outbounda Pty Ltd &middot; Sydney, Australia</div>
+</footer>
+</body>
+</html>
