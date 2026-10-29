@@ -445,6 +445,18 @@ footer {
 <!-- RB2B visitor identification -->
 <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HJZ28O5");</script>
 <meta name="robots" content="noindex, follow">
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (!q.has('invitee_full_name') && !q.has('event_start_time')) return;
+  window.__booking = {
+    name: q.get('invitee_first_name') || (q.get('invitee_full_name') || '').split(' ')[0],
+    start: q.get('event_start_time'),
+    invitee: q.get('invitee_uuid')
+  };
+  history.replaceState(null, '', location.pathname);
+})();
+</script>
 </head>
 <body>
 <nav>
@@ -460,9 +472,10 @@ footer {
 <main>
   <div class="wrap">
     <header class="page-head">
-      <p class="eyebrow">You're booked in</p>
+      <p class="eyebrow" id="pc-eyebrow">You're booked in</p>
+      <p id="pc-when" hidden style="font-size:17px;font-weight:600;color:#C4B5FD;margin:-4px 0 14px"></p>
       <h1>Before we talk</h1>
-      <p>You&#x27;ve got a call booked. Here&#x27;s what&#x27;s worth 10 minutes beforehand — it means we can skip the basics and spend the time on your actual situation.</p>
+      <p>If you&#x27;ve only got 10 minutes before our call, watch the first video. It means we can skip the basics and get straight into your actual situation.</p>
     </header>
     <div class="video-grid">
       <div class="video-card">
@@ -503,7 +516,7 @@ footer {
           <circle cx="12" cy="12" r="10" stroke="#8B5CF6" stroke-width="1.6"/>
           <path d="M8 12.4l2.6 2.6L16 9.6" stroke="#C4B5FD" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span>Know which customers were your best — the ones that closed fastest and stuck around.</span>
+        <span>Know which customers were your best: the ones that closed fastest and stuck around.</span>
       </li>
       <li>
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -516,11 +529,32 @@ footer {
       <div class="cta-band">
         <h2>Need to move the time?</h2>
         <p>No stress. Reschedule from the link in your confirmation email, or just reply to it.</p>
-        <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Manage my booking &rarr;</a>
+        <a href="https://calendly.com/matty-outbounda/30min" id="pc-manage" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Manage my booking &rarr;</a>
       </div>
     </div>
   </div>
 </main>
+<script>
+(function () {
+  var b = window.__booking;
+  if (!b) return;
+  if (b.name) document.getElementById('pc-eyebrow').textContent = "You're booked in, " + b.name;
+  var d = b.start ? new Date(b.start) : null;
+  if (d && !isNaN(d)) {
+    var w = document.getElementById('pc-when');
+    w.textContent = d.toLocaleString(undefined, {
+      weekday: 'long', day: 'numeric', month: 'long',
+      hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
+    });
+    w.hidden = false;
+  }
+  if (b.invitee && /^[A-Za-z0-9-]+$/.test(b.invitee)) {
+    var a = document.getElementById('pc-manage');
+    a.href = 'https://calendly.com/reschedulings/' + b.invitee;
+    a.textContent = 'Reschedule my call \u2192';
+  }
+})();
+</script>
 <footer>
   <div class="footer-logo">Outbounda</div>
   <div class="footer-links">
