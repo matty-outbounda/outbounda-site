@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How We Work | Outbounda</title>
+<meta name="description" content="What's included, how the first 90 days run, and what it's done for teams like Blue Onion, Matilda and Alloy.">
+<link rel="canonical" href="https://outbounda.io/how-we-work/">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0C0E1D">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Outbounda">
+<meta property="og:url" content="https://outbounda.io/how-we-work/">
+<meta property="og:title" content="How We Work | Outbounda">
+<meta property="og:description" content="What's included, how the first 90 days run, and what it's done for teams like yours.">
+<meta property="og:image" content="https://outbounda.io/og.png">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How We Work | Outbounda">
+<meta name="twitter:description" content="What's included, how the first 90 days run, and what it's done for teams like yours.">
+<meta name="twitter:image" content="https://outbounda.io/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* /how-we-work: the one link for any lead, and for new clients from the welcome email.
+   Hand-written (not generated). Tokens match brand/brand-kit.html. Do not invent colours. */
+
+:root {
+  --accent: #8B5CF6;
+  --accent-light: #C4B5FD;
+  --bg: #0C0E1D;
+  --bg-2: #13162E;
+  --bg-glow: #1E2150;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-2: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.10);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.56);
+  --subtle: rgba(255, 255, 255, 0.36);
+  --grad: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+  --mono: 'SF Mono', 'Fira Code', 'Fira Mono', ui-monospace, Menlo, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% -10%, var(--bg-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { color: #fff; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+.grad {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fff;
+}
+
+/* ─── NAV ─── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 68px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(12, 14, 29, 0.82);
+  backdrop-filter: saturate(150%) blur(12px);
+  -webkit-backdrop-filter: saturate(150%) blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+/* The wordmark: Inter 800, lowercase, tight tracking, gradient. Never swap the colours. */
+.wordmark { font-size: 23px; font-weight: 800; letter-spacing: -1px; text-transform: lowercase; }
+.nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
+.nav-links a { color: rgba(255, 255, 255, 0.55); font-size: 14px; font-weight: 500; transition: color .2s; }
+.nav-links a:hover { color: #fff; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all .2s;
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-primary { background: var(--accent); color: #fff; padding: 11px 22px; font-size: 14px; }
+.btn-primary:hover { background: #7C3AED; color: #fff; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(139, 92, 246, .45); }
+.btn-lg { padding: 15px 30px; font-size: 16px; }
+
+/* ─── LAYOUT ─── */
+main { position: relative; z-index: 1; padding: 0 6%; }
+.wrap { max-width: 1080px; margin: 0 auto; }
+section { padding: 88px 0 0; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 16px;
+}
+h1 {
+  font-size: clamp(38px, 6.4vw, 66px);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+  text-wrap: balance;
+  color: #fff;
+}
+.lede { color: var(--muted); font-size: 18px; margin-top: 14px; max-width: 60ch; }
+.sec-head { margin-bottom: 40px; }
+
+/* ─── HERO ─── */
+.hero { padding: 76px 0 0; text-align: center; }
+.hero h1 { margin: 0 auto; }
+.nw { white-space: nowrap; }
+@media (max-width: 480px) { .nw { white-space: normal; } }
+.hero .lede { margin: 20px auto 0; font-size: 19px; }
+.hero-video { max-width: 940px; margin: 48px auto 0; }
+.hero-caption { color: var(--subtle); font-size: 14px; margin-top: 14px; }
+
+/* Click-to-play YouTube. The iframe only loads once someone presses play. */
+.yt {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  padding: 0;
+  cursor: pointer;
+}
+.hero-video .yt { box-shadow: 0 30px 90px -30px rgba(139, 92, 246, .55); border-color: rgba(139, 92, 246, .35); }
+.yt img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s cubic-bezier(.2, .7, .3, 1); }
+.yt:hover img { transform: scale(1.03); }
+.yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.yt-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 72px;
+  height: 72px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 10px 40px rgba(139, 92, 246, .6);
+  transition: transform .25s;
+}
+.yt-play::after {
+  content: "";
+  position: absolute;
+  left: 54%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 11px 0 11px 18px;
+  border-color: transparent transparent transparent #fff;
+}
+.yt:hover .yt-play { transform: translate(-50%, -50%) scale(1.08); }
+.yt-sm .yt-play { width: 52px; height: 52px; }
+.yt-sm .yt-play::after { border-width: 8px 0 8px 13px; }
+.yt-len {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(12, 14, 29, .78);
+  color: #fff;
+}
+
+/* ─── STATS ─── */
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 56px; }
+.stat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px 26px 24px;
+  text-align: left;
+}
+.stat-num { font-size: clamp(38px, 5vw, 50px); font-weight: 800; letter-spacing: -.04em; line-height: 1; }
+.stat-label { color: var(--muted); font-size: 15px; line-height: 1.5; margin-top: 12px; }
+
+/* ─── LOGOS ─── */
+.logos { padding-top: 64px; text-align: center; }
+.logos .eyebrow { color: var(--subtle); }
+.logo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.logo-tile {
+  flex: 0 1 140px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+}
+.logo-tile img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.logo-tile.square img { max-height: 46px; border-radius: 8px; }
+/* Icon-only logos get their name beside them, same as the home page logo bar */
+.logo-tile.named { gap: 9px; }
+.logo-tile.named img { max-height: 36px; }
+.logo-tile.named span { font-size: 19px; font-weight: 700; letter-spacing: -.4px; color: #111; }
+
+/* ─── INCLUDED ─── */
+.inc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.inc-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 26px;
+}
+.inc-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+}
+.inc-card h3 { font-size: 21px; font-weight: 700; letter-spacing: -.02em; color: #fff; margin: 8px 0 18px; }
+.ticks { list-style: none; display: grid; gap: 12px; }
+.ticks li {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  align-items: start;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, .80);
+}
+.ticks svg { margin-top: 2px; }
+
+.team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 18px; }
+.team-card {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 22px 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(139, 92, 246, .26);
+  background: linear-gradient(140deg, rgba(139, 92, 246, .10), rgba(139, 92, 246, .02));
+}
+.team-card img, .team-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+.team-icon { display: grid; place-items: center; background: rgba(139, 92, 246, .16); }
+.team-role { font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-light); }
+.team-name { font-size: 17px; font-weight: 700; color: #fff; margin: 2px 0 6px; letter-spacing: -.01em; }
+.team-card p { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
+
+/* ─── TIMELINE ─── */
+.timeline { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; position: relative; }
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 9px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), rgba(196, 181, 253, .5), rgba(255, 255, 255, .15));
+}
+.tl { position: relative; padding-top: 34px; }
+.tl::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, .15);
+}
+.tl:last-child::before { background: var(--accent); }
+.tl-when { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-light); }
+.tl h3 { font-size: 17px; font-weight: 700; color: #fff; margin: 6px 0 6px; letter-spacing: -.01em; }
+.tl p { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
+
+/* ─── CASE STUDIES ─── */
+.case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.case {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 28px 26px;
+}
+.case-top { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.case-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  flex: none;
+}
+.case-logo img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 4px; }
+.case-logo.text { font-size: 18px; font-weight: 800; color: #1E1B4B; letter-spacing: -.5px; }
+.case-name { font-size: 19px; font-weight: 700; color: #fff; letter-spacing: -.015em; line-height: 1.2; }
+.chip {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, .38);
+  background: rgba(139, 92, 246, .10);
+  color: var(--accent-light);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.case p { color: rgba(255, 255, 255, .78); font-size: 15.5px; line-height: 1.6; }
+.case p { margin-bottom: 20px; }
+.case-result {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+.case-result span { color: var(--accent-light); }
+.case-link { display: inline-block; margin-top: 10px; font-size: 14px; font-weight: 600; }
+
+/* ─── VIDEOS ─── */
+.vid-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 22px; }
+.vid h3 { font-size: 17.5px; font-weight: 700; color: #fff; letter-spacing: -.015em; line-height: 1.35; margin: 16px 0 6px; }
+.vid p { color: var(--muted); font-size: 15px; line-height: 1.55; }
+
+/* ─── QUOTES ─── */
+.quote-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.quote {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.quote p { font-size: 17px; line-height: 1.6; color: #fff; }
+.quote p::before { content: "\201C"; color: var(--accent); font-weight: 800; margin-right: 2px; }
+.quote p::after { content: "\201D"; color: var(--accent); font-weight: 800; margin-left: 1px; }
+.who { display: flex; align-items: center; gap: 12px; margin-top: auto; }
+.who img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); }
+.who-name { font-size: 14.5px; font-weight: 600; color: #fff; line-height: 1.3; }
+.who-role { font-size: 13px; color: var(--subtle); }
+
+/* ─── CTA ─── */
+.cta {
+  margin: 96px 0 100px;
+  padding: 56px 40px;
+  background: linear-gradient(140deg, var(--bg-2), rgba(139, 92, 246, .14));
+  border: 1px solid rgba(139, 92, 246, .30);
+  border-radius: 24px;
+  text-align: center;
+}
+.cta h2 { margin-bottom: 12px; }
+.cta p { color: var(--muted); margin: 0 auto 28px; max-width: 46ch; }
+
+/* ─── FOOTER ─── */
+footer {
+  position: relative;
+  z-index: 1;
+  padding: 40px 6%;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 30px;
+  text-align: center;
+}
+footer .wordmark { font-size: 17px; letter-spacing: -.6px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; }
+.footer-links a { color: var(--muted); font-size: 14px; }
+.footer-links a:hover { color: #fff; }
+.footer-copy { color: var(--subtle); font-size: 13px; width: 100%; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 980px) {
+  .inc-grid, .team { grid-template-columns: minmax(0, 1fr); }
+  .timeline { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px 18px; }
+  .timeline::before { display: none; }
+}
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  nav { padding: 0 16px; gap: 12px; }
+  .nav-links { display: none; }
+  .btn-primary { padding: 10px 16px; }
+  main { padding: 0 16px; }
+  section { padding-top: 68px; }
+  .hero { padding-top: 48px; }
+  .hero .lede { font-size: 17px; }
+  .stats, .case-grid, .vid-grid, .quote-grid { grid-template-columns: minmax(0, 1fr); }
+  .stat { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; padding: 20px; }
+  .stat-label { margin-top: 0; }
+  .logo-tile { flex-basis: calc(50% - 6px); height: 70px; }
+  .timeline { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .tl { padding: 0 0 26px 38px; }
+  .tl::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 22px;
+    bottom: 0;
+    width: 2px;
+    background: rgba(139, 92, 246, .35);
+  }
+  .tl:last-child::after { display: none; }
+  .case, .quote, .inc-card { padding: 24px 20px; }
+  .cta { margin: 72px 0 72px; padding: 40px 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+  .yt:hover img, .btn-primary:hover { transform: none; }
+}
+</style>
+<!-- RB2B visitor identification, same as the rest of the site -->
+<script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HJZ28O5");</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tick" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10" fill="none" stroke="#8B5CF6" stroke-width="1.6"/>
+    <path d="M8 12.4l2.6 2.6L16 9.6" fill="none" stroke="#C4B5FD" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<nav>
+  <a href="/" class="wordmark grad" aria-label="Outbounda home">outbounda</a>
+  <ul class="nav-links">
+    <li><a href="#included">What's included</a></li>
+    <li><a href="#first-90-days">First 90 days</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#videos">Videos</a></li>
+  </ul>
+  <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary js-cta" target="_blank" rel="noopener">Book a call &rarr;</a>
+</nav>
+
+<main>
+  <div class="wrap">
+
+    <!-- ─── HERO ─── -->
+    <header class="hero">
+      <p class="eyebrow">How Outbounda works</p>
+      <h1><span class="nw">We book the meetings.</span><br><span class="grad nw">You close them.</span></h1>
+      <p class="lede">We build your outbound and run it every day: cold calling, email and LinkedIn. Start with the video. Blue Onion's AE on what they tried before us, and what's closed since.</p>
+
+      <div class="hero-video">
+        <button class="yt" data-id="rinz6ypT-f0" aria-label="Play: How This SaaS Closed $100k in 5 Months With Cold Calls">
+          <img src="https://i.ytimg.com/vi/rinz6ypT-f0/maxresdefault.jpg" alt="" width="1280" height="720">
+          <span class="yt-play"></span>
+          <span class="yt-len">9 MIN</span>
+        </button>
+        <p class="hero-caption">How This SaaS Closed $100k in 5 Months With Cold Calls · Logan, AE at Blue Onion</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num grad">5 deals</div>
+          <div class="stat-label">Nearly $100K USD closed by Blue Onion inside 5 months, all off cold calls.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num grad">46</div>
+          <div class="stat-label">Meetings booked for Blue Onion in a single 90 days.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num grad">150+</div>
+          <div class="stat-label">Meetings booked across our clients in 4 months. 70 to 75% of them came off the phone.</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ─── LOGOS ─── -->
+    <div class="logos">
+      <p class="eyebrow">Teams we've run outbound for</p>
+      <div class="logo-grid">
+        <div class="logo-tile"><img src="/assets/logos/blue-onion.webp" alt="Blue Onion"></div>
+        <div class="logo-tile"><img src="/assets/logos/superpath.svg" alt="Superpath"></div>
+        <div class="logo-tile"><img src="/assets/logos/matilda.svg" alt="Matilda Migration"></div>
+        <div class="logo-tile"><img src="/assets/logos/rivercity.svg" alt="Rivercity"></div>
+        <div class="logo-tile"><img src="/assets/logos/derive.svg" alt="Derive"></div>
+        <div class="logo-tile square"><img src="/assets/logos/vouch.jpeg" alt="Vouch"></div>
+        <div class="logo-tile square named"><img src="/assets/logos/alloy-robotics.jpeg" alt=""><span>Alloy</span></div>
+      </div>
+    </div>
+
+    <!-- ─── WHAT'S INCLUDED ─── -->
+    <section id="included">
+      <div class="sec-head">
+        <p class="eyebrow">What's included</p>
+        <h2>You take the meetings.<br>Everything before that is on us.</h2>
+        <p class="lede">One retainer. We pick the channel mix for your market and move it as the results come in.</p>
+      </div>
+
+      <div class="inc-grid">
+        <div class="inc-card">
+          <div class="inc-num">01 · Before launch</div>
+          <h3>The build</h3>
+          <ul class="ticks">
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Target market, buyers and a no-go list, agreed at kickoff</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Accounts researched, contacts found with direct mobiles and verified emails</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Your customers, live deals and do-not-contact list taken out first</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Sending domains and inboxes set up and warmed</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Call scripts, emails and LinkedIn messages, signed off by you before anything goes out</span></li>
+          </ul>
+        </div>
+        <div class="inc-card">
+          <div class="inc-num">02 · Every day</div>
+          <h3>The work</h3>
+          <ul class="ticks">
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Cold calling by our SDRs, from Australia</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Cold email and LinkedIn running alongside the calls</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Replies handled and sent to the right person</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Meetings booked into your calendar, each with a handover note</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Lists, openers and messaging tested the whole way through</span></li>
+          </ul>
+        </div>
+        <div class="inc-card">
+          <div class="inc-num">03 · What you see</div>
+          <h3>The reporting</h3>
+          <ul class="ticks">
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>A shared Slack channel with our team</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>A live dashboard: activity, replies, meetings booked and held</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>A written wrap at the end of every week</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>Recordings and transcripts of the calls</span></li>
+            <li><svg width="20" height="20" aria-hidden="true"><use href="#tick"/></svg><span>A monthly sit-down on what to stop, change and scale</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="team">
+        <div class="team-card">
+          <img src="/assets/matty-avatar.jpg" alt="Matty">
+          <div>
+            <div class="team-role">Founder</div>
+            <div class="team-name">Matty</div>
+            <p>Runs the strategy and messaging on every account. Before this, one of the first sales hires at Rippling in Australia, where his cold outbound built over $10M in pipeline.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.5"/><path d="M4.5 5.5v6c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5v-6"/><path d="M4.5 11.5v6c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5v-6"/></svg>
+          </div>
+          <div>
+            <div class="team-role">Lists and data</div>
+            <div class="team-name">GTM engineer</div>
+            <p>Builds every list off lookalikes of your best customers, finds the buying signals and checks the data before a rep sees it.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          </div>
+          <div>
+            <div class="team-role">On the phones</div>
+            <div class="team-name">SDRs</div>
+            <p>Dialling every day off the script you signed off, and logging what the market tells them on every call.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FIRST 90 DAYS ─── -->
+    <section id="first-90-days">
+      <div class="sec-head">
+        <p class="eyebrow">The first 90 days</p>
+        <h2>What happens, and when</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl">
+          <div class="tl-when">Week 1</div>
+          <h3>Kickoff</h3>
+          <p>We go through your last 20 closed customers: who buys, who never should, and what counts as a real meeting.</p>
+        </div>
+        <div class="tl">
+          <div class="tl-when">Weeks 1 to 2</div>
+          <h3>Build</h3>
+          <p>List built and checked. Scripts and sequences written for your sign-off. Inboxes warming.</p>
+        </div>
+        <div class="tl">
+          <div class="tl-when">Weeks 3 to 4</div>
+          <h3>Live</h3>
+          <p>Calling, email and LinkedIn switch on. Meetings start landing in your calendar.</p>
+        </div>
+        <div class="tl">
+          <div class="tl-when">Day 30</div>
+          <h3>First look</h3>
+          <p>If something's off, it's the data or the opener. We find which one and fix it.</p>
+        </div>
+        <div class="tl">
+          <div class="tl-when">Day 45</div>
+          <h3>First big decision</h3>
+          <p>What to stop, change and scale, decided off real numbers and written down.</p>
+        </div>
+        <div class="tl">
+          <div class="tl-when">Day 90</div>
+          <h3>Yours to keep</h3>
+          <p>The scripts, the sequences and everything we've learned about your market.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── RESULTS ─── -->
+    <section id="results">
+      <div class="sec-head">
+        <p class="eyebrow">Results</p>
+        <h2>Four different starting points</h2>
+        <p class="lede">Some came to us with a proven sale and needed volume. Some came with a guess about who the buyer was.</p>
+      </div>
+      <div class="case-grid">
+        <article class="case">
+          <div class="case-top">
+            <div class="case-logo"><img src="/assets/logos/blue-onion.webp" alt=""></div>
+            <div><div class="case-name">Blue Onion</div><span class="chip">Proven sale, needed volume</span></div>
+          </div>
+          <p>Tried two agencies and their own outbound team. A few meetings here and there. We rebuilt the talk track and put a direct mobile on every contact, so the reps actually reach the buyer.</p>
+          <div class="case-result"><span>5 deals, nearly $100K USD.</span> Logan closed the first meeting we sent him.</div>
+          <a class="case-link" href="#top-video">Watch Logan tell it &rarr;</a>
+        </article>
+        <article class="case">
+          <div class="case-top">
+            <div class="case-logo"><img src="/assets/logos/matilda-mark.svg" alt=""></div>
+            <div><div class="case-name">Matilda Migration</div><span class="chip">No outbound before us</span></div>
+          </div>
+          <p>Everyone assumed tech companies were the market. Our SDRs kept hearing about the Queensland trades shortage on calls, so we tested construction. It beat everything else on the list, and they fed it back into their paid ads.</p>
+          <div class="case-result"><span>A new best segment,</span> found off live calls</div>
+        </article>
+        <article class="case">
+          <div class="case-top">
+            <div class="case-logo"><img src="/assets/logos/alloy-robotics.jpeg" alt=""></div>
+            <div><div class="case-name">Alloy Robotics</div><span class="chip">Technical product, small market</span></div>
+          </div>
+          <p>Four campaigns into a narrow market, each one a different angle. We killed the weak ones and put the volume behind the two that landed.</p>
+          <div class="case-result"><span>33% and 27%</span> reply rates on the two that stayed</div>
+        </article>
+        <article class="case">
+          <div class="case-top">
+            <div class="case-logo"><img src="/assets/logos/superpath.svg" alt=""></div>
+            <div><div class="case-name">Superpath</div><span class="chip">Hard market to switch</span></div>
+          </div>
+          <p>Selling a learning platform to companies that already have one. Nobody's in a rush, so it comes down to getting the right person on the phone at the right time.</p>
+          <div class="case-result"><span>30 meetings</span> in 90 days</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─── QUOTES ─── -->
+    <section id="clients">
+      <div class="sec-head">
+        <p class="eyebrow">From the people we work with</p>
+        <h2>Don't take our word for it</h2>
+      </div>
+      <div class="quote-grid">
+        <figure class="quote">
+          <p>From the get go Outbounda have consistently delivered more meetings than promised. No ramp up time, no training. And you're paying for results, not activity.</p>
+          <figcaption class="who"><img src="/icons/roi.jpg" alt=""><div><div class="who-name">Roi Gavrieli</div><div class="who-role">CRO, Blue Onion</div></div></figcaption>
+        </figure>
+        <figure class="quote">
+          <p>Our SDR left the business, and these guys have consistently been able to generate highly qualified meetings since we started.</p>
+          <figcaption class="who"><img src="/icons/ben.jpg" alt=""><div><div class="who-name">Ben Sher</div><div class="who-role">Head of Sales, Vouch</div></div></figcaption>
+        </figure>
+        <figure class="quote">
+          <p>Cold calling had always been the channel we struggled to scale. Outbounda changed that completely. Their SDR is sharper than most full-time hires and we're booking meetings consistently every week.</p>
+          <figcaption class="who"><img src="/icons/akshat.jpg" alt=""><div><div class="who-name">Akshat Sondhi</div><div class="who-role">Co-Founder, Derive</div></div></figcaption>
+        </figure>
+        <figure class="quote">
+          <p>We were running entirely off referrals. Outbounda built our first cold outbound engine from scratch. Within 60 days we were closing deals from email we'd never have found otherwise.</p>
+          <figcaption class="who"><img src="/icons/james.jpg" alt=""><div><div class="who-name">James Lattouf</div><div class="who-role">Founder, Megaphone Media</div></div></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ─── VIDEOS ─── -->
+    <section id="videos">
+      <div class="sec-head">
+        <p class="eyebrow">Watch the work</p>
+        <h2>See how we actually do it</h2>
+        <p class="lede">Real calls, the full process, and where it all came from.</p>
+      </div>
+      <div class="vid-grid">
+        <div class="vid">
+          <button class="yt yt-sm" data-id="MWiFvQmmCsk" aria-label="Play: Watch Me Book 5 Sales Meetings in 2 Hours">
+            <img src="https://i.ytimg.com/vi/MWiFvQmmCsk/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720">
+            <span class="yt-play"></span><span class="yt-len">16 MIN</span>
+          </button>
+          <h3>Watch Me Book 5 Sales Meetings in 2 Hours</h3>
+          <p>A real calling block into CFOs and finance managers, hang-ups and all.</p>
+        </div>
+        <div class="vid">
+          <button class="yt yt-sm" data-id="TR9OqocnE_Y" aria-label="Play: The Ultimate Lead Generation Course for B2B SaaS">
+            <img src="https://i.ytimg.com/vi/TR9OqocnE_Y/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720">
+            <span class="yt-play"></span><span class="yt-len">25 MIN</span>
+          </button>
+          <h3>The Ultimate Lead Generation Course for B2B SaaS</h3>
+          <p>Every stage we run for a client, in the order we run it.</p>
+        </div>
+        <div class="vid">
+          <button class="yt yt-sm" data-id="iUnHNpZmdus" aria-label="Play: I Booked 150 Sales Meetings, Here's What Works">
+            <img src="https://i.ytimg.com/vi/iUnHNpZmdus/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720">
+            <span class="yt-play"></span><span class="yt-len">9 MIN</span>
+          </button>
+          <h3>I Booked 150 Sales Meetings, Here's What Works</h3>
+          <p>How calling, email and LinkedIn split across every client, and why the phone books most of it.</p>
+        </div>
+        <div class="vid">
+          <button class="yt yt-sm" data-id="vF7gvOACaek" aria-label="Play: $0 to $10M/yr SaaS Outbound Playbook">
+            <img src="https://i.ytimg.com/vi/vF7gvOACaek/maxresdefault.jpg" alt="" loading="lazy" width="1280" height="720">
+            <span class="yt-play"></span><span class="yt-len">14 MIN</span>
+          </button>
+          <h3>$0 to $10M/yr SaaS Outbound Playbook</h3>
+          <p>The Rippling story: launching in Australia with four people and zero brand.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA ─── -->
+    <div class="cta" id="cta">
+      <h2 class="js-cta-title">Want this running for you?</h2>
+      <p class="js-cta-text">30 minutes with Matty. Bring your last few closed deals and we'll show you where we'd start.</p>
+      <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary btn-lg js-cta" target="_blank" rel="noopener">Book a call &rarr;</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <span class="wordmark grad">outbounda</span>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://www.youtube.com/@matty.outbounda" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://calendly.com/matty-outbounda/30min" target="_blank" rel="noopener">Book a call</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Outbounda &middot; Sydney, Australia</div>
+</footer>
+
+<script>
+// Click-to-play: swap the thumbnail for the real player only when someone presses play.
+document.querySelectorAll('.yt').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.id + '?autoplay=1&rel=0&modestbranding=1';
+    f.title = b.getAttribute('aria-label').replace(/^Play: /, '');
+    f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture';
+    f.allowFullscreen = true;
+    var box = document.createElement('div');
+    box.className = b.className;
+    box.appendChild(f);
+    b.replaceWith(box);
+  });
+});
+
+// "Watch Logan tell it" scrolls back up and plays the hero video.
+document.querySelector('a[href="#top-video"]').addEventListener('click', function (e) {
+  e.preventDefault();
+  var hero = document.querySelector('.hero-video');
+  hero.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  var b = hero.querySelector('button.yt');
+  if (b) setTimeout(function () { b.click(); }, 500);
+});
+
+// New clients arrive from the welcome email with ?welcome. They're already in,
+// so the closing button books the kickoff instead of a sales call.
+if (new URLSearchParams(location.search).has('welcome')) {
+  document.querySelector('.js-cta-title').textContent = "You're in. Let's get started.";
+  document.querySelector('.js-cta-text').textContent = 'Grab a kickoff time. The sooner we talk, the sooner we’re dialling.';
+  document.querySelectorAll('.js-cta').forEach(function (a) {
+    a.href = 'https://calendly.com/matty-outbounda/new-meeting';
+    a.innerHTML = 'Book your kickoff &rarr;';
+  });
+}
+</script>
+</body>
+</html>
