@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Cold Calls, No Meetings? Check Who&#x27;s on Your List Before You Change the Script | Outbounda</title>
+<meta name="description" content="I made 300 cold calls in 2 hours with one script. Zero meetings in the first hour, two in the last 50 minutes. The only thing that changed was who I was calling.">
+<link rel="canonical" href="https://outbounda.io/blog/good-cold-calls-no-meetings/">
+<meta name="theme-color" content="#0C0E1D">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Outbounda">
+<meta property="og:url" content="https://outbounda.io/blog/good-cold-calls-no-meetings/">
+<meta property="og:title" content="Good Cold Calls, No Meetings? Check Who&#x27;s on Your List Before You Change the Script | Outbounda">
+<meta property="og:description" content="I made 300 cold calls in 2 hours with one script. Zero meetings in the first hour, two in the last 50 minutes. The only thing that changed was who I was calling.">
+<meta property="og:image" content="https://i.ytimg.com/vi/a42zO6TLfW8/maxresdefault.jpg">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Good Cold Calls, No Meetings? Check Who&#x27;s on Your List Before You Change the Script | Outbounda">
+<meta name="twitter:description" content="I made 300 cold calls in 2 hours with one script. Zero meetings in the first hour, two in the last 50 minutes. The only thing that changed was who I was calling.">
+<meta name="twitter:image" content="https://i.ytimg.com/vi/a42zO6TLfW8/maxresdefault.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* Outbounda: shared styles for generated pages (blog, pre-call).
+   Tokens match brand/brand-kit.html. Do not invent colours here. */
+
+:root {
+  --accent: #8B5CF6;
+  --accent-light: #C4B5FD;
+  --bg: #0C0E1D;
+  --bg-2: #13162E;
+  --bg-glow: #1E2150;
+  --card: rgba(255, 255, 255, 0.04);
+  --card-2: rgba(255, 255, 255, 0.07);
+  --border: rgba(255, 255, 255, 0.10);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.52);
+  --subtle: rgba(255, 255, 255, 0.34);
+  --mono: 'SF Mono', 'Fira Code', 'Fira Mono', ui-monospace, Menlo, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ambient glow, same treatment as the home page hero */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% -10%, var(--bg-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { color: #fff; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* ─── NAV ─── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 68px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: rgba(12, 14, 29, 0.82);
+  backdrop-filter: saturate(150%) blur(12px);
+  -webkit-backdrop-filter: saturate(150%) blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+/* Brand wordmark gradient, matches index.html. Never swap the colours. */
+.nav-wordmark, .footer-logo {
+  background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #fff;                 /* fallback if background-clip is unsupported */
+}
+.nav-wordmark { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links a { color: rgba(255, 255, 255, 0.55); font-size: 14px; font-weight: 500; transition: color .2s; }
+.nav-links a:hover, .nav-links a[aria-current="page"] { color: #fff; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all .2s;
+  border: none;
+  white-space: nowrap;
+}
+.btn-primary { background: var(--accent); color: #fff; padding: 11px 22px; font-size: 14px; }
+.btn-primary:hover { background: #7C3AED; color: #fff; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(139, 92, 246, .45); }
+.btn-lg { padding: 15px 30px; font-size: 16px; }
+
+/* ─── LAYOUT ─── */
+main { position: relative; z-index: 1; flex: 1 0 auto; padding: 0 6% 100px; }
+.wrap { max-width: 1080px; margin: 0 auto; }
+.wrap-wide { max-width: 1240px; }   /* blog index — gives the 3-up grid room */
+.narrow { max-width: 720px; margin: 0 auto; }
+
+.page-head { padding: 72px 0 48px; }
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 18px;
+}
+h1 {
+  font-size: clamp(34px, 5.5vw, 54px);
+  font-weight: 800;
+  letter-spacing: -.035em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+.page-head p { color: var(--muted); font-size: 19px; margin-top: 18px; max-width: 60ch; }
+
+/* ─── BLOG INDEX ───
+   Editorial feed: one image-led card per row, no panel or border around the card.
+   The thumbnail carries the card; everything else hangs off it. */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 44px 30px;
+  list-style: none;
+}
+
+.post-card { display: flex; flex-direction: column; height: 100%; }
+
+.post-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  margin-bottom: 16px;
+}
+.post-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s cubic-bezier(.2, .7, .3, 1);
+}
+.post-card:hover .post-thumb img { transform: scale(1.035); }
+.post-card:hover .post-thumb { border-color: rgba(139, 92, 246, .45); }
+
+/* Play glyph, so a video-backed post reads as one at a glance */
+.thumb-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 46px;
+  height: 46px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(12, 14, 29, .62);
+  border: 1px solid rgba(255, 255, 255, .28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background .25s, border-color .25s;
+}
+.thumb-play::after {
+  content: "";
+  position: absolute;
+  left: 54%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent #fff;
+}
+.post-card:hover .thumb-play { background: var(--accent); border-color: transparent; }
+
+.post-thumb-empty {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(140deg, var(--bg-2), rgba(139, 92, 246, .16));
+}
+.post-thumb-empty span {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  background: linear-gradient(130deg, #8B5CF6 0%, #C4B5FD 55%, #FFFFFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  margin-bottom: 11px;
+}
+.post-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--subtle); }
+.chip {
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, .38);
+  background: rgba(139, 92, 246, .10);
+  color: var(--accent-light);
+  letter-spacing: .1em;
+}
+.has-video { color: var(--accent-light); display: inline-flex; align-items: center; gap: 6px; }
+
+.post-card h2 {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -.022em;
+  line-height: 1.3;
+  color: #fff;
+  margin-bottom: 8px;
+  text-wrap: balance;
+  transition: color .2s;
+}
+.post-card:hover h2 { color: var(--accent-light); }
+.post-card p {
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.58;
+  /* Clamp so a long standfirst can't push one card's byline out of line with the rest */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── BYLINE ─── */
+.byline { display: flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 16px; }
+.byline img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex: none;
+}
+.byline div { display: flex; flex-direction: column; line-height: 1.3; }
+.byline-name { color: #fff; font-size: 13px; font-weight: 600; }
+.byline-role { color: var(--subtle); font-size: 11.5px; }
+.byline-lg img { width: 48px; height: 48px; }
+.byline-lg { gap: 12px; }
+.byline-lg .byline-name { font-size: 16px; }
+.byline-lg .byline-role { font-size: 13px; }
+
+.empty {
+  padding: 60px 30px;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
+  color: var(--muted);
+}
+
+/* ─── POST ─── */
+.post-head { padding: 64px 0 36px; }
+.post-head h1 { font-size: clamp(30px, 4.6vw, 46px); }
+.post-head .post-meta { margin: 0 0 20px; }
+.post-standfirst {
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.6;
+  margin-top: 18px;
+  max-width: 62ch;
+}
+.post-head .byline { margin-top: 28px; padding-top: 26px; border-top: 1px solid var(--border); }
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  margin-bottom: 44px;
+}
+.video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+article { font-size: 17.5px; line-height: 1.78; }
+article > * + * { margin-top: 1.35em; }
+article h2 {
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  line-height: 1.25;
+  color: #fff;
+  margin-top: 2.2em;
+  text-wrap: balance;
+}
+article h3 {
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -.01em;
+  color: #fff;
+  margin-top: 1.9em;
+}
+article p { color: rgba(255, 255, 255, .80); }
+article strong { color: #fff; font-weight: 650; }
+article ul, article ol { padding-left: 1.3em; color: rgba(255, 255, 255, .80); }
+article li + li { margin-top: .5em; }
+article li::marker { color: var(--accent); }
+article a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(196, 181, 253, .4); }
+article a:hover { text-decoration-color: currentColor; }
+article blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 22px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.55;
+}
+article code {
+  font-family: var(--mono);
+  font-size: .87em;
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  color: var(--accent-light);
+}
+article pre {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  overflow-x: auto;
+}
+article pre code { background: none; border: 0; padding: 0; color: var(--text); }
+article img { max-width: 100%; border-radius: 12px; display: block; }
+article hr { border: 0; border-top: 1px solid var(--border); margin: 2.6em 0; }
+article table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+article th, article td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--border); }
+article th { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--subtle); font-weight: 500; }
+
+/* ─── PRE-CALL ─── */
+.video-grid { display: grid; gap: 22px; margin-bottom: 56px; }
+.video-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.video-card .video-embed { margin: 0; border: 0; border-radius: 0; border-bottom: 1px solid var(--border); }
+.video-card-body { padding: 22px 26px 26px; }
+.video-card h3 { font-size: 20px; font-weight: 650; letter-spacing: -.015em; color: #fff; margin-bottom: 8px; }
+.video-card p { color: var(--muted); font-size: 16px; }
+
+.checklist { display: grid; gap: 14px; margin-bottom: 48px; list-style: none; }
+.checklist li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 14px;
+  align-items: start;
+  color: rgba(255, 255, 255, .80);
+}
+.checklist svg { margin-top: 5px; flex: none; }
+
+.cta-band {
+  padding: 44px 40px;
+  background: linear-gradient(140deg, var(--bg-2), rgba(139, 92, 246, .10));
+  border: 1px solid rgba(139, 92, 246, .28);
+  border-radius: 20px;
+  text-align: center;
+}
+.cta-band h2 { font-size: 27px; font-weight: 700; letter-spacing: -.02em; margin-bottom: 12px; }
+.cta-band p { color: var(--muted); margin-bottom: 24px; max-width: 48ch; margin-left: auto; margin-right: auto; }
+
+/* ─── FOOTER ─── */
+footer {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  padding: 44px 6%;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px 32px;
+  text-align: center;
+}
+.footer-logo { font-size: 15px; font-weight: 700; letter-spacing: -.3px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+.footer-links a { color: var(--muted); font-size: 14px; }
+.footer-links a:hover { color: #fff; }
+.footer-copy { color: var(--subtle); font-size: 13px; width: 100%; }
+
+/* 3-up down to 2-up, then a single column on phones */
+@media (max-width: 940px) {
+  .post-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 24px; }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  nav { padding: 0 5%; gap: 12px; }
+  .nav-links { display: none; }
+  main { padding: 0 5% 72px; }
+  .page-head { padding: 48px 0 36px; }
+  .post-list { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+  .post-card h2 { font-size: 20px; }
+  .post-card p { -webkit-line-clamp: 2; }
+  .post-standfirst { font-size: 17px; }
+  .cta-band { padding: 34px 24px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .post-card:hover, .btn-primary:hover { transform: none; }
+  .post-card:hover .post-thumb img { transform: none; }
+}
+
+</style>
+<!-- RB2B visitor identification -->
+<script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("1N5W0HJZ28O5");</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Good Cold Calls, No Meetings? Check Who's on Your List Before You Change the Script",
+  "description": "I made 300 cold calls in 2 hours with one script. Zero meetings in the first hour, two in the last 50 minutes. The only thing that changed was who I was calling.",
+  "datePublished": "2026-11-18",
+  "url": "https://outbounda.io/blog/good-cold-calls-no-meetings/",
+  "author": {
+    "@type": "Person",
+    "name": "Matty Morgan"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Outbounda",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://outbounda.io/logo-512.png"
+    }
+  }
+}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18570925745"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18570925745');
+</script>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-wordmark">Outbounda</span></a>
+  <ul class="nav-links">
+    <li><a href="/#how-it-works">How it works</a></li>
+    <li><a href="/#results">Results</a></li>
+    <li><a href="/blog/" aria-current="page">Blog</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+  <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a Call &rarr;</a>
+</nav>
+<main>
+  <div class="narrow">
+    <header class="post-head">
+      <div class="post-meta"><span class="chip">Cold calling</span><span>18 November 2026</span><span class="dot"></span><span>7 min read</span></div>
+      <h1>Good Cold Calls, No Meetings? Check Who&#x27;s on Your List Before You Change the Script</h1>
+      <p class="post-standfirst">I made 300 cold calls in 2 hours with one script. Zero meetings in the first hour, two in the last 50 minutes. The only thing that changed was who I was calling.</p>
+      <div class="byline byline-lg">
+      <img src="/assets/matty-avatar.jpg" alt="" width="40" height="40" loading="lazy">
+      <div>
+        <span class="byline-name">Matty Morgan</span>
+        <span class="byline-role">Founder, Outbounda</span>
+      </div>
+    </div>
+    </header>
+    <div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/a42zO6TLfW8" title="Good Cold Calls, No Meetings? Check Who&#x27;s on Your List Before You Change the Script"
+    loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+    <article>
+<p>If your reps are having good conversations on cold calls and still not booking meetings, the script probably isn&rsquo;t the problem. In most cases it&rsquo;s the list: the people picking up are happy to chat, but they don&rsquo;t get to choose what software their company buys.</p>
+<p>I tested this the hard way. I spent two hours cold calling for one of our B2B SaaS clients, made 300 dials, and didn&rsquo;t book a single meeting in the first hour. Then I booked two in the last 50 minutes. I used the same script on every call. The only thing I changed was the list.</p>
+<p>Here&rsquo;s what happened, list by list, and what I&rsquo;d check on your team&rsquo;s lists before touching the script.</p>
+<h2>The setup</h2>
+<p>The client sells an AI learning platform. You upload your own SOPs, policies, videos and documents, and the AI turns them into a custom training course in a few minutes. Then it tracks who on your team has and hasn&rsquo;t done each course.</p>
+<p>I was calling Australian companies with roughly 100 to 600+ employees, mostly in industries that need a lot of training: healthcare, manufacturing, construction and logistics. The only ask was a 15-minute demo with the client&rsquo;s team.</p>
+<p>Most of these companies already had a learning management system (LMS), so pitching them a platform they already own goes nowhere. The angle was the content inside it. Most of what they&rsquo;re running comes from generic, off-the-shelf course libraries.</p>
+<h2>The script I used on all 300 dials</h2>
+<p>The opener and problem statement didn&rsquo;t change all afternoon:</p>
+<blockquote>
+<p>&ldquo;Hey, it&rsquo;s Matty here, giving you a quick call from [company]. We haven&rsquo;t spoken before, I know my number hasn&rsquo;t come up on your phone. Do you mind if I grab literally a minute to explain why I&rsquo;m giving you a buzz? I&rsquo;ll be really brief, promise it&rsquo;s relevant.&rdquo;</p>
+</blockquote>
+<p>If they said yes:</p>
+<blockquote>
+<p>&ldquo;If it doesn&rsquo;t make sense, you can hang up on me, I won&rsquo;t take it personally. The reason I&rsquo;m reaching out is we work with learning and development leaders around Australia. Whenever we speak to these teams they say, we already have a training or learning platform in place. But usually the feedback is that most of the content is sitting inside generic, off-the-shelf course libraries, and they&rsquo;re looking at ways to create more customised and relevant staff training using AI. Bit of a stab in the dark, but I wanted to see what you guys do from a learning perspective and whether that sounds relevant at all.&rdquo;</p>
+</blockquote>
+<p>That last part is the problem statement. It describes what other people in their seat are dealing with, then asks if it fits.</p>
+<p>If it sounds relevant, ask what they use and how they build courses, give the short version of the product and ask for 15 minutes next week. If it doesn&rsquo;t, find out why before you let them go.</p>
+<p>I used a parallel dialler, which rings several numbers at once and connects you to whoever answers first. That&rsquo;s how I got through about 300 dials in two hours.</p>
+<h2>List 1: anyone with &ldquo;training&rdquo; or &ldquo;learning&rdquo; in their title</h2>
+<p>The first hour went to an older list built off keywords in job titles.</p>
+<p>The very first person who picked up was a machine learning engineer. &ldquo;Learning&rdquo; was in his title, so he made it onto the list. That call lasted about 10 seconds.</p>
+<p>To be fair, most people on that list did work in training, and they were more than happy to talk. One instructional designer at a healthcare company kept me on the phone for around eight minutes. She told me exactly which tools they used to build courses and where they hosted them. When I asked for 15 minutes to compare, she said she doesn&rsquo;t have a say in the decision.</p>
+<p>A few calls later, a lead training specialist heard the whole pitch, then told me she isn&rsquo;t a decision maker and they run all their training through Workday.</p>
+<p>Two good conversations, both dead ends, and both for the same reason: they don&rsquo;t pick the software.</p>
+<p>A keyword list finds people who work in the area. It doesn&rsquo;t find the people who sign off on what the company buys.</p>
+<h2>List 2: learning and HR people at companies under 600 staff</h2>
+<p>The second list was a mixed bag. It included people who hadn&rsquo;t picked up in the last few months, pulled together from older lists.</p>
+<p>The targeting was off. Connect rates were poor, and the people I did reach didn&rsquo;t have a strong enough reason for us to be calling them.</p>
+<p>Across the first two lists: <strong>185 dials, 8 conversations, 0 meetings.</strong></p>
+<h2>List 3: rebuilt around one question</h2>
+<p>For the last 50 minutes I called a list I&rsquo;d rebuilt that morning around a single question: <strong>who actually picks the LMS for the whole company?</strong></p>
+<p>In priority order:</p>
+<ol>
+<li>Head of learning</li>
+<li>Learning and development manager, especially anyone specifically responsible for the LMS</li>
+<li>Senior HR: chief people officer, head of people</li>
+<li>HR managers and people and culture managers</li>
+<li>Learning coordinators</li>
+</ol>
+<p>And who I took off it completely:</p>
+<ul>
+<li>Anyone who only handles training for one department (sales, safety, clinical)</li>
+<li>HR business partners</li>
+<li>Any company where training is the product they sell</li>
+</ul>
+<h3>Meeting one</h3>
+<p>An HR manager at a scientific and medical company picked up while she was driving. She looks after HR, health and safety, and learning and development, with nobody helping her on the learning side.</p>
+<p>Their LMS has around 4,500 courses in it. About 2% get used.</p>
+<p>She was living the exact problem the script describes, and fixing it was her job. Since she was in the car, I didn&rsquo;t try to sell her anything. I asked if there was a day next week for 15 minutes and said I&rsquo;d send some info in the meantime. She gave me a couple of time slots.</p>
+<p>On a cold call you&rsquo;re only selling the next step. Think of it as a test drive.</p>
+<h3>Meeting two</h3>
+<p>With about 12 minutes left, the last call of the session went to a training coordinator at a plumbing business.</p>
+<p>My problem statement didn&rsquo;t fit them at all. They build almost all their training themselves, write their own how-tos, and had just bought a pair of Meta glasses to film the more complex jobs.</p>
+<p>So I stopped pitching and asked questions. How often do they make new courses? Probably not enough, she said, and it depends on how easy it is. Then she asked how the platform keeps training compliant. I answered that, told her I wasn&rsquo;t expecting a decision, and asked for 15 or 20 minutes to compare what they do now with the platform. She booked it on the spot.</p>
+<h2>Even the right list says no</h2>
+<p>Plenty of the right people still said no. One couldn&rsquo;t take cold calls. One hung up the moment I hit the problem statement.</p>
+<p>Most of the ones who stayed on the line gave the same reason: they&rsquo;d just changed their setup.</p>
+<ul>
+<li>One had just moved to a new LMS</li>
+<li>One had just bought Articulate for the whole instructional design team, and said maybe in six months</li>
+<li>One had just been acquired, and was about to move onto the new owner&rsquo;s LMS</li>
+<li>A head of people at a construction company had started building her own courses with Claude, about 10 minutes each, had just moved HR systems, and had no budget. Call back in a couple of months</li>
+</ul>
+<p>Timing kills good leads. We saw the flip side on a past campaign to HR and learning leaders. Replies were nothing special until we added one rule: only target companies actively switching their LMS or HR system. Exact same message. The reply rate more than doubled.</p>
+<p>If you can find companies still in the middle of switching software like yours, those are the ones your reps should dial first.</p>
+<h2>The numbers</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dials</td>
+<td>300</td>
+</tr>
+<tr>
+<td>People</td>
+<td>221 at 193 companies</td>
+</tr>
+<tr>
+<td>Pickups</td>
+<td>33 (11% connect rate)</td>
+</tr>
+<tr>
+<td>Right person</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Heard the full problem statement</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Qualified meetings</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Callbacks</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Referrals</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>The referral came from a learning and development leader on parental leave. Their LMS is old, she&rsquo;d been tasked with pricing a new one before she left, and she&rsquo;s passing my details to her replacement and her manager.</p>
+<p>The rebuilt list didn&rsquo;t produce many more conversations than the first one. It produced both meetings, because it was built around whoever owns the LMS.</p>
+<h2>What to check before you rewrite the script</h2>
+<p>If your team is getting connects and conversations but not meetings, go through this first:</p>
+<ol>
+<li><strong>Pull the last 20 good conversations that didn&rsquo;t book.</strong> Count how many ended with some version of &ldquo;I don&rsquo;t make that call.&rdquo;</li>
+<li><strong>Rewrite the list around the decision, not the keyword.</strong> Name the job titles that own the budget for what you sell, in priority order.</li>
+<li><strong>Write down who comes off.</strong> Department-only roles, partners without budget, and companies that sell what you sell.</li>
+<li><strong>Look for companies mid-switch.</strong> Recent migrations, acquisitions and new hires in the buying team are worth more than a better opener.</li>
+<li><strong>Then judge the script.</strong> If the right people are picking up and still not booking, now it&rsquo;s a script problem.</li>
+</ol>
+<p>Same script, different list: zero meetings in an hour, then two in 50 minutes.</p>
+    </article>
+    <div class="cta-band" style="margin-top:64px">
+      <h2>Want this running for your company?</h2>
+      <p>We build and run the outbound engine: cold email, LinkedIn, and cold calling. You focus on closing.</p>
+      <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Book a Strategy Session &rarr;</a>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="footer-logo">Outbounda</div>
+  <div class="footer-links">
+    <a href="/#how-it-works">How it works</a>
+    <a href="/#results">Results</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://www.youtube.com/@matty.outbounda" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://calendly.com/matty-outbounda/30min" target="_blank" rel="noopener">Book a Call</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 Outbounda Pty Ltd &middot; Sydney, Australia</div>
+</footer>
+</body>
+</html>

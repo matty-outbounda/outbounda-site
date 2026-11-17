@@ -65,7 +65,7 @@
       /* Text */
       --text: rgba(255,255,255,0.92);    /* primary */
       --muted: rgba(255,255,255,0.52);   /* secondary */
-      --subtle: rgba(255,255,255,0.34);  /* tertiary / labels */
+      --subtle: rgba(255,255,255,0.5);  /* tertiary / labels */
     }
 
     html {
@@ -291,7 +291,7 @@
     .btn-primary:hover {
       background: #7C3AED;
       transform: translateY(-1px);
-      box-shadow: 0 6px 24px rgba(139, 92, 246, 0.45);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
     }
 
     .btn-outline {
@@ -372,24 +372,6 @@
         0 0 0 1px rgba(255,255,255,0.04);
     }
 
-    .hero-badge-chrome {
-      background: linear-gradient(90deg,
-        #888 0%,
-        #bbb 12%,
-        #fff 25%,
-        #ddd 38%,
-        #999 50%,
-        #ccc 62%,
-        #fff 75%,
-        #bbb 88%,
-        #888 100%
-      );
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: chrome-sweep 3s linear infinite;
-    }
 
     @keyframes chrome-sweep {
       from { background-position: 200% center; }
@@ -485,7 +467,7 @@
       text-align: center;
       margin-top: 16px;
       font-size: 13.5px;
-      color: rgba(255, 255, 255, 0.32);
+      color: rgba(255, 255, 255, 0.55);
       font-style: italic;
       letter-spacing: 0.2px;
     }
@@ -511,7 +493,7 @@
 
     .hero-stat-label {
       font-size: 12.5px;
-      color: rgba(255, 255, 255, 0.38);
+      color: rgba(255, 255, 255, 0.55);
       margin-top: 6px;
       font-weight: 500;
     }
@@ -567,7 +549,6 @@
       align-items: center;
       gap: 72px;
       width: max-content;
-      animation: marquee 28s linear infinite;
     }
 
     .logo-track:hover {
@@ -649,7 +630,7 @@
 
     .section-tag {
       display: inline-block;
-      font-size: 11.5px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 1.8px;
       text-transform: uppercase;
@@ -749,7 +730,7 @@
     }
 
     .system .section-tag {
-      color: rgba(255, 255, 255, 0.35);
+      color: rgba(255, 255, 255, 0.55);
     }
 
     .system .section-title {
@@ -757,7 +738,7 @@
     }
 
     .system .section-sub {
-      color: rgba(255, 255, 255, 0.42);
+      color: rgba(255, 255, 255, 0.55);
     }
 
     .system-flow {
@@ -806,7 +787,7 @@
 
     .step-desc {
       font-size: 13px;
-      color: rgba(255, 255, 255, 0.42);
+      color: rgba(255, 255, 255, 0.55);
       line-height: 1.6;
     }
 
@@ -824,13 +805,13 @@
       border-radius: 6px;
       padding: 3px 8px;
       font-size: 11px;
-      color: rgba(255, 255, 255, 0.45);
+      color: rgba(255, 255, 255, 0.55);
       font-weight: 500;
     }
 
     .system-arrow {
       text-align: center;
-      color: rgba(255, 255, 255, 0.16);
+      color: rgba(255, 255, 255, 0.55);
       font-size: 20px;
     }
 
@@ -882,7 +863,6 @@
       align-items: center;
       gap: 12px;
       width: max-content;
-      animation: marquee 38s linear infinite;
     }
 
     .tools-track:hover {
@@ -948,7 +928,7 @@
       display: none;
       align-items: center;
       justify-content: center;
-      font-size: 9px;
+      font-size: 11px;
       font-weight: 600;
       color: rgba(255, 255, 255, 0.65);
       flex-shrink: 0;
@@ -1153,9 +1133,9 @@
       width: 40px; height: 40px; border-radius: 50%; object-fit: cover;
       box-shadow: 0 0 0 2px rgba(0,0,0,0.08); flex-shrink: 0; transition: box-shadow 0.3s;
     }
-    .tv2-card:hover .tv2-avatar { box-shadow: 0 0 0 2px rgba(139,92,246,0.45); }
+    .tv2-card:hover .tv2-avatar { box-shadow: 0 0 0 2px rgba(12,14,29,0.15); }
     .tv2-name { display: block; font-weight: 600; font-size: 14px; color: #0d0f1e; letter-spacing: -0.2px; line-height: 1.3; font-style: normal; }
-    .tv2-role { display: block; font-size: 12.5px; color: #8888aa; line-height: 1.3; margin-top: 2px; }
+    .tv2-role { display: block; font-size: 12.5px; color: #66667f; line-height: 1.3; margin-top: 2px; }
 
     .testimonials-placeholder {
       margin-top: 40px;
@@ -1256,7 +1236,7 @@
 
     .cta-section p {
       font-size: 17px;
-      color: rgba(255, 255, 255, 0.45);
+      color: rgba(255, 255, 255, 0.55);
       margin-bottom: 40px;
       position: relative;
     }
@@ -1286,7 +1266,7 @@
 
     .footer-links a {
       font-size: 13px;
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.55);
       text-decoration: none;
       transition: color 0.2s;
     }
@@ -1297,7 +1277,7 @@
 
     .footer-copy {
       font-size: 12.5px;
-      color: rgba(255, 255, 255, 0.25);
+      color: rgba(255, 255, 255, 0.55);
     }
 
     .footer-socials {
@@ -1462,7 +1442,7 @@
 
     /* Section tags: subtle purple accent */
     .section-tag {
-      color: rgba(139, 92, 246, 0.65);
+      color: rgba(196, 181, 253, 0.9);
     }
 
     /* Hero stat numbers: clean white */
@@ -1501,18 +1481,6 @@
       border-color: rgba(208, 208, 232, 0.25);
     }
 
-    /* ─── GRID BACKGROUND ─── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(139,92,246,0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(139,92,246,0.06) 1px, transparent 1px);
-      background-size: 52px 52px;
-      pointer-events: none;
-      z-index: 0;
-    }
 
     /* ─── ROTATING RING ON CTA BUTTON ─── */
     @property --ring-angle {
@@ -1650,13 +1618,13 @@
 
     /* System arrows: silver */
     .system-arrow {
-      color: rgba(208, 208, 232, 0.38);
+      color: rgba(208, 208, 232, 0.55);
     }
 
     /* Final result step: subtle purple glow */
     .step-result {
       border-color: rgba(139, 92, 246, 0.2);
-      box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.08), 0 0 36px rgba(139, 92, 246, 0.04);
+      box-shadow: none;
     }
 
     /* Problem cards: shimmer on hover */
@@ -1730,10 +1698,10 @@
     .signal-box::after  { right: -2px; }
 
     .signal-box-label {
-      font-size: 9.5px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.9px;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255, 255, 255, 0.55);
       text-transform: uppercase;
       text-align: center;
       line-height: 1.3;
@@ -1762,8 +1730,8 @@
 
     .sig-icon-cb   { color: #1a6fff; }
     .sig-icon-g2   { color: #ff492c; }
-    .sig-icon-rb   { color: #a78bfa; font-size: 10px; }
-    .sig-icon-bw   { color: #22c55e; font-size: 10px; }
+    .sig-icon-rb   { color: #a78bfa; font-size: 11px; }
+    .sig-icon-bw   { color: #22c55e; font-size: 11px; }
 
     .signal-lines-svg {
       display: block;
@@ -1797,7 +1765,7 @@
       justify-content: center;
       gap: 0;
       position: relative;
-      box-shadow: 0 0 50px rgba(139,92,246,0.18), inset 0 0 30px rgba(139,92,246,0.06);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.35);
       padding: 28px 32px 20px;
     }
 
@@ -1817,10 +1785,10 @@
     }
 
     .engine-channel-name {
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.5px;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255, 255, 255, 0.55);
       text-transform: uppercase;
     }
 
@@ -1845,13 +1813,13 @@
 
     .engine-team-text {
       font-size: 12px;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255, 255, 255, 0.55);
       line-height: 1.4;
       text-wrap: balance;
     }
 
     .engine-team-tag {
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.6px;
       color: var(--accent);
@@ -1883,11 +1851,11 @@
       font-weight: 900;
       color: #fff;
       letter-spacing: -1px;
-      box-shadow: 0 4px 20px rgba(139,92,246,0.4);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
     }
 
     .engine-label {
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 1.4px;
       color: var(--accent-light);
@@ -1924,17 +1892,17 @@
       display: flex;
       align-items: center;
       gap: 7px;
-      font-size: 9.5px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.8px;
-      color: rgba(255,255,255,0.28);
+      color: rgba(255, 255, 255, 0.55);
       text-transform: uppercase;
     }
 
     .ops-sq { width: 5px; height: 5px; background: rgba(139,92,246,0.4); flex-shrink: 0; }
 
     .ops-tag {
-      font-size: 10.5px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.6px;
       color: var(--accent);
@@ -1960,7 +1928,7 @@
 
     .ops-desc {
       font-size: 12px;
-      color: rgba(255,255,255,0.35);
+      color: rgba(255, 255, 255, 0.55);
       line-height: 1.55;
       margin: 0;
     }
@@ -1972,7 +1940,7 @@
       align-items: center;
       gap: 8px;
       font-size: 12px;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255, 255, 255, 0.55);
     }
 
     .ops-act-dot {
@@ -2006,10 +1974,10 @@
       justify-content: space-between;
       padding: 12px 18px;
       border-bottom: 1px solid rgba(139,92,246,0.12);
-      font-size: 9.5px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.9px;
-      color: rgba(255,255,255,0.28);
+      color: rgba(255, 255, 255, 0.55);
       text-transform: uppercase;
     }
 
@@ -2023,11 +1991,11 @@
       padding: 14px 18px;
       border-bottom: 1px solid rgba(255,255,255,0.04);
       font-size: 13px;
-      color: rgba(255,255,255,0.38);
+      color: rgba(255, 255, 255, 0.55);
     }
 
     .acc-fit { font-size: 24px; font-weight: 800; color: var(--accent); line-height: 1; }
-    .acc-fit-label { font-size: 10px; font-weight: 600; color: rgba(139,92,246,0.6); margin-left: 3px; }
+    .acc-fit-label { font-size: 11px; font-weight: 600; color: rgba(196, 181, 253, 0.9); margin-left: 3px; }
 
     .acc-signal-row {
       display: flex;
@@ -2046,7 +2014,7 @@
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 800;
       border-radius: 4px;
     }
@@ -2060,7 +2028,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 9px;
+      font-size: 11px;
       color: var(--accent);
       flex-shrink: 0;
     }
@@ -2073,10 +2041,10 @@
       border-bottom: 1px solid rgba(139,92,246,0.1);
     }
 
-    .acc-action-label { font-size: 12px; color: rgba(255,255,255,0.28); }
+    .acc-action-label { font-size: 12px; color: rgba(255, 255, 255, 0.55); }
 
     .acc-action-btn {
-      font-size: 9.5px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.8px;
       color: var(--accent);
@@ -2093,7 +2061,7 @@
       padding: 12px 18px;
     }
 
-    .acc-stack-label { font-size: 12px; color: rgba(255,255,255,0.22); }
+    .acc-stack-label { font-size: 12px; color: rgba(255, 255, 255, 0.55); }
     .acc-stack-icons { display: flex; gap: 6px; align-items: center; }
 
     /* FAQ dividers: silver */
@@ -2114,6 +2082,56 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
+    /* ─── DE-AI PASS · Nov 2026 ───
+       Solid colour instead of gradient text, no purple glow, nothing on a loop.
+       --accent-2 is the warm supporting colour. It marks proof: the numbers and
+       one highlighted phrase per headline. Purple stays on buttons, links and
+       the wordmark. Never use --accent-2 as a gradient. */
+    :root { --accent-2: #E8C07D; }
+
+    .grad,
+    .hero h1 em,
+    .hero-stat-val,
+    .result-num {
+      background: none;
+      -webkit-background-clip: border-box;
+      background-clip: border-box;
+      -webkit-text-fill-color: currentColor;
+      color: var(--accent-2);
+      animation: none;
+    }
+
+    /* No spinning ring around the buttons */
+    .btn-ring-wrap::before,
+    .btn-ring-wrap::after { display: none; }
+
+    /* Logo and tool strips sit still */
+    .logo-track,
+    .tools-track {
+      animation: none;
+      width: auto;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .logo-track { gap: 28px 56px; }
+    .tools-track {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+    }
+    @media (max-width: 760px) {
+      .tools-track { grid-template-columns: repeat(2, auto); }
+    }
+    .logo-track-outer::before,
+    .logo-track-outer::after,
+    .tools-carousel-outer::before,
+    .tools-carousel-outer::after { display: none; }
+
+    /* Wordmark, brand utility treatment */
+    .nav-wordmark { font-weight: 800; letter-spacing: -1.5px; color: rgba(255,255,255,0.92); }
+    .footer-logo { font-weight: 800; letter-spacing: -1px; }
   </style>
   <script type="application/ld+json">
 {
@@ -2221,7 +2239,7 @@
           "name": "How is this different from hiring an SDR?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "An SDR is a person. We're a system — strategy, data, tooling, execution, and optimisation all in one. We're operational in 30 days, not 90. And you're not betting $120K+ on a single hire who might not work out."
+            "text": "You get the strategy, the data, the tooling and the people doing the work, instead of one rep you have to hire, train and manage. We're live in about 30 days, and a new SDR usually takes three months to ramp. You're also not betting $120K+ on a hire who might not work out."
           }
         },
         {
@@ -2229,7 +2247,7 @@
           "name": "What channels do you run?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Cold email, LinkedIn outreach, and cold calling — across all three or just the ones that make sense for your market. We run the full tech stack: Instantly, HeyReach, Clay, Apollo, and more."
+            "text": "Cold email, LinkedIn and cold calling. They work best together, so most campaigns use all three. We run the whole stack ourselves: Instantly, HeyReach, Clay, Apollo and a few more."
           }
         },
         {
@@ -2245,7 +2263,7 @@
           "name": "What do we actually need to do?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We need your input on ICP and positioning in week one. After that, you handle the meetings once they're booked. Everything in between — prospecting, messaging, sending, optimising — is on us."
+            "text": "We need your input on ICP and positioning in week one. After that, you take the meetings once they're booked. Everything in between is on us: the prospecting, the messaging, the sending and the follow-up."
           }
         },
         {
@@ -2253,7 +2271,7 @@
           "name": "What does it cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It depends on scope — which channels, what volume, and how much of the system you want us to own. Best to book a call and we'll figure out what makes sense for your situation."
+            "text": "It depends on which channels you want, how much volume, and how much of the system you want us to run. Jump on a call and we'll work out what makes sense for you."
           }
         },
         {
@@ -2261,7 +2279,7 @@
           "name": "Do you work with any industry?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We focus on B2B — SaaS, professional services, and high-ticket agencies. If you're selling to businesses and need more pipeline, there's a good chance we can help."
+            "text": "B2B only, mostly SaaS, professional services and high-ticket agencies. If you sell to businesses and need more pipeline, there's a good chance we can help."
           }
         }
       ]
@@ -2297,7 +2315,7 @@
   <!-- ─── NAV ─── -->
   <nav>
     <a href="/" class="nav-logo">
-      <span class="nav-wordmark">Outbounda</span>
+      <span class="nav-wordmark">outbounda</span>
     </a>
     <ul class="nav-links">
       <li><a href="#how-it-works">How it works</a></li>
@@ -2306,7 +2324,7 @@
       <li><a href="#faq">FAQ</a></li>
     </ul>
     <div class="btn-ring-wrap">
-      <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a Call →</a>
+      <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary" target="_blank" rel="noopener">Book a call →</a>
     </div>
   </nav>
 
@@ -2315,21 +2333,17 @@
     <div class="hero-orb hero-orb-1"></div>
     <div class="hero-orb hero-orb-2"></div>
 
-    <div class="hero-badge">
-      🏅 <span class="hero-badge-chrome">APAC's Premier GTM Agency</span>
-    </div>
-
-    <h1>Turn outbound into<br><em id="heroRotate">a GTM weapon</em></h1>
+    <h1>We book the meetings.<br><em>You close them.</em></h1>
 
     <p class="hero-sub">
-      We build and run your outbound engine — AI-driven research, buying signals, and multi-channel execution that consistently creates pipeline.
+      We find the accounts showing buying signals and work them across cold email, LinkedIn and the phone until they're in your calendar. You get a GTM engineer and an SDR from day one.
     </p>
 
     <div class="hero-ctas">
       <div class="btn-ring-wrap">
         <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary btn-lg" target="_blank"
           rel="noopener">
-          Book a Strategy Session →
+          Book a call →
         </a>
       </div>
       <a href="#how-it-works" class="btn btn-outline btn-lg">See how it works</a>
@@ -2344,7 +2358,7 @@
           allowfullscreen>
         </iframe>
       </div>
-      <p class="hero-video-caption">"All 13 stages of the outbound process we run for B2B SaaS clients"</p>
+      <p class="hero-video-caption">All 13 stages of the outbound process we run for B2B SaaS clients</p>
     </div>
 
     <div class="hero-stats">
@@ -2353,8 +2367,8 @@
         <div class="hero-stat-label">Pipeline built at Rippling</div>
       </div>
       <div>
-        <div class="hero-stat-val">3</div>
-        <div class="hero-stat-label">Channels: email, LinkedIn, calling</div>
+        <div class="hero-stat-val">12+</div>
+        <div class="hero-stat-label">B2B clients</div>
       </div>
       <div>
         <div class="hero-stat-val">30 days</div>
@@ -2390,27 +2404,6 @@
           onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
           style="display:none">Digital Directions</span>
 
-        <!-- Set 2 — duplicate for seamless loop -->
-        <img src="https://superpath.io/sp_logo.svg" alt="Superpath"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
-          style="display:none">Superpath</span>
-        <span class="logo-brand"><img src="https://www.blueonion.ai/blue-onion-logo-512.png" alt="">Blue Onion</span>
-        <img src="https://cdn.prod.website-files.com/6178de88b212f6724e37c05c/68178bf06690f3cac98a4c18_Group%207910.svg"
-          alt="Derive" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span
-          class="logo-text" style="display:none">Derive</span>
-        <img
-          src="https://cdn.prod.website-files.com/682bb2f6ef2157b198f6cac8/682bb4aa54fe04851e093654_vouch-webclip.png"
-          alt="Vouch" style="height:42px;width:42px;border-radius:8px;"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
-          style="display:none">Vouch</span>
-        <span class="logo-brand"><img src="icons/alloy.jpg" alt="" style="height:42px;width:42px;border-radius:8px;"><span style="font-family:'Geist',sans-serif;">Alloy</span></span>
-        <img src="https://www.rivercity.net.au/wp-content/uploads/Rivercity-Logo-–-COL.svg" alt="Rivercity"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
-          style="display:none">Rivercity</span>
-        <img src="https://digitaldirections.io/wp-content/uploads/2024/03/logo-D.png" alt="Digital Directions"
-          onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-text"
-          style="display:none">Digital Directions</span>
-
       </div>
     </div>
   </div>
@@ -2418,9 +2411,8 @@
   <!-- ─── SIGNAL DIAGRAM ─── -->
   <section class="section signal-section" id="signals">
     <div class="container">
-      <span class="section-tag">Buying Intelligence</span>
-      <h2 class="section-title">We find accounts ready to buy<br><em class="grad">before your competitors do</em></h2>
-      <p class="section-sub">Real-time buying signals. One engine. Every account scored by fit and intent — automatically.</p>
+      <h2 class="section-title">We find the accounts ready to buy<br>before your competitors do</h2>
+      <p class="section-sub">We watch for funding rounds, hiring, website visits, intent data, tech stack changes and job moves. Every account gets scored on fit and timing, and the hottest ones get worked first.</p>
     </div>
 
     <div class="signal-diagram-outer">
@@ -2606,31 +2598,28 @@
   <!-- ─── PROBLEM ─── -->
   <section class="section problem" id="problem">
     <div class="container">
-      <span class="section-tag">The problem</span>
       <h2 class="section-title">Most outbound fails for<br>one of two reasons</h2>
-      <p class="section-sub">Both are more common than you think. Both kill pipeline before it starts.</p>
+      <p class="section-sub">We hear one of these on almost every first call.</p>
 
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-icon">💸</div>
-          <h3>The SDR Hire Trap</h3>
+          <h3>You hired an SDR</h3>
           <p>You hire a rep, spend months getting them up to speed, and wonder why the pipeline isn't moving.</p>
           <ul class="problem-list">
             <li>$120K+ all-in before a single qualified meeting</li>
             <li>3–6 month ramp before they're productive</li>
-            <li>Generic messaging that doesn't resonate</li>
+            <li>Messaging that sounds like everyone else's</li>
             <li>One bad hire and you're back to square one</li>
           </ul>
         </div>
         <div class="problem-card">
-          <div class="problem-icon">⏳</div>
-          <h3>The Founder Grind Trap</h3>
+          <h3>You're doing it yourself</h3>
           <p>You know you need outbound but you're also running the business. It happens in bursts, then stops.</p>
           <ul class="problem-list">
             <li>Manual prospecting eats 10+ hours a week</li>
             <li>Inconsistent follow-up kills warm leads</li>
             <li>You're the bottleneck to your own growth</li>
-            <li>No system means no scale</li>
+            <li>Nothing gets sent when you're busy closing</li>
           </ul>
         </div>
       </div>
@@ -2640,16 +2629,15 @@
   <!-- ─── SYSTEM ─── -->
   <section class="system" id="how-it-works">
     <div class="container">
-      <span class="section-tag">How it works</span>
-      <h2 class="section-title">Up and running in <em class="grad">30 days</em></h2>
-      <p class="section-sub">No long onboarding. No 90-day ramp. Here's what the first few weeks look like.</p>
+      <h2 class="section-title">Up and running in 30 days</h2>
+      <p class="section-sub">A new SDR usually takes three months to ramp. Here's what our first month looks like.</p>
 
       <div class="system-flow">
 
         <div class="system-step">
           <div class="step-num">1</div>
-          <div class="step-title">Week 1 — Strategy</div>
-          <div class="step-desc">We get deep on your ICP, offer, and what's worked before. Out comes a targeting strategy, messaging framework, and channel plan built for your market.</div>
+          <div class="step-title">Week 1: Strategy</div>
+          <div class="step-desc">We dig into your ICP, your offer and whatever's worked for you before, then turn it into a targeting plan and messaging built for your market.</div>
           <div class="step-tags">
             <span class="step-tag">ICP Workshop</span>
             <span class="step-tag">Offer Positioning</span>
@@ -2662,8 +2650,8 @@
 
         <div class="system-step">
           <div class="step-num">2</div>
-          <div class="step-title">Week 2–3 — Build</div>
-          <div class="step-desc">We build the full system — sequences, lists, infrastructure, and signal tracking. You approve everything before we go live.</div>
+          <div class="step-title">Weeks 2–3: Build</div>
+          <div class="step-desc">We write the sequences, build the lists and set up the sending and signal tracking. You sign off on all of it before anything goes out.</div>
           <div class="step-tags">
             <span class="step-tag">Sequence Writing</span>
             <span class="step-tag">List Building</span>
@@ -2676,8 +2664,8 @@
 
         <div class="system-step">
           <div class="step-num">3</div>
-          <div class="step-title">Week 4 — Launch</div>
-          <div class="step-desc">Campaigns go live across email, LinkedIn, and cold calling. Replies get handled, meetings get booked, everything gets tracked in real time.</div>
+          <div class="step-title">Week 4: Launch</div>
+          <div class="step-desc">Email, LinkedIn and calling all go live. We handle every reply and book meetings straight into your calendar, and you can watch it happen.</div>
           <div class="step-tags">
             <span class="step-tag">Campaigns Live</span>
             <span class="step-tag">Reply Handling</span>
@@ -2690,8 +2678,8 @@
 
         <div class="system-step step-result">
           <div class="step-num" style="background: rgba(139,92,246,0.3); border-color: rgba(139,92,246,0.45)">✓</div>
-          <div class="step-title">Ongoing — Optimise</div>
-          <div class="step-desc">Weekly updates, monthly strategy reviews, and continuous testing. We improve every month based on what's working and what the data's telling us.</div>
+          <div class="step-title">Ongoing: Optimise</div>
+          <div class="step-desc">You get a wrap every Friday and a strategy review every month. We keep testing and double down on whatever's booking meetings.</div>
           <div class="step-tags">
             <span class="step-tag">Weekly Reporting</span>
             <span class="step-tag">A/B Testing</span>
@@ -2707,86 +2695,14 @@
   <!-- ─── TOOLS ─── -->
   <section class="section tools-section" id="tools">
     <div class="container">
-      <span class="section-tag">Our stack</span>
       <h2 class="section-title">The tools behind every campaign</h2>
-      <p class="section-sub">We don't just know the tools — we've built a system that makes them work together.</p>
+      <p class="section-sub">It's all wired together, so a new buying signal ends up in a live sequence without anyone touching a spreadsheet.</p>
     </div>
 
     <div class="tools-carousel-outer">
       <div class="tools-track" id="toolsTrack">
 
         <!-- Set 1 -->
-        <div class="tool-card">
-          <img class="tool-icon-img" src="icons/claude.png" alt=""
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="tool-initials">CL</div>
-          <span class="tool-card-name">Claude</span>
-        </div>
-
-        <div class="tool-card">
-          <img class="tool-icon-img" src="icons/arkai-logo.jpg" alt=""
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="tool-initials">AI</div>
-          <span class="tool-card-name">Ark AI</span>
-        </div>
-
-        <div class="tool-card">
-          <img class="tool-icon-img" src="icons/apify.png" alt=""
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="tool-initials">AP</div>
-          <span class="tool-card-name">Apify</span>
-        </div>
-
-        <div class="tool-card">
-          <img class="tool-icon-img" src="icons/storeleads.png" alt=""
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="tool-initials">SL</div>
-          <span class="tool-card-name">Storeleads</span>
-        </div>
-
-        <div class="tool-card">
-          <img class="tool-icon-img" src="icons/apollo.png" alt=""
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="tool-initials">AP</div>
-          <span class="tool-card-name">Apollo</span>
-        </div>
-
-        <div class="tool-card">
-          <img class="tool-icon-img" src="icons/instantly.png" alt=""
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="tool-initials">IN</div>
-          <span class="tool-card-name">Instantly</span>
-        </div>
-
-        <div class="tool-card">
-          <img class="tool-icon-img" src="icons/clay.png" alt=""
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="tool-initials">CY</div>
-          <span class="tool-card-name">Clay</span>
-        </div>
-
-        <div class="tool-card">
-          <img class="tool-icon-img" src="icons/heyreach.png" alt=""
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="tool-initials">HR</div>
-          <span class="tool-card-name">HeyReach</span>
-        </div>
-
-        <div class="tool-card">
-          <img class="tool-icon-img" src="icons/fireflies.png" alt=""
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="tool-initials">FF</div>
-          <span class="tool-card-name">Fireflies</span>
-        </div>
-
-        <div class="tool-card">
-          <img class="tool-icon-img" src="icons/linkedin.svg" alt=""
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-          <div class="tool-initials">LI</div>
-          <span class="tool-card-name">Sales Nav</span>
-        </div>
-
-        <!-- Set 2 — duplicate for seamless loop -->
         <div class="tool-card">
           <img class="tool-icon-img" src="icons/claude.png" alt=""
             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -2864,22 +2780,18 @@
   <!-- ─── RESULTS ─── -->
   <section class="section results" id="results">
     <div class="container">
-      <span class="section-tag">Results</span>
-      <h2 class="section-title">Operator-led. Numbers, not claims.</h2>
-      <p class="section-sub">Built by our founder from his prior role at Rippling — scaled from zero to $10M ARR. We
-        built the outbound engine that fed the pipeline. Operators, not agencies.</p>
+      <h2 class="section-title">Run by someone who still makes the calls</h2>
+      <p class="section-sub">Before Outbounda, Matty helped build Rippling's go-to-market in Australia and ran the outbound that fed it. It's the same playbook we run for clients today.</p>
 
       <div class="results-grid">
         <div class="result-card">
           <div class="result-num">$10M+</div>
-          <div class="result-desc">ARR pipeline built during our founder's time at Rippling. Zero to a full outbound
-            motion in under 18 months. We didn't consult on it — we ran it.</div>
+          <div class="result-desc">Pipeline built at Rippling, taking outbound from nothing to a full motion in under 18 months.</div>
           <div class="result-source">Matty's prior role at Rippling</div>
         </div>
         <div class="result-card">
           <div class="result-num">30 days</div>
-          <div class="result-desc">Strategy, data, sequences, execution — live in week two, first qualified meetings in
-            the calendar by week four.</div>
+          <div class="result-desc">Campaigns are usually live in week two, with the first qualified meetings in the calendar by week four.</div>
           <div class="result-source">New client average</div>
         </div>
       </div>
@@ -2889,9 +2801,8 @@
   <!-- ─── TESTIMONIALS ─── -->
   <section class="section testimonials" id="testimonials">
     <div class="container">
-      <span class="section-tag">What clients say</span>
-      <h2 class="section-title">Don't take our word for it</h2>
-      <p class="section-sub">Founders and sales leaders who've run outbound with Outbounda.</p>
+      <h2 class="section-title">From the people who pay us</h2>
+      <p class="section-sub">Founders and heads of sales, in their own words.</p>
 
       <div class="hero-video testimonial-video">
         <div class="hero-video-inner">
@@ -2994,22 +2905,18 @@
   <!-- ─── FAQ ─── -->
   <section class="section faq" id="faq">
     <div class="container">
-      <span class="section-tag">FAQ</span>
       <h2 class="section-title">Common questions</h2>
 
       <div class="faq-list">
 
         <details class="faq-item">
           <summary>How is this different from hiring an SDR?</summary>
-          <p class="faq-body">An SDR is a person. We're a system — strategy, data, tooling, execution, and optimisation
-            all in one. We're operational in 30 days, not 90. And you're not betting $120K+ on a single hire who might
-            not work out.</p>
+          <p class="faq-body">You get the strategy, the data, the tooling and the people doing the work, instead of one rep you have to hire, train and manage. We're live in about 30 days, and a new SDR usually takes three months to ramp. You're also not betting $120K+ on a hire who might not work out.</p>
         </details>
 
         <details class="faq-item">
           <summary>What channels do you run?</summary>
-          <p class="faq-body">Cold email, LinkedIn outreach, and cold calling — across all three or just the ones that
-            make sense for your market. We run the full tech stack: Instantly, HeyReach, Clay, Apollo, and more.</p>
+          <p class="faq-body">Cold email, LinkedIn and cold calling. They work best together, so most campaigns use all three. We run the whole stack ourselves: Instantly, HeyReach, Clay, Apollo and a few more.</p>
         </details>
 
         <details class="faq-item">
@@ -3020,20 +2927,17 @@
 
         <details class="faq-item">
           <summary>What do we actually need to do?</summary>
-          <p class="faq-body">We need your input on ICP and positioning in week one. After that, you handle the meetings
-            once they're booked. Everything in between — prospecting, messaging, sending, optimising — is on us.</p>
+          <p class="faq-body">We need your input on ICP and positioning in week one. After that, you take the meetings once they're booked. Everything in between is on us: the prospecting, the messaging, the sending and the follow-up.</p>
         </details>
 
         <details class="faq-item">
           <summary>What does it cost?</summary>
-          <p class="faq-body">It depends on scope — which channels, what volume, and how much of the system you want us
-            to own. Best to book a call and we'll figure out what makes sense for your situation.</p>
+          <p class="faq-body">It depends on which channels you want, how much volume, and how much of the system you want us to run. Jump on a call and we'll work out what makes sense for you.</p>
         </details>
 
         <details class="faq-item">
           <summary>Do you work with any industry?</summary>
-          <p class="faq-body">We focus on B2B — SaaS, professional services, and high-ticket agencies. If you're selling
-            to businesses and need more pipeline, there's a good chance we can help.</p>
+          <p class="faq-body">B2B only, mostly SaaS, professional services and high-ticket agencies. If you sell to businesses and need more pipeline, there's a good chance we can help.</p>
         </details>
 
       </div>
@@ -3043,24 +2947,24 @@
   <!-- ─── CTA ─── -->
   <section class="cta-section">
     <div class="container">
-      <h2>Ready to build your<br><em class="grad">outbound engine?</em></h2>
-      <p>30-minute strategy session. No pitch deck. Just a straight conversation about your pipeline.</p>
+      <h2>Got <em class="grad">30 minutes?</em></h2>
+      <p>We'll look at where your pipeline comes from today and tell you straight whether outbound's worth it for you.</p>
       <a href="https://calendly.com/matty-outbounda/30min" class="btn btn-primary btn-lg" target="_blank"
         rel="noopener">
-        Book a Strategy Session →
+        Book a call →
       </a>
     </div>
   </section>
 
   <!-- ─── FOOTER ─── -->
   <footer>
-    <div class="footer-logo">Outbounda</div>
+    <div class="footer-logo">outbounda</div>
     <div class="footer-links">
       <a href="#how-it-works">How it works</a>
       <a href="#results">Results</a>
       <a href="/blog/">Blog</a>
       <a href="#faq">FAQ</a>
-      <a href="https://calendly.com/matty-outbounda/30min" target="_blank">Book a Call</a>
+      <a href="https://calendly.com/matty-outbounda/30min" target="_blank">Book a call</a>
     </div>
     <div class="footer-socials">
       <a href="https://www.linkedin.com/company/outbounda" target="_blank" rel="noopener" class="footer-social-btn">
@@ -3092,14 +2996,14 @@
         <div class="widget-role">Founder, Outbounda</div>
       </div>
     </div>
-    <div class="widget-title">Book your 1-1 Strategy Call</div>
-    <div class="widget-desc">Book a 30 min session to see how we would engineer an unstoppable pipeline for you.</div>
+    <div class="widget-title">Talk to Matty</div>
+    <div class="widget-desc">30 minutes on your pipeline and whether outbound makes sense for you. No pitch deck.</div>
     <div class="widget-avail">
       <span class="widget-avail-dot"></span>
       <span>Next available: <strong id="widgetNextAvail">this week</strong></span>
     </div>
     <a href="https://calendly.com/matty-outbounda/30min" class="widget-cta" target="_blank" rel="noopener">
-      Claim Your Session →
+      Pick a time →
     </a>
     <div class="widget-fine">Free · No obligation · 30 minutes</div>
   </div>
@@ -3187,7 +3091,7 @@
 
     .widget-role {
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.4);
+      color: rgba(255, 255, 255, 0.55);
       margin-top: 1px;
     }
 
@@ -3201,7 +3105,7 @@
 
     .widget-desc {
       font-size: 13px;
-      color: rgba(255, 255, 255, 0.45);
+      color: rgba(255, 255, 255, 0.55);
       line-height: 1.6;
       margin-bottom: 16px;
     }
@@ -3250,8 +3154,8 @@
 
     .widget-fine {
       text-align: center;
-      font-size: 11.5px;
-      color: rgba(255, 255, 255, 0.25);
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.55);
     }
 
     /* Tab that shows after dismiss */
@@ -3268,13 +3172,13 @@
       font-weight: 700;
       cursor: pointer;
       z-index: 200;
-      box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .widget-tab:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(139, 92, 246, 0.5);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
     }
 
     @media (max-width: 480px) {
@@ -3291,34 +3195,6 @@
     }
   </style>
 
-  <script>
-  /* ─── HERO WORD ROTATE ─── */
-  (function() {
-    var words = ['a GTM weapon', 'a pipeline machine', 'a meetings machine', 'a revenue engine'];
-    var duration = 2500;
-
-    document.addEventListener('DOMContentLoaded', function() {
-      var el = document.getElementById('heroRotate');
-      if (!el) return;
-      var index = 0;
-
-      setInterval(function() {
-        index = (index + 1) % words.length;
-        el.classList.add('word-rotate-out');
-
-        setTimeout(function() {
-          el.textContent = words[index];
-          el.classList.remove('word-rotate-out');
-          el.classList.add('word-rotate-in');
-
-          setTimeout(function() {
-            el.classList.remove('word-rotate-in');
-          }, 250);
-        }, 250);
-      }, duration);
-    });
-  })();
-  </script>
 
   <script>
   /* ─── TESTIMONIALS V2: duplicate cards for seamless infinite scroll ─── */
